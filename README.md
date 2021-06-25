@@ -1,59 +1,217 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **My Portfolio**
 
-Welcome USER_NAME,
+![Mock up]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+## **Goal for the project**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+<a></a>
 
-`python3 -m http.server`
+## Table of contents 
+* [UX](#ux)
+    * [User Goals](#user-goals)
+    * [User Stories](#user-stories)
+    * [Site Owners Goals](#site-owners-goals)
+    * [User Requirements and Expectations](#user-requirements-and-expectations)
+        * [Requirements](#requirements)
+        * [Expectations](#expectations)
+    * [Design Choices](#design-choices)
+        * [Fonts](#fonts)
+        * [Colors](#colors)
+        * [Structure](#structure)
+* [Wireframes and Flowcharts](#wireframes-and-flowcharts)
+    * [Wireframes](#wireframes)
+    * [Flowcharts](#flowcharts)
+    * [Database Structure](#database-structure)
+* [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Features to be implemented](#features-to-be-implemented)
+* [Technologies used](#technologies-used)
+    * [Languages](#languages)
+    * [Libraries and Frameworks](#libraries-and-frameworks)
+    * [Tools](#tools)
+* [Testing](#testing)
+* [Deployment](#deployment)
+    * [Local Deployment](#local-deployment)
+    * [Heroku Deployment](#heroku-deployment)
+* [Credits](#credits)
 
-A blue button should appear to click: _Make Public_,
+--- 
 
-Another blue button should appear to click: _Open Browser_.
+<a name="ux"></a>
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## **UX**
 
-A blue button should appear to click: _Make Public_,
+<a></a>
 
-Another blue button should appear to click: _Open Browser_.
+### **User Goals**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Back to Top](#table-of-contents)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+<a></a>
 
-## Updates Since The Instructional Video
+### **User Stories**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<a></a>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### **Site owners Goals**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Back to Top](#table-of-contents)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<a></a>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### **User Requirements and Expectations**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<a></a>
+
+#### Requirements
+
+
+
+<a></a>
+
+#### Expectations
+
+
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+### **Design Choices**
+
+
+<a></a>
+
+#### Colors
+
+
+
+<a></a>
+
+#### Fonts
+
+<a></a>
+
+#### Structure
+
+
+
+[Back to Top](#table-of-contents)
+
+--- 
+<a></a>
+
+## **Wireframes and Flowcharts**
+
+### **Wireframes**
+
+
+
+
+
+#### Desktop Wireframes
+
+
+#### Tablet Wireframes
+
+#### Mobile Wireframes
+
+
+
+[Back to Top](#table-of-contents)
 
 ---
 
-Happy coding!
+<a></a>
+
+## **Features**
+
+<a></a>
+
+### **Existing Features**
+
+
+
+<a></a>
+
+### **Features to be implemented**
+
+
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Technologies used**
+
+<a></a>
+
+### **Languages**
+
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://www.python.org/)
+
+<a></a>
+
+### **Libraries and Frameworks**
+
+* [Font Awesome](https://fontawesome.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [jQuery](https://jquery.com/)
+
+### **Tools**
+* [Git](https://git-scm.com/)
+* [GitPod](https://www.gitpod.io/)
+* [Heroku](https://www.heroku.com/)
+* [Balsamic](https://balsamiq.com/wireframes/)
+* [W3C HTML Validation Service](https://validator.w3.org/)
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+* [techsini](http://techsini.com/)
+* [MongoDB Atlas](https://www.mongodb.com/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [PyMongo](https://api.mongodb.com/python/current/tutorial.html)
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+
+## **Testing**
+
+
+
+[Back to Top](#table-of-contents)
+
+## **Bugs**
+
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Deployment**
+
+    
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **Credits**
+
+
+
+
+[Back to Top](#table-of-contents)
+
