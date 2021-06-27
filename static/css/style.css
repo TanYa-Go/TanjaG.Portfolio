@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
 body {
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   margin: 0;
 }
 
@@ -46,17 +49,19 @@ ul {
   width: 500px;
   justify-content: space-around;
   font-size: 30px;
+  margin-right: 40px;
   
 }
 
 li {
   text-decoration: none;
   margin-top: 30px;
+  
    
 }
 
 li a {
-  color: coral;
+  color: rgb(252, 82, 21);
 }
 
 h1 {
@@ -71,7 +76,12 @@ h2 {
 p {
   margin: 0;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
+  
+}
+
+.information p {
+  text-align: justify;
 }
 
 .subtext {
@@ -95,7 +105,7 @@ p {
   width: 200px;
   height: 55px;
   border-radius: 30px;
-  background-color: coral;
+  background-color: rgb(252, 82, 21);
   text-align: center;
   font-size: 30px;
   font-weight: 300;
@@ -120,9 +130,8 @@ p {
 }
 
 
-
 .logo {
-  height: 80px;
+  height: 50px;
   margin: 30px;
   margin-left: 80px;
 }
@@ -134,7 +143,7 @@ p {
   display: flex;
   justify-content: space-around;
   padding: 80px;
-  height: 400px;
+ 
 }
 
 .sub-section-alternative {
@@ -142,11 +151,14 @@ p {
   flex-direction: column;
   text-align: center;
   padding: 80px;
+  background-color: rgb(252, 82, 21);
 }
 
+
 .headshot {
-  width: 300px;
-  border-radius: 150px;
+  width: 500px;
+  height: 100%;
+  border-radius: 180px;
   margin-left: 80px;
 }
 
@@ -158,8 +170,10 @@ p {
 .project-card {
   width: 300px;
   height: 500px;
-  box-shadow: 5px 5px 20px rgb(197, 195, 195);
+  box-shadow: 5px 5px 20px black;
   margin: 10px;
+  background-color: #fafafa;
+  border-radius: 10px;
 }
 
 .project-container {
@@ -178,7 +192,8 @@ p {
 .project-image {
   margin-top: 25px;
   width: 250px;
-  border-radius: 125px;
+  margin-bottom: 20px;
+  
 }
 
 hr {
