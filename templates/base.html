@@ -20,20 +20,21 @@
 
 <body>
 
-
-    <section class="hero">
-        <nav>
+<section class="hero" id="home">
+        <nav class="navbar sticky-top">
             <img class="logo" src="{{ url_for('static', filename ='images/#') }}" alt="" />
             <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about-me">About</a></li>
-                <li><a href="#about-me">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact-me">Contact</a></li>
             </ul>
             <button class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
+      
         <div class="hero-area">
             <div class="hero-text">
                 <h1 class="ml10">
@@ -68,6 +69,7 @@
                     </a></div>
             </div>
         </div>
+
     </section>
 
     <section class="sub-section" id="about-me">
@@ -93,7 +95,7 @@
     </div>
     </section>
     <section class="sub-section-alternative" id="projects">
-        <h2>PROJECTS</h2><br>
+        <h2>Projects</h2><br>
         <div class="project-container">
             <div class="project-card">
                 <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
@@ -133,15 +135,15 @@
         </div>
     </section>
     
-    <section class="skills">
-        <h2 class="text-center">SKILLS</h2>
+    <section class="skills" id="skills">
+        <h2 class="text-center">Skills</h2>
     
         <div class="accordion" id="accordionExample">
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Frontend
+                  <button class="btn btn-link editBtn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-desktop"></i> Frontend 
                   </button>
                 </h2>
               </div>
@@ -159,8 +161,8 @@
             <div class="card">
               <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Backend
+                  <button class="btn btn-link editBtn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fas fa-cogs"></i> Backend
                   </button>
                 </h2>
               </div>
@@ -177,8 +179,8 @@
             <div class="card">
               <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Libraries & Frameworks
+                  <button class="btn btn-link editBtn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="fas fa-crop-alt"></i> Libraries & Frameworks
                   </button>
                 </h2>
               </div>
