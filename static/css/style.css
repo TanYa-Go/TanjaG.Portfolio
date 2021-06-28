@@ -252,3 +252,31 @@ a {
   }
 }
 
+/* skills */
+.skills-title {
+  margin-bottom: 10px;
+  font-family: "Caveat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #3066be;
+}
+
+.skill-container {
+  height: 185px;
+  width: auto;
+  margin: 20px 0px;
+  padding: 15px 0px;
+  padding-left: 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 5px 5px #d4d4d4;
+          box-shadow: 0 0 5px 5px #d4d4d4;
+  background-color: #d8e9fe;
+  -webkit-animation-name: stretch;
+          animation-name: stretch;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
