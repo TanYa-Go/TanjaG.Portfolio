@@ -40,3 +40,17 @@ $('.navbar a').on('click', function (e) {
         },800);
     }
   });
+
+
+  let navbar = document.getElementById('navbar')
+  let scrollval = 0;
+  window.addEventListener('scroll', () => {
+    if(scrollval > window.scrollY) {
+        navbar.classList.remove('hide')
+      console.log('Scroll up')
+    } else {
+      navbar.classList.add('hide')
+      console.log('Scroll down')
+    }
+    scrollval = window.scrollY;
+  });

@@ -32,6 +32,10 @@ nav {
  
 }
 
+.navbar {
+  background-color: rgba(0, 0, 0, 0.69);
+  height: 70px;
+}
 
 ul {
   display: flex;
@@ -45,14 +49,25 @@ ul {
 
 li {
   text-decoration: none;
-  margin-top: 10px;
-  
-   
+  margin-top: -35px;
+    
 }
 
 li a {
   color: rgb(252, 82, 21);
   margin-right: 20px;
+}
+
+li a:hover{
+  color: #fafafa;
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.title-skills{
+  margin-top: 80px;
 }
 
 h1 {
@@ -89,6 +104,7 @@ p {
 }
 
 .hero-text {
+  margin-top: 300px;
   margin-left: 80px;
   margin-bottom: 200px;
 }
@@ -119,6 +135,7 @@ p {
 
 .socials {
   padding-bottom: 200px;
+  margin-top: 300px;
 }
 
 
@@ -185,6 +202,10 @@ p {
   display: block;
 }
 
+.skill-list li {
+  margin-top: 5px;
+}
+
 .card-header {
   background-color: #fafafa;
 }
@@ -194,6 +215,11 @@ p {
   font-weight: 500;
   color: rgb(252, 82, 21);
 }
+
+.editBtn:hover {
+  color: #333;
+}
+
 
 /* animate letters */
 .ml10 {
@@ -215,6 +241,10 @@ p {
   display: inline-block;
   line-height: 1em;
   transform-origin: 0 0;
+}
+
+.hide {
+  display: none;
 }
 
 /* ----------------------------------------Media Queries */
