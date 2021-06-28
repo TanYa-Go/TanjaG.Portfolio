@@ -210,7 +210,9 @@
 
 ## **Credits**
 
+Took inspiration from [Ania Kubow](https://www.youtube.com/watch?v=-D6oTPA4vXc&t=4221s) for layout of the page
 
+Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate letters on the home page from 
 
 
 [Back to Top](#table-of-contents)
