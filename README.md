@@ -110,6 +110,16 @@
 
 ## **Wireframes and Flowcharts**
 
+### **Database Schema**
+
+![Database Schema](static/images/schema.png)
+
+
+### **Flowchart**
+
+![Flowchart](static/images/flowchart.png)
+
+
 ### **Wireframes**
 
 
