@@ -2,7 +2,6 @@
 
 
 body {
-  /*font-family: 'Poppins', sans-serif;*/
   margin: 0;
 }
 
@@ -23,7 +22,7 @@ footer {
   color: white;
   text-align: center;
   padding: 80px;
-  height: 400px;
+  height: 250px;
 }
 
 nav {
