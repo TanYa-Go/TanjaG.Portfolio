@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+}
+
+.title-register {
+    margin-top: 130px;
+    color: #fafafa;
+    background-color: black;
+  }
+  .main-form {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px 50px;
+    font-size: 30px;
+    color: #fafafa;
+    border-radius: 36px;
+    background: #48484c;
+    box-shadow: inset 25px 25px 25px #1e1e20,
+              inset -25px -25px 25px #404045;
+  }
+  
+  
+  .btn-register {
+     background-color: rgb(233, 76, 29);
+     font-size: 20px;
+     width: 30%;
+  
+  }
+
+  .form-control {
+    background-color: #48484c;
+    color:rgb(233, 76, 29);
+  }

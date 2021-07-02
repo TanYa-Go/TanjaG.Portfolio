@@ -11,10 +11,13 @@ section {
   background-color: white;
 }
 
+.section-reg {
+  background-color: #1c1d25;
+}
 
 .hero {
-  background-color: #1c1d25;
-  height: 100vh;
+  /* background-color: #1c1d25;
+  height: 100vh;  */
   font-size: 30px;
   color: #fafafa;
 }
@@ -69,6 +72,7 @@ li a:hover{
 
 .title-skills{
   margin-top: 80px;
+  color: #1c1d25;
 }
 
 h1 {
@@ -201,6 +205,7 @@ p {
 
 .skill-list {
   display: block;
+  color: #1c1d25;
 }
 
 .skill-list li {
@@ -250,6 +255,13 @@ p {
 .hide {
   display: none;
 }
+
+/*------------------- flash messages ----------*/
+
+.flashes {
+  background-color: black;
+}
+
 
 /* ----------------------------------------Media Queries */
 
