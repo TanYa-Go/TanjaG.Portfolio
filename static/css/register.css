@@ -1,23 +1,23 @@
 body {
-    background-color: black;
+    background-color: #25252c;
 }
 
 .title-register {
     margin-top: 130px;
     color: #fafafa;
-    background-color: black;
+    background-color: #25252c;
   }
   .main-form {
     width: 50%;
     margin: auto;
     margin-top: 30px;
-    padding: 20px 50px;
+    padding: 30px 80px;
     font-size: 30px;
     color: #fafafa;
     border-radius: 36px;
-    background: #48484c;
-    box-shadow: inset 25px 25px 25px #1e1e20,
-              inset -25px -25px 25px #404045;
+    background: linear-gradient(225deg, #28282f, #212128);
+    box-shadow:  -25px 25px 50px #0f0f12,
+                  25px -25px 50px #3b3b46;
   }
   
   
