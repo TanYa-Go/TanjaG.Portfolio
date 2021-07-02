@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
 }
@@ -21,8 +23,8 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 80px;
-  height: 250px;
+  padding: 50px;
+  height: 300px;
 }
 
 nav {
@@ -53,7 +55,7 @@ li {
 }
 
 li a {
-  color: rgb(252, 82, 21);
+  color: rgb(233, 76, 29);
   margin-right: 20px;
 }
 
@@ -112,7 +114,7 @@ p {
   width: 200px;
   height: 55px;
   border-radius: 30px;
-  background-color: rgb(252, 82, 21);
+  background-color: rgb(233, 76, 29);
   text-align: center;
   font-size: 30px;
   font-weight: 300;
@@ -159,7 +161,7 @@ p {
   flex-direction: column;
   text-align: center;
   padding: 50px;
-  background-color: rgb(252, 82, 21);
+  background-color: rgb(233, 76, 29);
 }
 
 
@@ -168,7 +170,7 @@ p {
   height: 100%;
   border-radius: 350px;
   margin-left: 80px;
-  border: 2px solid rgb(252, 82, 21);
+  border: 2px solid rgb(233, 76, 29);
 }
 
 .headshot-container {
@@ -191,7 +193,7 @@ p {
 }
 
 .contact i {
-  color: rgb(252, 82, 21);
+  color: rgb(233, 76, 29);
   font-size: 40px;
 }
 
@@ -212,13 +214,16 @@ p {
 .editBtn {
   font-size: x-large;
   font-weight: 500;
-  color: rgb(252, 82, 21);
+  color: rgb(233, 76, 29);
 }
 
 .editBtn:hover {
   color: #333;
 }
 
+.letters{
+  color: rgb(233, 76, 29);
+}
 
 /* animate letters */
 .ml10 {
@@ -269,7 +274,7 @@ hr {
 
 .project-link {
   text-decoration: none;
-  color: #ef744b;
+  color: rgb(233, 76, 29);
 }
 
 a {

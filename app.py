@@ -25,6 +25,11 @@ def get_skills():
     return render_template("skills.html", skills=skills)
 
 
+@app.route("/about")
+def about():
+    return render_template("base.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
