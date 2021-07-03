@@ -5,7 +5,8 @@
         <li><a href="{{url_for('projects')}}">Projects</a></li>
         <li><a href="{{url_for('skills')}}">Skills</a></li>
         <li><a href="{{url_for('register')}}">Register</a></li>
-        <li><a href="{{url_for('login')}}">Log In</a></li>
+        <li><a href="{{url_for('login')}}">Log&nbsp;In</a></li>
+        <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
     </ul>
     <button class="hamburger" id="hamburger">
         <i class="fas fa-bars"></i>

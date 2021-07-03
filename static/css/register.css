@@ -42,3 +42,16 @@ body {
     font-size: 20px;
     margin-top: 10px;
   }
+
+  .main-form-dash {
+    width: 50%;
+    margin: auto;
+    margin-top: 130px;
+    padding: 30px 80px;
+    font-size: 30px;
+    color: #fafafa;
+    border-radius: 36px;
+    background: linear-gradient(225deg, #28282f, #212128);
+    box-shadow:  -25px 25px 50px #0f0f12,
+                  25px -25px 50px #3b3b46;
+  }

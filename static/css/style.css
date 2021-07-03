@@ -30,24 +30,20 @@ footer {
   height: 300px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
- 
-}
+
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.69);
-  height: 70px;
+  height: 80px;
 }
 
 ul {
   display: flex;
   list-style-type: none;
-  width: 500px;
+  width: 600px;
   justify-content: space-around;
   font-size: 30px;
-  margin-right: 40px;
+  margin-right: 90px;
   
 }
 
@@ -59,7 +55,8 @@ li {
 
 li a {
   color: rgb(233, 76, 29);
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
 }
 
 li a:hover{
