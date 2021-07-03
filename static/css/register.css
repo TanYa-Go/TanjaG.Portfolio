@@ -36,3 +36,9 @@ body {
     border-left: coral;
     border-right: coral;
   }
+
+  .question {
+    color: #fafafa;
+    font-size: 20px;
+    margin-top: 10px;
+  }

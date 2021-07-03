@@ -3,11 +3,11 @@
 
 
 
- <h2 class="title-register text-center">Register</h2>
+ <h2 class="title-register text-center">Log In</h2>
             {% include "components/flash.html" %}
-    <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('register') }}">
+    <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('login') }}">
             <div class="form-group">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user-cog"></i>
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" class="form-control" required>
                 <div class="invalid-feedback">Please enter a valid username.</div>
@@ -17,17 +17,17 @@
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" class="form-control">
             </div>
-            <button type="submit" class="btn  btn-register">Register <i class="fas fa-sign-in-alt"></i></button>
+            <button type="submit" class="btn  btn-register">Log in <i class="fas fa-sign-in-alt"></i></button>
             </div>
         </form>
-   
-        <div class="row">
-            <div class="col-12">
-                <p class="text-center question">
-                    Already have an account? 
-                    <a href="{{ url_for('login') }}">Log In</a>
-                </p>
-            </div>
+     
+    <div class="row">
+        <div class="col-12">
+            <p class="question text-center">
+                Don't have account yet?
+                <a href="{{ url_for('register') }}">Register Account</a>
+            </p>
         </div>
+    </div>
 
 {% endblock %}
