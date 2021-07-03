@@ -259,7 +259,9 @@ p {
 /*------------------- flash messages ----------*/
 
 .flashes {
-  background-color: black;
+  background-color: #25252c;
+  color: rgb(233, 76, 29);
+  
 }
 
 
