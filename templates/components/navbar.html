@@ -4,6 +4,7 @@
         <li><a href="{{url_for('index')}}">Home</a></li>
         <li><a href="{{url_for('projects')}}">Projects</a></li>
         <li><a href="{{url_for('skills')}}">Skills</a></li>
+       
         {% if session.user %}
             <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
             <li><a href="{{url_for('login')}}">Log&nbsp;Out</a></li>

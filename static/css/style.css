@@ -79,6 +79,7 @@ h1 {
 
 h2 {
   font-size: 50px;
+  color: #fafafa;
 }
 
 p {
@@ -109,6 +110,10 @@ p {
   margin-top: 300px;
   margin-left: 80px;
   margin-bottom: 200px;
+}
+
+.hero-text h1 {
+  font-size: 90px;
 }
 
 .button {
