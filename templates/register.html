@@ -4,9 +4,8 @@
 
 
  <h2 class="title-register text-center">Register</h2>
-
-   {% include "components/flash.html" %}
-        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('register') }}">
+            {% include "components/flash.html" %}
+    <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('register') }}">
             <div class="form-group">
                 <i class="fas fa-user"></i>
                 <label for="username">Username</label>

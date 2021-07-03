@@ -58,6 +58,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -16,8 +16,8 @@ section {
 }
 
 .hero {
-  /* background-color: #1c1d25;
-  height: 100vh;  */
+  background-color: #1c1d25;
+  height: 100vh; 
   font-size: 30px;
   color: #fafafa;
 }

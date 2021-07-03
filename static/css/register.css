@@ -29,6 +29,9 @@ body {
   }
 
   .form-control {
-    background-color: #48484c;
+    background-color: #25252c;
     color:rgb(233, 76, 29);
+        border-top:  coral;
+    border-left: coral;
+    border-right: coral;
   }
