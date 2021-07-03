@@ -18,7 +18,7 @@ body {
     border-radius: 36px;
     background: linear-gradient(225deg, #28282f, #212128);
     box-shadow:  -25px 25px 50px #0f0f12,
-                  25px -25px 50px #3b3b46;
+                  25px -25px 50px #4c4c57;
   }
   
   
@@ -32,9 +32,11 @@ body {
   .form-control {
     background-color: #25252c;
     color:rgb(233, 76, 29);
-        border-top:  coral;
-    border-left: coral;
-    border-right: coral;
+    border-top:  #25252c;
+    border-left: #25252c;
+    border-right: #25252c;
+    border-radius: 0px;
+
   }
 
   .question {
@@ -54,4 +56,21 @@ body {
     background: linear-gradient(225deg, #28282f, #212128);
     box-shadow:  -25px 25px 50px #0f0f12,
                   25px -25px 50px #3b3b46;
+  }
+
+
+  /* --- Media Queries -----*/
+  @media only screen and (max-width: 1000px) {
+    .main-form {
+      width: 90%;
+      font-size: 25px;
+  }
+
+  .btn-register {
+    width: 80%;
+  }
+
+  .title-register{
+    font-size: 30px;
+  }
   }
