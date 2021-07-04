@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="text-center title-register">Add Skill</h3>
+    
+
+        {% include "components/flash.html" %}
+        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <i class="fas fa-cog"></i>
+                    <label for="skill_title">Skill Title</label>
+                    <input type="text" name="skill_title" id="skill_title" minlength="5" maxlength="50" 
+                        class="form-control validate" required>
+                   
+                </div>
+                <div class="form-group">
+                    <i class="fas fa-percent"></i>
+                    <label for="skill_percentage">Skill Progress</label>
+                    <input type="number" name="skill_percentage" id="skill_percentage" class="form-control" required>
+                </div>
+                <button type="submit" class="btn  btn-register">Add Skill <i class="fas fa-check"></i></button>
+                </div>
+            </form>
+         
+           
+    {% endblock %}
+    

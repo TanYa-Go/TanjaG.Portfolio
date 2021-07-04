@@ -6,6 +6,7 @@
         <li><a href="{{url_for('skills')}}">Skills</a></li>
        
         {% if session.user %}
+            <li><a href="{{url_for('add_skill')}}">Add&nbsp;Skill</a></li>
             <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
             <li><a href="{{url_for('logout')}}">Log&nbsp;Out</a></li>
             

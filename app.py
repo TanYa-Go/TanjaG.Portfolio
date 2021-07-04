@@ -110,6 +110,10 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add/skill")
+def add_skill():
+    return render_template("add_skill.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
