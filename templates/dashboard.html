@@ -2,15 +2,15 @@
 {% block content %}
 
 
-
-    {% include "components/flash.html" %}
-
-    <div class="main-form-dash col-12 col-lg-8 text-center">
-            <h3 class="text-center">
-                {{ username }}'s Dashboard
-            </h3>
-    </div>
-     
+    
+               
+        <div class="main-form-dash col-12 col-lg-8 text-center">
+            {% include "components/flash.html" %}
+                <h3 class="text-center">
+                    {{ username }}'s Dashboard
+                </h3>
+        </div>
+   
    
 
 {% endblock %}

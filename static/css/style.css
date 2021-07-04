@@ -34,7 +34,7 @@ footer {
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.69);
-  height: 80px;
+  height: 70px;
 }
 
 ul {
@@ -261,7 +261,7 @@ p {
 /*------------------- flash messages ----------*/
 
 .flashes {
-  background-color: #25252c;
+  background: linear-gradient(225deg, #28282f, #212128);
   color: rgb(233, 76, 29);
   
 }
