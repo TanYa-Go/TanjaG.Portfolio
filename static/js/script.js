@@ -9,8 +9,9 @@ hamburgerButton.addEventListener('click', toggleButton)
 
 // borrowed code from https://tobiasahlin.com/moving-letters/#10 to animate letters
 // Wrap every letter in a span
-var textWrapper = document.querySelector('.ml10 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+if (document.querySelector('.ml10 .letters')) {
+   var textWrapper = document.querySelector('.ml10 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({loop: true})
   .add({
@@ -53,4 +54,4 @@ anime.timeline({loop: true})
       console.log('Scroll down')
     }
     scrollval = window.scrollY;
-  });
+  })}
