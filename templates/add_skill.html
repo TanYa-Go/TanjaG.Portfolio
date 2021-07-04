@@ -5,8 +5,9 @@
     
 
         {% include "components/flash.html" %}
-        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="">
+        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('add_skill')}}">
             <div class="dropdown">
+                <!-- category selection -->
                 <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-folder"></i> Category
                 </button>
@@ -16,6 +17,7 @@
                      {% endfor %}
                 </div>
               </div>
+              <!-- category name -->
                 <div class="form-group">
                     <i class="fas fa-cog"></i>
                     <label for="skill_title">Title</label>
@@ -23,11 +25,13 @@
                         class="form-control validate" required>
                    
                 </div>
+                <!-- category progress pecentage -->
                 <div class="form-group">
                     <i class="fas fa-percent"></i>
                     <label for="skill_percentage">Progress</label>
                     <input type="number" name="skill_percentage" id="skill_percentage" class="form-control" required>
                 </div>
+                <!-- submit button -->
                 <button type="submit" class="btn  btn-register">Add Skill <i class="fas fa-check"></i></button>
                 </div>
             </form>

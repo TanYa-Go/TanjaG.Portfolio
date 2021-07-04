@@ -110,8 +110,18 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_skill")
+@app.route("/add_skill", methods=["GET", "POST"])
 def add_skill():
+    if request.method == "POST":
+        skill = {
+            "category_title": request.form.get("category_title"),
+            "skill_title": request.form.get("skill_title"),
+            "skill_percentage": request.form.get("skill_percentage"),
+            "created_by": session["user"]
+        }
+        mongo.db.skills.insert_one(skill)
+        flash("Skill Successfully Added")
+        return redirect(url_for("add_skill"))
     categories = mongo.db.categories.find().sort("category_title", 1)
     return render_template("add_skill.html", categories=categories)
 

@@ -8,17 +8,20 @@
           <div class="container skills-container">
               <div class="row">
                   <div class="col-12 col-md-4">
+                        
+                              <h3>FrontEnd</h3>
+                        
                          <ul class="skill-list">
-                            <h3>Frontend</h3>
-                            {% for skill in skills %}
-                            <li> {{skill.skill_title}}</li>
-                        {% endfor %}
+                          {% for skill in skills %} 
+                              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                              
+                          {% endfor %}
                           </ul>
                     </div>
                   <div class="col-12 col-md-4">
                       
                     <ul class="skill-list">
-                      <h3>Backend</h3>
+                      <h3>BackEnd</h3>
                       {% for skill in skills %}
                       <li> {{skill.skill_title}} </li>
                   {% endfor %}
