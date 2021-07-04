@@ -5,17 +5,27 @@
     
 
         {% include "components/flash.html" %}
-        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('login') }}">
+        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-folder"></i> Category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {% for category in categories %}
+                        <a class="dropdown-item text-center" href="">{{category.category_title}}</a>
+                     {% endfor %}
+                </div>
+              </div>
                 <div class="form-group">
                     <i class="fas fa-cog"></i>
-                    <label for="skill_title">Skill Title</label>
+                    <label for="skill_title">Title</label>
                     <input type="text" name="skill_title" id="skill_title" minlength="5" maxlength="50" 
                         class="form-control validate" required>
                    
                 </div>
                 <div class="form-group">
                     <i class="fas fa-percent"></i>
-                    <label for="skill_percentage">Skill Progress</label>
+                    <label for="skill_percentage">Progress</label>
                     <input type="number" name="skill_percentage" id="skill_percentage" class="form-control" required>
                 </div>
                 <button type="submit" class="btn  btn-register">Add Skill <i class="fas fa-check"></i></button>

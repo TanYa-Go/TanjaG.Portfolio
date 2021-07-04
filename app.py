@@ -110,9 +110,11 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add/skill")
+@app.route("/add_skill")
 def add_skill():
-    return render_template("add_skill.html")
+    categories = mongo.db.categories.find().sort("category_title", 1)
+    return render_template("add_skill.html", categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
