@@ -7,7 +7,7 @@
        
         {% if session.user %}
             <li><a href="{{ url_for('dashboard', username=session['user']) }}">Dashboard</a></li>
-            <li><a href="{{url_for('login')}}">Log&nbsp;Out</a></li>
+            <li><a href="{{url_for('logout')}}">Log&nbsp;Out</a></li>
             
         {% else %}
             <li><a href="{{url_for('register')}}">Register</a></li>

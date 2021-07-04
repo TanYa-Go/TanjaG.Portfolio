@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 
 @app.route("/skills")
 def skills():
-    skills = mongo.db.skills.find()
+    skills = list(mongo.db.skills.find())
     return render_template("skills.html", skills=skills)
 
 
@@ -106,7 +106,7 @@ def dashboard(username):
 def logout():
     # remove user from session cookie
     flash("You have been logged out")
-    session.clear()
+    session.pop("user")
     return redirect(url_for("login"))
 
 
