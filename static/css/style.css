@@ -68,8 +68,10 @@ li a:hover{
 }
 
 .title-skills{
-  margin-top: 80px;
+  margin-top: 70px;
   color: #1c1d25;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 h1 {

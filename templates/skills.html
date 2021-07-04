@@ -4,24 +4,38 @@
       
         <section class="skills section" id="skills">
           <h2 class="text-center title-skills">Skills</h2>
-           <div class="accordion" id="accordionExample">
-             <div class="card">
-                 <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    
-                    <button class="btn btn-link editBtn btn-block text-center" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <i class="fas fa-desktop"></i>  <i class="fas fa-caret-down"></i>
-                    </button>
-                  </h2>
+           
+          <div class="container skills-container">
+              <div class="row">
+                  <div class="col-12 col-md-4">
+                         <ul class="skill-list">
+                            <h3>Frontend</h3>
+                            {% for skill in skills %}
+                            <li> {{skill.skill_title}}</li>
+                        {% endfor %}
+                          </ul>
+                    </div>
+                  <div class="col-12 col-md-4">
+                      
+                    <ul class="skill-list">
+                      <h3>Backend</h3>
+                      {% for skill in skills %}
+                      <li> {{skill.skill_title}} </li>
+                  {% endfor %}
+                    </ul>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <ul class="skill-list">
+                      <h3>Libraries & Frameworks</h3>
+                      {% for skill in skills %}
+                      <li> {{skill.skill_title}} </li>
+                  {% endfor %}
+                    </ul>
                 </div>
-            
-                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                    {% for skill in skills %}
-                      <ul class="skill-list">
-                         <li> {{skill.skill_title}} : {{ skill_percentage}}</li>
-                    {% endfor %}
-                      </ul>
-                
-    </section>
+              </div>
+        </div>
+  
+        
+          </section>
 {% endblock %}
