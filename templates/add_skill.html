@@ -6,9 +6,9 @@
 
         {% include "components/flash.html" %}
         <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('add_skill')}}">
-            <div class="dropdown">
-                <!-- category selection -->
-                <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            
+           <div class="dropdown">
+               <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-folder"></i> Category
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -17,6 +17,7 @@
                      {% endfor %}
                 </div>
               </div>
+            
               <!-- category name -->
                 <div class="form-group">
                     <i class="fas fa-cog"></i>
@@ -32,7 +33,9 @@
                     <input type="number" name="skill_percentage" id="skill_percentage" class="form-control" required>
                 </div>
                 <!-- submit button -->
-                <button type="submit" class="btn  btn-register">Add Skill <i class="fas fa-check"></i></button>
+                <button type="submit" class="btn  btn-register"><i class="fas fa-check"></i> Add Skill </button><br>
+                 <!-- cancel button -->   
+                  <a href="{{ url_for('dashboard', username=session['user']) }}" class="register-cancel"><i class="fas fa-times"></i> Cancel <i class="fas fa-cancel"></i></a>
                 </div>
             </form>
          
