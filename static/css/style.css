@@ -69,9 +69,9 @@ li a:hover{
 
 .title-skills{
   margin-top: 70px;
-  color: #1c1d25;
+  color: rgb(233, 76, 29);
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
 h1 {
@@ -207,9 +207,20 @@ p {
 
 /* ----------------------------------------Skills */
 
+
+.category-title {
+  color: rgb(233, 76, 29);
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  background: linear-gradient(225deg, #28282f, #212128);
+  margin-top: 100px;
+}
+
 .skill-list {
   display: block;
-  color: #1c1d25;
+  color: rgb(233, 76, 29);
 }
 
 .skill-list li {

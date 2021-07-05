@@ -2,8 +2,7 @@
 {% block content %}
 
 
-    
-               
+                   
         <div class="main-form-dash col-12 col-lg-8 text-center">
             {% include "components/flash.html" %}
                 <h3 class="text-center">
@@ -11,6 +10,25 @@
                 </h3>
         </div>
    
+        <div class="main-form-dash-add col-12 col-lg-3 offset-2 text-center">
+             <h3 class="text-center">
+                    <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> &nbsp;Add Skill </a>
+                </h3>
+        </div>
+
+        <div class="main-form-dash-add col-12 col-lg-3 text-center">
+            <h3 class="text-center">
+                   <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> &nbsp;Add Project </a>
+               </h3>
+       </div>
+
+       <div class="main-form-dash-add col-12 col-lg-3 text-center">
+        <h3 class="text-center">
+               <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i>&nbsp;Add Testimonial </a>
+           </h3>
+   </div>
+
+  
    
 
 {% endblock %}
