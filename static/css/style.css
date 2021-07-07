@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+#background-img {
+  background-image: url("/static/images/prism.png");
+  background-color: #1c1d25;
+}
+
 section {
   background-color: white;
 }
@@ -33,7 +38,7 @@ footer {
 
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.69);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 70px;
 }
 
@@ -158,9 +163,9 @@ p {
 }
 
 .sub-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 80px;
+  /* display: flex;
+  justify-content: space-around; */
+  padding: 60px;
  
 }
 
