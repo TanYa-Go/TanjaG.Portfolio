@@ -5,7 +5,7 @@ body {
 .title-register {
     margin-top: 130px;
     color: #fafafa;
-    background: linear-gradient(225deg, #28282f, #212128);
+    /* background: linear-gradient(225deg, #28282f, #212128); */
     margin-bottom: 20px;
   }
   .main-form {
@@ -17,8 +17,8 @@ body {
     color: #fafafa;
     border-radius: 36px;
     background: linear-gradient(225deg, #28282f, #212128);
-    box-shadow:  -25px 25px 50px #0f0f12,
-                  25px -25px 50px #4c4c57;
+    box-shadow:  -25px 25px 25px #0f0f12,
+                  25px -25px 25px #43434d;
   }
   
   
@@ -58,10 +58,13 @@ body {
     color: #fafafa;
     border-radius: 36px;
     background: linear-gradient(225deg, #28282f, #212128);
-    box-shadow:  -25px 25px 50px #0f0f12,
-                  25px -25px 50px #3b3b46;
+    box-shadow:  -15px 15px 15px #0f0f12,
+                  15px -15px 15px #3b3b46;
   }
-
+  
+#link-color a {
+  color:rgb(233, 76, 29);
+}
 
   /* --- Media Queries -----*/
   @media only screen and (max-width: 1000px) {

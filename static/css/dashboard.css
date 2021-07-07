@@ -4,8 +4,8 @@
 
 .main-form-dash-add {
     width: 50%;
-    margin: auto;
-    margin-top: 30px;
+    margin:auto;
+    margin-top: 40px;
     padding: 30px 50px;
     font-size: 30px;
     color: #fafafa;
@@ -17,7 +17,7 @@
 
 
   .fa-plus {
-      color: rgb(233, 76, 29);;
+      color: rgb(233, 76, 29);
   }
 
   @media only screen and (max-width: 1000px) {
