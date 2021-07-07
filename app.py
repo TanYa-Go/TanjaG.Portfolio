@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/skills")
 def skills():
     skills = list(mongo.db.skills.find())
-    return render_template("skills.html", skills=skills)
+    return render_template("index.html/", skills=skills)
 
 
 @app.route("/")

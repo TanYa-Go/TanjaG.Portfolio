@@ -39,8 +39,8 @@
             </a></div>
     </div>
 </div>
-
 </section>
+
 <!-- About Me -->
 <section class="sub-section" id="about-me">
 <div class="row">
@@ -57,6 +57,37 @@
         combine to create
         a great user experience.
     </p>
+<!--skills-->
+<div class="container skills-container">
+    <h2 class="text-center title-skills">Skills</h2>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <h3 class="category-title">Category Title</h3>
+            <ul class="skill-list">
+              {% for skill in skills %}
+              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3 class="category-title">Category Title</h3>
+            <ul class="skill-list">
+              {% for skill in skills %}
+              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="col-12 col-md-4">
+            <h3 class="category-title">Category Title</h3>
+            <ul class="skill-list">
+              {% for skill in skills %}
+              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+              {% endfor %}
+            </ul>
+          </div>
+    </div>
+</div>
+<!--end skills-->
 </div>
 <div class="col-12 col-md-4 headshot-container">
     <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
@@ -107,39 +138,8 @@
     </div>
 </section>
 
-<!-- Skills -->
-<section class="container skills-container">
-    <h2 class="text-center title-skills">Skills</h2>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <h3 class="category-title">Category Title</h3>
-                <ul class="skill-list">
-                {% for skill in skills %}
-                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="col-12 col-md-4">
-                <h3 class="category-title">Category Title</h3>
-                <ul class="skill-list">
-                {% for skill in skills %}
-                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="col-12 col-md-4">
-                <h3 class="category-title">Category Title</h3>
-                <ul class="skill-list">
-                {% for skill in skills %}
-                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                {% endfor %}
-                </ul>
-        </div>
-</div>
-</section>
 
 
 
-
-
+{% include "components/footer.html" %}
 {% endblock %}
