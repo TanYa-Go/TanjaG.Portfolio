@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- <section id="background-img"> -->
-<div class="hero-area">
+
+<div class="hero-area" id="hello">
             
     <div class="hero-text">
         <h2>Hello, I'm</h2>
@@ -41,7 +41,7 @@
 </div>
 
 </section>
-
+<!-- About Me -->
 <section class="sub-section" id="about-me">
 <div class="row">
 <div class="col-12 col-md-7 information">
@@ -64,5 +64,82 @@
 </div>
 </div>
 </section>
-<!-- </section> -->
+
+<!-- Projects -->
+<section class="sub-section-alternative" id="projects">
+    <h2 class="title">Projects</h2><br>
+    <div class="project-container">
+        <div class="project-card">
+            <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
+                alt="Project One Image" />
+
+            <h3>Eleventh Embodiment</h3><br>
+            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+            <hr />
+            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View
+                    here</a></p>
+        </div>
+        <div class="project-card">
+            <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
+                alt="Project Two Image" />
+            <h3>Movie Trivia Extravaganza</h3>
+            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+            <hr />
+            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/" target="_blank">View here</a>
+            </p>
+        </div>
+        <div class="project-card">
+            <img class="project-image" src="{{ url_for('static', filename ='images/projectThree.jpg') }}"
+                alt="Project Three Image" />
+            <h3>Project Three</h3>
+            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+            <hr />
+            <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+        </div>
+        <div class="project-card">
+            <img class="project-image" src="{{ url_for('static', filename ='images/projectFour.png') }}"
+                alt="Project Four Image" />
+            <h3>Project Four</h3>
+            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+            <hr />
+            <p class="subtext"><a class="project-link" href="https://www.github.com/">View here</a></p>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section class="container skills-container">
+    <h2 class="text-center title-skills">Skills</h2>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <h3 class="category-title">Category Title</h3>
+                <ul class="skill-list">
+                {% for skill in skills %}
+                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3 class="category-title">Category Title</h3>
+                <ul class="skill-list">
+                {% for skill in skills %}
+                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col-12 col-md-4">
+                <h3 class="category-title">Category Title</h3>
+                <ul class="skill-list">
+                {% for skill in skills %}
+                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                {% endfor %}
+                </ul>
+        </div>
+</div>
+</section>
+
+
+
+
+
 {% endblock %}

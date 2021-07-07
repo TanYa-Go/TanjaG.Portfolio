@@ -12,9 +12,9 @@ body {
   background-color: #1c1d25;
 }
 
-section {
+/* section {
   background-color: white;
-}
+} */
 
 .section-reg {
   background-color: #1c1d25;
@@ -25,14 +25,6 @@ section {
   height: 100vh; 
   font-size: 30px;
   color: #fafafa;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 50px;
-  height: 300px;
 }
 
 
@@ -163,8 +155,8 @@ p {
 }
 
 .sub-section {
-  /* display: flex;
-  justify-content: space-around; */
+  display: flex;
+  justify-content: space-around;
   padding: 60px;
  
 }
@@ -205,10 +197,7 @@ p {
   justify-content: space-around;
 }
 
-.contact i {
-  color: rgb(233, 76, 29);
-  font-size: 40px;
-}
+
 
 /* ----------------------------------------Skills */
 
@@ -219,8 +208,7 @@ p {
 }
 
 .skills-container {
-  background: linear-gradient(225deg, #28282f, #212128);
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .skill-list {
@@ -276,6 +264,35 @@ p {
   display: none;
 }
 
+/* -- Footer --*/
+footer {
+  background-color:rgb(233, 76, 29);
+  color: #333;
+  text-align: center;
+  padding: 35px;
+  height: 280px;
+}
+
+.contact i {
+  color:#fafafa;
+  font-size: 35px;
+  text-shadow: 5px 5px 5px #333;
+}
+
+.contact a {
+  color:#333;
+}
+
+.contact-title {
+  color: #333;
+  text-shadow: 2px 2px 2px #5e5b5b;
+}
+
+.contact p {
+  font-weight: 500;
+}
+
+
 /* ---- Add skills page--*/
 
 .dropdown button {
@@ -304,8 +321,7 @@ p {
 /*------------------- flash messages ----------*/
 
 .flashes {
-  background: linear-gradient(225deg, #28282f, #212128);
-  color: rgb(233, 76, 29);
+   color: rgb(233, 76, 29);
   
 }
 
