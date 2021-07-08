@@ -19,16 +19,17 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/skills")
-def skills():
-    skills = list(mongo.db.skills.find())
-    return render_template("index.html/", skills=skills)
+# @app.route("/skills")
+# def skills():
+#     skills = list(mongo.db.skills.find())
+#     return render_template("index.html/", skills=skills)
 
 
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    skills = list(mongo.db.skills.find())
+    return render_template("index.html", skills=skills)
 
 
 @app.route("/projects")

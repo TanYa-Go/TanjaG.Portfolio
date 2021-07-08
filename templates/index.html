@@ -47,7 +47,7 @@
         <div class="col-12 col-md-4 information">
             <h2 class="title">About Me</h2><br>
                 <p>Hello! My name is Tanja.  I enjoy creating beautiful websites and apps.
-                    I'm a skilled Full Stack Developer with a wealth of diverse life and technical experience that I bring
+                    I'm a Full Stack Developer with a diverse life and technical experience that I bring
                     to every project.
                     I work quickly and effectively in getting things built and working across the stack. I'm an excellent
                     communicator who
@@ -59,18 +59,18 @@
                 </p>
         </div>
 
-        <div class="col-12 col-md-4 headshot-container">
+        <div class="col-12 col-md-3 headshot-container">
             <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
                 alt="Tanja Godinic headshot" />
         </div>
 
 <!--skills-->
 <div class="col-md-4">
-    <div class="container skills-container">
+    <div class="container skills-container text-center">
         <h2 class="text-center title-skills">Skills</h2>
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <h3 class="category-title">Category Title</h3>
+                    <h3 class="category-title ">Category Title</h3>
                         <ul class="skill-list">
                          {% for skill in skills %}
                         <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-12 col-md-4">
                     <h3 class="category-title">Category Title</h3>
                         <ul class="skill-list">
@@ -99,19 +99,18 @@
                         {% endfor %}
                         </ul>
                 </div>
-            </div>
+            </div> -->
     </div>
 </div>
-<!--end skills-->
-
-
 </div>
 </section>
 
 <!-- Projects -->
+
 <section class="sub-section-alternative" id="projects">
-    <h2 class="title">Projects</h2><br>
-    <div class="project-container">
+    <h2 class="title">My Projects</h2>
+    
+        <div class="project-container">
         <div class="project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
                 alt="Project One Image" />
@@ -119,8 +118,8 @@
             <h3>Eleventh Embodiment</h3><br>
             <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
             <hr />
-            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View
-                    here</a></p>
+            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View here</a></p>
+            <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p>
         </div>
         <div class="project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"

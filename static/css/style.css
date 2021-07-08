@@ -63,8 +63,9 @@ li a:hover{
 
 
 .title {
-  margin-top: 20px;
+  margin-top: 5px;
   color: #333;
+  
 }
 
 .title-skills{
@@ -170,7 +171,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   background-color: rgb(233, 76, 29);
 }
 
@@ -235,7 +236,7 @@ p {
 .editBtn {
   font-size: x-large;
   font-weight: 500;
-  color: rgb(233, 76, 29);
+  color: green;
 }
 
 .editBtn:hover {
