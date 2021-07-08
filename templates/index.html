@@ -44,55 +44,67 @@
 <!-- About Me -->
 <section class="sub-section" id="about-me">
 <div class="row">
-<div class="col-12 col-md-7 information">
-    <h2 class="title">About Me</h2><br>
-    <p>Hello! My name is Tanja.  I enjoy creating beautiful websites and apps.
-        I'm a skilled Full Stack Developer with a wealth of diverse life and technical experience that I bring
-        to every project.
-        I work quickly and effectively in getting things built and working across the stack. I'm an excellent
-        communicator who
-        thrives in bright and enthusiastic teams and I'm aslo a self starter when working solo. I follow form as
-        well as function.
-        I know that the aesthetics of effective design combined with application speed, security and reliability
-        combine to create
-        a great user experience.
-    </p>
+        <div class="col-12 col-md-4 information">
+            <h2 class="title">About Me</h2><br>
+                <p>Hello! My name is Tanja.  I enjoy creating beautiful websites and apps.
+                    I'm a skilled Full Stack Developer with a wealth of diverse life and technical experience that I bring
+                    to every project.
+                    I work quickly and effectively in getting things built and working across the stack. I'm an excellent
+                    communicator who
+                    thrives in bright and enthusiastic teams and I'm aslo a self starter when working solo. I follow form as
+                    well as function.
+                    I know that the aesthetics of effective design combined with application speed, security and reliability
+                    combine to create
+                    a great user experience.
+                </p>
+        </div>
+
+        <div class="col-12 col-md-4 headshot-container">
+            <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
+                alt="Tanja Godinic headshot" />
+        </div>
+
 <!--skills-->
-<div class="container skills-container">
-    <h2 class="text-center title-skills">Skills</h2>
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <h3 class="category-title">Category Title</h3>
-            <ul class="skill-list">
-              {% for skill in skills %}
-              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="col-12 col-md-4">
-            <h3 class="category-title">Category Title</h3>
-            <ul class="skill-list">
-              {% for skill in skills %}
-              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="col-12 col-md-4">
-            <h3 class="category-title">Category Title</h3>
-            <ul class="skill-list">
-              {% for skill in skills %}
-              <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-              {% endfor %}
-            </ul>
-          </div>
+<div class="col-md-4">
+    <div class="container skills-container">
+        <h2 class="text-center title-skills">Skills</h2>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3 class="category-title">Category Title</h3>
+                        <ul class="skill-list">
+                         {% for skill in skills %}
+                        <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                        {% endfor %}
+                        </ul>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3 class="category-title">Category Title</h3>
+                        <ul class="skill-list">
+                        {% for skill in skills %}
+                        <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                        {% endfor %}
+                        </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3 class="category-title">Category Title</h3>
+                        <ul class="skill-list">
+                        {% for skill in skills %}
+                        <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                        {% endfor %}
+                        </ul>
+                </div>
+            </div>
     </div>
 </div>
 <!--end skills-->
-</div>
-<div class="col-12 col-md-4 headshot-container">
-    <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
-        alt="Tanja Godinic headshot" />
-</div>
+
+
 </div>
 </section>
 
@@ -138,6 +150,40 @@
     </div>
 </section>
 
+<!-- Testimonials-->
+
+ <!-- Three columns of text below the carousel -->
+<section id="testimonials">
+        <div class="row text-center">
+            <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+            <h3>Jim Beam</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore hic esse consequatur deserunt, expedita eos neque cum! Est, ab.</p>
+            
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+            <h3>Johnny Walker</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, distinctio fuga officiis adipisci neque.</p>
+           
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+            <h3>Jack Daniels</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure expedita quod quidem in molestias? Dolorem cupiditate excepturi architecto atque reprehenderit?</p>
+            
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
 
 
 

@@ -1,9 +1,10 @@
 <nav class="navbar fixed-top" id="navbar">
-    <img class="logo" src="{{ url_for('static', filename ='images/#') }}" alt="" />
+    <!-- <img class="logo" src="{{ url_for('static', filename ='images/#') }}" alt="" /> -->
     <ul id="nav-list">
-        <li><a href="{{ url_for('.index', _anchor='hello') }}">Home</a></li>
+        <li><a href="{{ url_for('.index', _anchor='hello') }}" >Home</a></li>
         <li><a href="{{ url_for('.index', _anchor='about-me') }}">About&nbsp;Me</a></li>
         <li><a href="{{ url_for('.index', _anchor='projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('.index', _anchor='testimonials') }}">Testimonials</a></li>
         <li><a href="{{ url_for('.index', _anchor='contact-me') }}">Contact</a></li>
        
         {% if session.user %}
