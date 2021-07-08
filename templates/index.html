@@ -3,16 +3,22 @@
 
 
 <div class="hero-area" id="hello">
-            
-    <div class="hero-text">
-        <h2>Hello, I'm</h2>
-        <h1 class="ml10">
-            <span class="text-wrapper">
-                     <span class="letters">Tanja Godinic<br></h1></span>
-            <h2>Full Stack Software Developer</h2></span>
-           
-        <div class="button"><a href="#about-me">About Me</a></div>
-    </div>
+       
+            <div class="hero-text">
+                <h2>Hello, I'm</h2>
+                <h1 class="ml10">
+                    <span class="text-wrapper">
+                            <span class="letters">Tanja Godinic<br></h1></span>
+                    <h2>Full Stack Software Developer</h2></span>
+                
+                <div class="button"><a href="#about-me">About Me</a></div>
+            </div>
+
+            <div class="col-12 col-md-3 headshot-container">
+                <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
+                    alt="Tanja Godinic headshot" />
+            </div>
+          
     <div class="socials">
         <div><a href="https://www.twitter.com" class="social" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40"
@@ -42,9 +48,9 @@
 </section>
 
 <!-- About Me -->
-<section class="sub-section" id="about-me">
+<section class="sub-section container" id="about-me">
 <div class="row">
-        <div class="col-12 col-md-4 information">
+        <div class="col-12 col-md-6 information">
             <h2 class="title">About Me</h2><br>
                 <p>Hello! My name is Tanja.  I enjoy creating beautiful websites and apps.
                     I'm a Full Stack Developer with a diverse life and technical experience that I bring
@@ -59,93 +65,88 @@
                 </p>
         </div>
 
-        <div class="col-12 col-md-3 headshot-container">
+        <!-- <div class="col-12 col-md-3 headshot-container">
             <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
                 alt="Tanja Godinic headshot" />
-        </div>
+        </div> -->
 
 <!--skills-->
-<div class="col-md-4">
-    <div class="container skills-container text-center">
-        <h2 class="text-center title-skills">Skills</h2>
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <h3 class="category-title ">Category Title</h3>
-                        <ul class="skill-list">
-                         {% for skill in skills %}
-                        <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                        {% endfor %}
-                        </ul>
-                </div>
+        <div class="col-md-6">
+            <div class="container skills-container text-center">
+                <h2 class="text-center title-skills">Skills</h2>
+                    <div class="row">
+                       <div class="col-12 col-md-4">
+                            <h3 class="category-title ">Category Title</h3>
+                                <ul class="skill-list">
+                                {% for skill in skills %}
+                                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                                {% endfor %}
+                                </ul>
+                        </div>
+                                            
+                        <div class="col-12 col-md-4">
+                            <h3 class="category-title">Category Title</h3>
+                                <ul class="skill-list">
+                                {% for skill in skills %}
+                                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                                {% endfor %}
+                                </ul>
+                        </div>
+                    
+                        <div class="col-12 col-md-4">
+                            <h3 class="category-title">Category Title</h3>
+                                <ul class="skill-list">
+                                {% for skill in skills %}
+                                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                                {% endfor %}
+                                </ul>
+                        </div>
+                    </div>
             </div>
-            
-            <!-- <div class="row">
-                <div class="col-12 col-md-4">
-                    <h3 class="category-title">Category Title</h3>
-                        <ul class="skill-list">
-                        {% for skill in skills %}
-                        <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                        {% endfor %}
-                        </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <h3 class="category-title">Category Title</h3>
-                        <ul class="skill-list">
-                        {% for skill in skills %}
-                        <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                        {% endfor %}
-                        </ul>
-                </div>
-            </div> -->
-    </div>
-</div>
+        </div>            
 </div>
 </section>
 
 <!-- Projects -->
 
-<section class="sub-section-alternative" id="projects">
-    <h2 class="title">My Projects</h2>
-    
-        <div class="project-container">
-        <div class="project-card">
-            <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
-                alt="Project One Image" />
+<section class="sub-section-alternative " id="projects">
+    <div class="container project-container">
+        <h2 class="title">My Projects</h2>
+                <div class="project-card">
+                        <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
+                            alt="Project One Image" />
 
-            <h3>Eleventh Embodiment</h3><br>
-            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
-            <hr />
-            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View here</a></p>
-            <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p>
-        </div>
-        <div class="project-card">
-            <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
-                alt="Project Two Image" />
-            <h3>Movie Trivia Extravaganza</h3>
-            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
-            <hr />
-            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/" target="_blank">View here</a>
-            </p>
-        </div>
-        <div class="project-card">
-            <img class="project-image" src="{{ url_for('static', filename ='images/projectThree.jpg') }}"
-                alt="Project Three Image" />
-            <h3>Project Three</h3>
-            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
-            <hr />
-            <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
-        </div>
-        <div class="project-card">
-            <img class="project-image" src="{{ url_for('static', filename ='images/projectFour.png') }}"
-                alt="Project Four Image" />
-            <h3>Project Four</h3>
-            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
-            <hr />
-            <p class="subtext"><a class="project-link" href="https://www.github.com/">View here</a></p>
-        </div>
+                        <h3>Eleventh Embodiment</h3><br>
+                        <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+                        <hr />
+                        <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View here</a></p>
+                        <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p>
+                </div>
+                <div class="project-card">
+                        <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
+                            alt="Project Two Image" />
+                        <h3>Movie Trivia Extravaganza</h3>
+                        <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+                        <hr />
+                        <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/" target="_blank">View here</a>
+                        </p>
+                </div>
+                <div class="project-card">
+                        <img class="project-image" src="{{ url_for('static', filename ='images/projectThree.jpg') }}"
+                            alt="Project Three Image" />
+                        <h3>Project Three</h3>
+                        <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+                        <hr />
+                        <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
+                </div>
+                <div class="project-card">
+                        <img class="project-image" src="{{ url_for('static', filename ='images/projectFour.png') }}"
+                            alt="Project Four Image" />
+                        <h3>Project Four</h3>
+                        <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+                        <hr />
+                        <p class="subtext"><a class="project-link" href="https://www.github.com/">View here</a></p>
+                </div>
     </div>
 </section>
 
