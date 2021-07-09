@@ -171,21 +171,21 @@ p {
 }
 
 .sub-section {
-  margin-right: 30px;
+  margin-right: 80px;
   padding: 60px;
   background-color: #fafafa;
   border-radius: 20px;
   margin-bottom: 100px;
  
 }
-/* 
+
 .sub-section-alternative {
-  /* display: flex;
-  flex-direction: column; */
-  /* text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   padding: 20px;
   background-color: rgb(233, 76, 29);
-} */ 
+} 
 
 
 .headshot {
@@ -204,8 +204,8 @@ p {
 /* --Projects --*/
 
 .project-card {
-  width: 250px;
-  height: 300px;
+  width: 200px;
+  height: 350px;
   box-shadow: 5px 5px 20px black;
   margin: 10px;
   background-color: #fafafa;
@@ -213,15 +213,24 @@ p {
 }
 
 .project-container {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(233, 76, 29);
+  margin-left: 60px;
 }
 
-.hr-small {
+.hr-red {
   border: 1px solid rgb(233, 76, 29);
+  width: 220px;
+  margin: 20px 0px
+
+}
+
+.hr-black {
+  border: 1px solid #333;
   width: 220px;
   margin: 20px 0px
 
@@ -268,6 +277,18 @@ p {
 }
 
 /* -- testimonials -- */
+
+/*-- Testimonials ---*/
+
+.testimonials-container {
+  margin-right: 80px;
+  padding: 60px;
+  background-color: #fafafa;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+
+}
 
 #testimonials {
   padding: 70px 40px;
@@ -316,17 +337,22 @@ p {
   display: none;
 }
 
+
+
 /* -- Footer --*/
 footer {
-  background-image: url("/static/images/prism.png");
-  background-color: #1c1d25;
+  /* background-image: url("/static/images/prism.png"); */
+  
   color: rgb(233, 76, 29);
   text-align: center;
   padding: 35px;
   height: auto;
 }
   
+.contact-container {
+  background-color: rgba(0, 0, 0, 0.8);
 
+}
 
 .contact i {
   color:#fafafa;
@@ -389,11 +415,12 @@ footer {
       display: flex;
       flex-wrap: wrap;
   }
-}
 
+}
 .project-image {
-  margin-top: 25px;
-  width: 150px;
+  width: 100%;
+  margin-top: 15px;
+  /* width: 200px; */
   margin-bottom: 20px;
   
 }
