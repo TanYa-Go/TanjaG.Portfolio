@@ -14,11 +14,7 @@
                 <div class="button"><a href="#about-me">About Me</a></div>
             </div>
 
-            <div class="col-12 col-md-3 headshot-container">
-                <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
-                    alt="Tanja Godinic headshot" />
-            </div>
-          
+                     
     <div class="socials">
         <div><a href="https://www.twitter.com" class="social" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40"
@@ -50,8 +46,15 @@
 <!-- About Me -->
 <section class="sub-section container" id="about-me">
 <div class="row">
-        <div class="col-12 col-md-6 information">
-            <h2 class="title">About Me</h2><br>
+
+    <div class="col-12 col-md-5 headshot-container">
+        <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
+            alt="Tanja Godinic headshot" />
+    </div>
+
+        <div class="col-12 col-md-6 offset-md-1 information">
+            <h2 class="title">About Me</h2>
+            <hr class="hr-small">
                 <p>Hello! My name is Tanja.  I enjoy creating beautiful websites and apps.
                     I'm a Full Stack Developer with a diverse life and technical experience that I bring
                     to every project.
@@ -65,13 +68,11 @@
                 </p>
         </div>
 
-        <!-- <div class="col-12 col-md-3 headshot-container">
-            <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
-                alt="Tanja Godinic headshot" />
-        </div> -->
+        
+</div>
 
 <!--skills-->
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
             <div class="container skills-container text-center">
                 <h2 class="text-center title-skills">Skills</h2>
                     <div class="row">
@@ -104,7 +105,7 @@
                     </div>
             </div>
         </div>            
-</div>
+</div> -->
 </section>
 
 <!-- Projects -->
