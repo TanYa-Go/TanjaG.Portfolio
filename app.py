@@ -29,7 +29,9 @@ mongo = PyMongo(app)
 @app.route("/index")
 def index():
     skills = list(mongo.db.skills.find())
-    return render_template("index.html", skills=skills)
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("index.html", skills=skills, username=username)
 
 
 @app.route("/projects")
@@ -114,17 +116,35 @@ def logout():
 @app.route("/add_skill", methods=["GET", "POST"])
 def add_skill():
     if request.method == "POST":
+        files = request.files
+        if 'image' not in files:
+            return 'no image'
+        image = files['image']
+        path = f'static/uploads/{image.filename}'
+        image.save(path)
+
         skill = {
             "category_title": request.form.get("category_title"),
             "skill_title": request.form.get("skill_title"),
             "skill_percentage": request.form.get("skill_percentage"),
-            "created_by": session["user"]
+            "image_path": path,
         }
         mongo.db.skills.insert_one(skill)
         flash("Skill Successfully Added")
         return redirect(url_for("add_skill"))
+
     categories = mongo.db.categories.find().sort("category_title", 1)
     return render_template("add_skill.html", categories=categories)
+
+
+@app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
+def edit_skill(skill_id):
+    skill = mongo.db.skills.find_one({"_id": ObjectId(skill_id)})
+    print('skill', skill)
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "edit_skill.html", skill=skill, categories=categories)
 
 
 if __name__ == "__main__":

@@ -1,23 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="text-center title-register">Add Skill</h2>
+    <h2 class="text-center title-register">Edit Skill</h2>
     
 
         {% include "components/flash.html" %}
-        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('add_skill')}}" enctype="multipart/form-data">
+        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('edit_skill', skill_id='skill._id')}}">
             
            <div class="dropdown">
-               <!-- <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-folder"></i> Category
-                </button> -->
-                
-                <select name="category_title">
-                    <option disabled selected>Category</option>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {% for category in categories %}
-                        <option class="" value="{{category.category_title}}">{{category.category_title}}</option>
+                        <a class="dropdown-item text-center" href="">{{category.category_title}}</a>
                      {% endfor %}
-                </select>
+                </div>
               </div>
             
               <!-- category name -->
@@ -28,15 +26,14 @@
                         class="form-control validate" required>
                    
                 </div>
-               
-                <!-- image -->
+                <!-- category progress pecentage -->
                 <div class="form-group">
-                    <i class=""></i>
-                    <label for="image">Image</label>
-                    <input type="file" name="image" id="image" class="form-control" required>
+                    <i class="fas fa-percent"></i>
+                    <label for="skill_percentage">Progress</label>
+                    <input type="number" name="skill_percentage" id="skill_percentage" class="form-control" required>
                 </div>
                 <!-- submit button -->
-                <button type="submit" class="btn  btn-register"><i class="fas fa-check"></i> Add Skill </button><br>
+                <button type="submit" class="btn  btn-register"><i class="fas fa-check"></i> Save </button><br>
                  <!-- cancel button -->   
                   <a href="{{ url_for('dashboard', username=session['user']) }}" class="register-cancel"><i class="fas fa-times"></i> Cancel <i class="fas fa-cancel"></i></a>
                 </div>

@@ -72,40 +72,72 @@
 </div>
 
 <!--skills-->
-        <!-- <div class="col-md-6">
+        <div class="col-md-6">
             <div class="container skills-container text-center">
                 <h2 class="text-center title-skills">Skills</h2>
                     <div class="row">
-                       <div class="col-12 col-md-4">
-                            <h3 class="category-title ">Category Title</h3>
-                                <ul class="skill-list">
-                                {% for skill in skills %}
-                                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
-                                {% endfor %}
-                                </ul>
-                        </div>
-                                            
+                                                               
                         <div class="col-12 col-md-4">
-                            <h3 class="category-title">Category Title</h3>
+                            <h3 class="category-title">Frontend</h3>
                                 <ul class="skill-list">
                                 {% for skill in skills %}
-                                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                                    {% if skill.category_title == "Frontend" %}
+                                    <li data-id="{{skill._id}}">
+                                        <img src={{skill.image_path}} width="20" height="20">
+                                        {{skill.skill_title}}
+                                        {% if username == 'meadmin' %}
+                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i> Edit </a>
+                                        {% endif %}
+                                    </li>
+                                    <br>
+                                    {% endif %}
                                 {% endfor %}
                                 </ul>
                         </div>
                     
                         <div class="col-12 col-md-4">
-                            <h3 class="category-title">Category Title</h3>
+                            <h3 class="category-title">Backend</h3>
                                 <ul class="skill-list">
                                 {% for skill in skills %}
-                                <li> {{skill.skill_title}}: {{skill.skill_percentage}}%</li>
+                                    {% if skill.category_title == "Backend" %}
+                                    <li data-id="{{skill._id}}">
+                                        <img src={{skill.image_path}} width="20" height="20">
+                                        {{skill.skill_title}}
+                                        <br>
+                                        {% if username == 'meadmin' %}
+                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i> Edit </a>
+                                        {% endif %}
+                                    </li>
+                                    <br>
+                                    {% endif %}
                                 {% endfor %}
                                 </ul>
                         </div>
+
+                        <div class="col-12 col-md-4">
+                            <h3 class="category-title">Libraries&nbsp;and&nbsp;Frameworks</h3>
+                                <ul class="skill-list">
+                                {% for skill in skills %}
+                                    {% if skill.category_title == "Libraries&nbsp;and&nbsp;Frameworks" %}
+                                    <li data-id="{{skill._id}}">
+                                        <img src={{skill.image_path}} width="20" height="20">
+                                        {{skill.skill_title}}
+                                        <br>
+                                        {% if username == 'meadmin' %}
+                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i> Edit </a>
+                                        {% endif %}
+                                    </li>
+                                    <br>
+                                    {% endif %}
+                                {% endfor %}
+                                </ul>
+                        </div>
+
+                         
                     </div>
             </div>
         </div>            
-</div> -->
+</div>
 </section>
 
 <!-- Projects -->

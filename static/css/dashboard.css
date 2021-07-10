@@ -1,12 +1,13 @@
 .main-form-dash {
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .main-form-dash-add {
-    width: 50%;
-    margin:auto;
-    margin-top: 40px;
-    padding: 30px 50px;
+    width: 30%;
+    margin-left: 190px;
+    margin-top: 20px;
+    padding: 30px 30px;
     font-size: 30px;
     color: #fafafa;
     border-radius: 36px;
@@ -16,7 +17,7 @@
   }
 
 
-  .fa-plus {
+  .fa-plus, .fa-edit {
       color: rgb(233, 76, 29);
   }
 
