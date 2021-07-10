@@ -350,7 +350,10 @@ footer {
 }
   
 .contact-container {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(233, 76, 29);
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px black;
+  margin-bottom: 70px;
 
 }
 
@@ -361,17 +364,23 @@ footer {
 }
 
 .contact a {
-  color:rgb(233, 76, 29);
+  color:#333;
 }
 
 .contact-title {
-  color: rgb(233, 76, 29);
+  color: #333;
   text-shadow: 2px 2px 2px #5e5b5b;
 }
 
 .contact p {
   font-weight: 500;
+  color: #333;
   text-shadow: 2px 2px 2px #5e5b5b;
+}
+
+.author {
+  color: #fafafa;
+  margin-bottom: 10px;
 }
 
 
