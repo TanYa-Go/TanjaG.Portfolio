@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,400;0,900;1,700&family=Yatra+One&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
+  font-family: Yatra One;
 }
 
 #background-img {
@@ -49,7 +51,7 @@ ul {
 }
 
 li {
-  text-decoration: none;
+  
   margin-top: 15px;
     
 }
@@ -58,9 +60,11 @@ li a {
   color: rgb(233, 76, 29);
   margin-right: 10px;
   margin-left: 20px;
+  
 }
 
 li a:hover{
+  text-decoration: none;
   color: #fafafa;
 }
 
@@ -73,7 +77,7 @@ li a:hover{
 }
 
 .title-skills{
-  margin-top: -20px;
+  margin-top: 20px;
   color: rgb(233, 76, 29);
   padding-top: 5px;
   padding-bottom: 30px;
@@ -171,11 +175,12 @@ p {
 }
 
 .sub-section {
-  margin-right: 80px;
+  margin:auto;
   padding: 60px;
   background-color: #fafafa;
   border-radius: 20px;
   margin-bottom: 100px;
+  box-shadow: 5px 5px 20px black;
  
 }
 
@@ -204,7 +209,7 @@ p {
 /* --Projects --*/
 
 .project-card {
-  width: 200px;
+  width: 100px;
   height: 350px;
   box-shadow: 5px 5px 20px black;
   margin: 10px;
@@ -219,10 +224,11 @@ p {
   border-radius: 20px;
   padding: 10px;
   background-color: rgb(233, 76, 29);
-  margin-left: 60px;
+  margin:auto;
+  box-shadow: 5px 5px 20px black;
 }
 
-.hr-red {
+/* .hr-red {
   border: 1px solid rgb(233, 76, 29);
   width: 220px;
   margin: 20px 0px
@@ -231,10 +237,63 @@ p {
 
 .hr-black {
   border: 1px solid #333;
-  width: 300px;
+  width: 260px;
   margin: 20px 0px
 
+} */
+
+
+/* code for the divider borrowed from codepen https://codepen.io/Oddgson/pen/VPrYbv */
+.divider
+{
+	position: relative;
+	margin-top: 20px;
+  margin-bottom: 40px;
+	height: 1px;
 }
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.div-dot:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	background-color:rgb(233, 76, 29);
+	border: 1px solid rgb(48,49,51);
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px white,
+					0 0 0 4px white;
+}
+
+.div-dot-black:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	background-color: #333;
+	border: 1px solid rgb(48,49,51);
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px rgb(233, 76, 29);
+					0 0 0 4px rgb(233, 76, 29);
+}
+
 
 .row {
   justify-content: center;
@@ -287,12 +346,13 @@ p {
 /*-- Testimonials ---*/
 
 .testimonials-container {
-  margin-right: 80px;
+  margin:auto;
   padding: 60px;
   background-color: #fafafa;
   border-radius: 20px;
   margin-bottom: 100px;
   margin-top: 100px;
+  box-shadow: 5px 5px 20px black;
 
 }
 
@@ -360,6 +420,7 @@ footer {
   border-radius: 20px;
   box-shadow: 5px 5px 20px black;
   margin-bottom: 70px;
+  height: max-content;
 
 }
 
@@ -371,17 +432,22 @@ footer {
 
 .contact a {
   color:#333;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .contact-title {
   color: #333;
   text-shadow: 2px 2px 2px #5e5b5b;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
 .contact p {
   font-weight: 500;
   color: #333;
   text-shadow: 2px 2px 2px #5e5b5b;
+  margin-bottom: 30px;
 }
 
 .author {
