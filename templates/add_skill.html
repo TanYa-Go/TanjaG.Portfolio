@@ -13,7 +13,7 @@
                 </button> -->
                 
                 <select name="category_title">
-                    <option disabled selected>Category</option>
+                    <option disabled selected><i class="fas fa-folder"></i> Category</option>
                     {% for category in categories %}
                         <option class="" value="{{category.category_title}}">{{category.category_title}}</option>
                      {% endfor %}
@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <i class="fas fa-cog"></i>
                     <label for="skill_title">Title</label>
-                    <input type="text" name="skill_title" id="skill_title" minlength="5" maxlength="50" 
+                    <input type="text" name="skill_title" id="skill_title" minlength="3" maxlength="50" 
                         class="form-control validate" required>
                    
                 </div>
