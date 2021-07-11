@@ -147,6 +147,13 @@ def edit_skill(skill_id):
         "edit_skill.html", skill=skill, categories=categories)
 
 
+@app.route("/delete_skill/<skill_id>")
+def delete_skill(skill_id):
+    mongo.db.skills.remove({"_id": ObjectId(skill_id)})
+    flash("Skill Successfully Deleted")
+    return redirect(url_for("add_skill"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

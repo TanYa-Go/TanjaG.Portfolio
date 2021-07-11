@@ -394,13 +394,13 @@ footer {
   background: linear-gradient(225deg, #28282f, #212128);
 }
 
-.dropdown-menu {
+.select-menu {
   width: 100%;
   background: linear-gradient(225deg, #28282f, #212128);
   height: 200px;
 }
 
-.dropdown-item {
+.select-item {
   color:rgb(233, 76, 29);
   font-size: 25px;
   border-radius: 5px;

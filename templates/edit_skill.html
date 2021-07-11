@@ -8,14 +8,15 @@
         <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('edit_skill', skill_id='skill._id')}}">
             
            <div class="dropdown">
-               <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <!-- <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-folder"></i> Category
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                </button> -->
+                <select name="category_title" class="">
+                    <option class="select-menu" disabled selected><i class="fas fa-folder"></i> Category</option>
                     {% for category in categories %}
-                        <a class="dropdown-item text-center" href="">{{category.category_title}}</a>
+                        <option class="" value="{{category.category_title}}">{{category.category_title}}</option>
                      {% endfor %}
-                </div>
+                </select>
               </div>
             
               <!-- category name -->
@@ -26,12 +27,20 @@
                         class="form-control validate" required>
                    
                 </div>
-                <!-- category progress pecentage -->
+                <!-- category progress pecentage
                 <div class="form-group">
                     <i class="fas fa-percent"></i>
                     <label for="skill_percentage">Progress</label>
                     <input type="number" name="skill_percentage" id="skill_percentage" class="form-control" required>
+                </div> -->
+
+                 <!-- image -->
+                 <div class="form-group">
+                    <i class=""></i>
+                    <label for="image">Image</label>
+                    <input type="file" name="image" id="image" class="form-control" required>
                 </div>
+
                 <!-- submit button -->
                 <button type="submit" class="btn  btn-register"><i class="fas fa-check"></i> Save </button><br>
                  <!-- cancel button -->   

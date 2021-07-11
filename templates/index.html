@@ -88,7 +88,7 @@
                                         <br>
                                         {% if username == 'meadmin' %}
                                         <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i></a>
-                                        <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i></a>
+                                        <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     <br>
@@ -108,7 +108,7 @@
                                         <br>
                                         {% if username == 'meadmin' %}
                                             <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i></a>
-                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i></a>
+                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     <br>
@@ -128,7 +128,7 @@
                                         <br>
                                         {% if username == 'meadmin' %}
                                             <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i> Edit </a>
-                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i> Delete </a>
+                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i> Delete </a>
                                         {% endif %}
                                     </li>
                                     <br>
