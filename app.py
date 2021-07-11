@@ -29,8 +29,12 @@ mongo = PyMongo(app)
 @app.route("/index")
 def index():
     skills = list(mongo.db.skills.find())
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    try:
+        username = mongo.db.users.find_one(
+            {"username": session["user"]}
+        )["username"]
+    except:
+        username = ''
     return render_template("index.html", skills=skills, username=username)
 
 
