@@ -83,12 +83,12 @@
                                 {% for skill in skills %}
                                     {% if skill.category_title == "Frontend" %}
                                     <li data-id="{{skill._id}}">
-                                        <img src={{skill.image_path}} width="20" height="20">
+                                        <img src={{skill.image_path}} width="25" height="25">
                                         {{skill.skill_title}}
                                         
                                         {% if username == 'meadmin' %}
-                                        <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i></a>
-                                        <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i></a>
+                                        <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Edit"> <i class="fas fa-edit"></i></a>
+                                        <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Delete"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     
@@ -107,8 +107,8 @@
                                         {{skill.skill_title}}
                                         
                                         {% if username == 'meadmin' %}
-                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i></a>
-                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i></a>
+                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Edit"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Delete"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     
@@ -127,8 +127,8 @@
                                         {{skill.skill_title}}
                                         
                                         {% if username == 'meadmin' %}
-                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}"> <i class="fas fa-edit"></i>  </a>
-                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}"> <i class="fas fa-trash"></i>  </a>
+                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Edit"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Delete"></li><i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     

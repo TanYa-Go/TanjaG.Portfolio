@@ -321,15 +321,29 @@ p {
   display: block;
   color: rgb(233, 76, 29);
   text-align: left;
+  padding-left: 0px;
 }
+
 
 .skill-list li {
   margin-top: 5px;
   color: #333 ;
 }
 
+.skill-list a{
+  margin: 5px 0px;
+  
+}
+
+.skill-list i{
+  color: #5e5b5b;
+}
 .card-header {
   background-color: #fafafa;
+}
+
+.skill-list ul {
+  padding-left: 0px;
 }
 
 .editBtn {
@@ -442,7 +456,7 @@ footer {
 }
 
 .contact-title {
-  color: #333;
+  color: #fafafa;
   text-shadow: 2px 2px 2px #5e5b5b;
   margin-bottom: 40px;
   font-weight: 700;

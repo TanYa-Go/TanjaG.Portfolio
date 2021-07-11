@@ -55,3 +55,8 @@ anime.timeline({loop: true})
     }
     scrollval = window.scrollY;
   })}
+
+  /* -- enable tooltips -- */
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
