@@ -76,12 +76,6 @@ li a:hover{
   
 }
 
-.title-skills{
-  margin-top: 20px;
-  color: rgb(233, 76, 29);
-  padding-top: 5px;
-  padding-bottom: 30px;
-}
 
 h1 {
   font-size: 90px;
@@ -194,16 +188,19 @@ p {
 
 
 .headshot {
+  
   width: 100%;
   height: 100%;
   border-radius: 50%;
   border: 2px solid rgb(233, 76, 29);
   box-shadow: 7px 7px 7px #5e5b5b;
+  
   }
 
 .headshot-container {
-  display: flex;
+    display: flex;
   align-items: center;
+  margin-top: 80px;
 }
 
 /* --Projects --*/
@@ -301,6 +298,12 @@ p {
 
 /* -----Skills---- */
 
+.title-skills{
+  margin-top: 20px;
+  color: #333;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
 
 .category-title {
   color: rgb(233, 76, 29);
@@ -308,7 +311,8 @@ p {
 }
 
 .skills-container {
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-left: 10px;
   height:fit-content;
   width:max-content;
 }
@@ -321,6 +325,7 @@ p {
 
 .skill-list li {
   margin-top: 5px;
+  color: #333 ;
 }
 
 .card-header {
@@ -491,13 +496,13 @@ footer {
 
 /* ----------------------------------------Media Queries */
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
   .project-container {
       display: flex;
       flex-wrap: wrap;
   }
 
-}
+} */
 .project-image {
   width: 100%;
   margin-top: 15px;
@@ -530,6 +535,10 @@ a {
 }
 
 
+
+
+
+
 @media only screen and (max-width: 1000px) {
   .hamburger {
       display: block;
@@ -544,21 +553,54 @@ a {
   ul {
       display: none;
       background-color: #2b2c38;
-      margin: 0ppx;
+      margin: 0px;
   }
 
   ul.show {
       display: block;
+      background-color: black;
+      width: 100%;
   }
 
   nav {
       display: flex;
-      flex-direction: column-reverse;
-      background-color: #2b2c38;
+      flex-direction:row-reverse;
+      
   }
 
   .logo {
       display: none;
   }
+
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10px;
+}
+
+.headshot-container {
+  width: 100%;
+  height: auto;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-left:60px;
+  margin-right: 60px;
+} 
+
+.sub-section {
+  margin: 20px 20px;
+}
+
+.testimonials-container {
+  margin: 20px 20px;
+}
+
+.contact-container {
+  margin: 20px 20px;
+}
+
+.skill-list  {
+  background-color: transparent;
+}
 }
 
