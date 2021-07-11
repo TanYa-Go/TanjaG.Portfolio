@@ -34,11 +34,11 @@ body {
   color: #fafafa;
 }
 
-
+/* 
 .navbar {
   background-color: rgba(0, 0, 0, 0.8);
   height: 70px;
-}
+} */
 
 ul {
   display: flex;
@@ -66,9 +66,10 @@ li a {
 li a:hover{
   text-decoration: none;
   color: #fafafa;
-}
+} 
 
 
+/**/
 
 .title {
   margin-top: 5px;

@@ -60,3 +60,5 @@ anime.timeline({loop: true})
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
   });
+
+  
