@@ -214,7 +214,7 @@ p {
 
 .project-container {
   width: 100%;
-  display: flex;
+  display: block;
   justify-content: center;
   border-radius: 20px;
   padding: 10px;
@@ -231,9 +231,13 @@ p {
 
 .hr-black {
   border: 1px solid #333;
-  width: 220px;
+  width: 300px;
   margin: 20px 0px
 
+}
+
+.row {
+  justify-content: center;
 }
 
 /* -----Skills---- */
@@ -251,8 +255,9 @@ p {
 }
 
 .skill-list {
-  display: inline;
+  display: block;
   color: rgb(233, 76, 29);
+  text-align: left;
 }
 
 .skill-list li {

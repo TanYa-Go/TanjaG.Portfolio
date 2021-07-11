@@ -126,7 +126,6 @@ def add_skill():
         skill = {
             "category_title": request.form.get("category_title"),
             "skill_title": request.form.get("skill_title"),
-            "skill_percentage": request.form.get("skill_percentage"),
             "image_path": path,
         }
         mongo.db.skills.insert_one(skill)
@@ -140,11 +139,39 @@ def add_skill():
 @app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
 def edit_skill(skill_id):
     skill = mongo.db.skills.find_one({"_id": ObjectId(skill_id)})
-    print('skill', skill)
+
+    if request.method == "POST":
+
+        new_values = {
+            "category_title": request.form.get("category_title"),
+            "skill_title": request.form.get("skill_title"),
+        }
+
+        files = request.files
+        if files:
+            image = files['image']
+            path = f'static/uploads/{image.filename}'
+            image.save(path)
+            new_values["image_path"] = path
+        
+        new_values = {'$set': new_values}
+
+        mongo.db.skills.update_one(skill, new_values)
+        flash("Skill Successfully Updated")
+
+        return redirect( url_for ('edit_skill', skill_id=skill['_id']) )
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_skill.html", skill=skill, categories=categories)
+
+
+
+
+
+
+
+
 
 
 @app.route("/delete_skill/<skill_id>")
