@@ -23,20 +23,9 @@ body {
   background-color: #1c1d25;
 }
 
-.hero-text {
- padding: 80px;
-}
 
 
-.hero {
-  background-color: #1c1d25;
-  height: 80vh; 
-  font-size: 30px;
-  color: #fafafa;
-}
-
- 
-
+/* Navbar */
 ul {
   display: flex;
   list-style-type: none;
@@ -47,11 +36,6 @@ ul {
   
 }
 
-/* li {
-  
-  margin-top: 15px;
-    
-}*/
 
 .nav-link {
   color: rgb(233, 76, 29);
@@ -63,8 +47,7 @@ ul {
 li a:hover{
   text-decoration: none;
   color: #fafafa;
-}  */
-
+} 
 
 
 
@@ -109,17 +92,26 @@ p {
 }
 
 .hero-area {
-  display: flex;
+  /* display: flex; */
   height: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 50px 50px;
 }
+
+
+ .hero {
+   background-color: #1c1d25;
+   height: 80vh; 
+   font-size: 30px;
+   color: #fafafa;
+ }
 
 .hero-text {
   margin-top: 150px;
   margin-left: 80px;
   margin-bottom: 200px;
+  padding: 80px;
   
 }
 
@@ -174,7 +166,7 @@ p {
 .socials {
   padding-bottom: 200px;
   margin-top: 300px;
-  padding-right: 70px;
+  padding-right: 0px;
 }
 
 
@@ -221,10 +213,10 @@ p {
 /* Projects */
 
 .project-card {
-  width: 100px;
+  width: 90%;
   height: 350px;
   box-shadow: 5px 5px 20px black;
-  margin: 10px;
+  /* margin: 10px; */
   background-color: #fafafa;
   border-radius: 10px;
 }
@@ -445,7 +437,7 @@ footer {
 }
   
 .contact-container {
-  background-color: rgba(233, 76, 29, 0.6);
+  background-color: rgba(233, 76, 29, 0.8);
   border-radius: 20px;
   box-shadow: 5px 5px 20px black;
   margin-bottom: 70px;
