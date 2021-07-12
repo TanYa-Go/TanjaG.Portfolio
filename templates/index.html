@@ -5,13 +5,19 @@
 <div class="hero-area" id="hello">
        
             <div class="hero-text">
-                <h2>Hello, I'm</h2>
+                <h3>Hello there, I'm</h3>
                 <h1 class="ml10">
                     <span class="text-wrapper">
                             <span class="letters">Tanja Godinic<br></h1></span>
                     <h2>Full Stack Software Developer</h2></span>
                 
-                <div class="button"><a href="#about-me">About Me</a></div>
+                <br>
+                <div class="home-content__scroll">
+                    <a href="#about-me" class="scroll-link smoothscroll">
+                        <span>Scroll Down <i class="fas fa-angle-double-down"></i></span>
+                        
+                    </a>
+                </div>
             </div>
 
                      
@@ -72,9 +78,9 @@
 </div>
 
 <!--skills-->
-    <h2 class="text-center title-skills">Skills</h2>
+    <h2 class="text-center title-skills text-center">Skills</h2>
         <div class="divider div-transparent div-dot"></div>
-            <div class="container skills-container text-center" id="skills">
+            <div class="container skills-container " id="skills">
                    <div class="row">
                                                    
                         <div class="col-12 col-md-4">
@@ -87,8 +93,8 @@
                                         {{skill.skill_title}}
                                         
                                         {% if username == 'meadmin' %}
-                                        <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Edit"> <i class="fas fa-edit"></i></a>
-                                        <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Delete"> <i class="fas fa-trash"></i></a>
+                                        <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="bottom" title="Edit"> <i class="fas fa-edit"></i></a>
+                                        <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="bottom" title="Delete"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     
@@ -107,8 +113,8 @@
                                         {{skill.skill_title}}
                                         
                                         {% if username == 'meadmin' %}
-                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Edit"><i class="fas fa-edit"></i></a>
-                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Delete"> <i class="fas fa-trash"></i></a>
+                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
+                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="bottom" title="Delete"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     
@@ -127,8 +133,8 @@
                                         {{skill.skill_title}}
                                         
                                         {% if username == 'meadmin' %}
-                                            <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Edit"><i class="fas fa-edit"></i></a>
-                                            <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="right" title="Delete"></li><i class="fas fa-trash"></i></a>
+                                        <a href="{{ url_for ('edit_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
+                                        <a href="{{ url_for ('delete_skill', skill_id=skill._id)}}" data-toggle="tooltip" data-placement="bottom" title="Delete"> <i class="fas fa-trash"></i></a>
                                         {% endif %}
                                     </li>
                                     
@@ -149,7 +155,7 @@
         <h2 class="title text-center">My Projects</h2>
         <div class="divider div-transparent div-dot-black"></div>
             <div class="row">
-                <div class="col-md-3 project-card">
+                <div class="col-md-4 project-card">
                         <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
                             alt="Project One Image" />
 
@@ -159,7 +165,7 @@
                         <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View here</a></p>
                         <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p>
                 </div>
-                <div class="col-md-3 project-card">
+                <div class="col-md-4 project-card">
                         <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
                             alt="Project Two Image" />
                         <h4>Movie Trivia Extravaganza</h4>
@@ -168,7 +174,7 @@
                         <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/" target="_blank">View here</a>
                         </p>
                 </div>
-                <div class="col-md-3 project-card">
+                <div class="col-md-4 project-card">
                         <img class="project-image" src="{{ url_for('static', filename ='images/projectThree.jpg') }}"
                             alt="Project Three Image" />
                         <h4>Project Three</h4>

@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,400;0,900;1,700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
-  font-family: Yatra One;
+  font-family: Montserrat;
 }
 
 #background-img {
@@ -69,11 +70,12 @@ li a:hover{
 } 
 
 
-/**/
+
 
 .title {
   margin-top: 5px;
   color: #333;
+  text-transform: uppercase;
   
 }
 
@@ -127,9 +129,22 @@ p {
 
 .hero-text h1 {
   font-size: 90px;
+  
+}
+.hero-text h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 30px;
+  color: #fafafa;
 }
 
-.button {
+.hero-text h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 40px;
+}
+
+/* .button {
   width: 200px;
   height: 55px;
   border-radius: 30px;
@@ -151,7 +166,38 @@ p {
 .button:active {
   background-color: #A9A9A9;
   color: #808080;
+} */
+
+
+/*-- scroll down button -- */
+.home-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 120rem;
+  width: 95%;
 }
+
+
+.home-content__scroll a {
+  font-family: 'montserrat-semibold', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  line-height: 3rem;
+  padding-right: 2rem;
+  text-decoration: none;
+}
+
+.smoothscroll i {
+  color: rgb(233, 76, 29);
+}
+/*-- end scroll down-*/
+
 
 .socials {
   padding-bottom: 200px;
@@ -220,7 +266,7 @@ p {
   display: block;
   justify-content: center;
   border-radius: 20px;
-  padding: 10px;
+  padding: 30px;
   background-color: rgb(233, 76, 29);
   margin:auto;
   box-shadow: 5px 5px 20px black;
@@ -304,6 +350,7 @@ p {
   color: #333;
   padding-top: 5px;
   padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .category-title {
@@ -327,8 +374,17 @@ p {
 
 
 .skill-list li {
-  margin-top: 5px;
-  color: #333 ;
+  list-style: none;
+    background: #eee;
+    color: #333;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-family: 'montserrat-medium', sans-serif;
+    margin-right: 1.5rem;
 }
 
 .skill-list a{
@@ -345,6 +401,7 @@ p {
 
 .skill-list ul {
   padding-left: 0px;
+  
 }
 
 .editBtn {
@@ -428,8 +485,6 @@ p {
 /* -- Footer --*/
 footer {
   /* background-image: url("/static/images/prism.png"); */
-  
-  color: rgb(233, 76, 29);
   text-align: center;
   padding: 35px;
   height: auto;
@@ -445,28 +500,29 @@ footer {
 }
 
 .contact i {
-  color:#fafafa;
+  color:#333;
   font-size: 35px;
-  text-shadow: 2px 2px 2px #5e5b5b;
+  text-shadow: 1px 1px 1px #333;
 }
 
 .contact a {
-  color:#333;
+  color:#fafafa;
   font-size: 30px;
   margin-bottom: 30px;
 }
 
 .contact-title {
   color: #fafafa;
-  text-shadow: 2px 2px 2px #5e5b5b;
+  text-shadow: 3px 3px 3px #333;
   margin-bottom: 40px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .contact p {
   font-weight: 500;
-  color: #333;
-  text-shadow: 2px 2px 2px #5e5b5b;
+  color: #fafafa;
+  text-shadow: 3px 3px 3px #333;
   margin-bottom: 30px;
 }
 
