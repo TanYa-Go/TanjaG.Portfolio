@@ -35,29 +35,25 @@ body {
   color: #fafafa;
 }
 
-/* 
-.navbar {
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 70px;
-} */
+ 
 
 ul {
   display: flex;
   list-style-type: none;
   width: auto;
-  justify-content: space-around;
-  font-size: 20px;
-  margin:auto;
+  justify-content: center;
+  font-size: 50px;
+  margin: auto;
   
 }
 
-li {
+/* li {
   
   margin-top: 15px;
     
-}
+}*/
 
-li a {
+.nav-link {
   color: rgb(233, 76, 29);
   margin-right: 10px;
   margin-left: 20px;
@@ -67,7 +63,7 @@ li a {
 li a:hover{
   text-decoration: none;
   color: #fafafa;
-} 
+}  */
 
 
 
@@ -144,30 +140,6 @@ p {
   font-size: 40px;
 }
 
-/* .button {
-  width: 200px;
-  height: 55px;
-  border-radius: 30px;
-  background-color: rgb(233, 76, 29);
-  text-align: center;
-  font-size: 30px;
-  font-weight: 300;
-  padding-top: 5px;
-  margin-top: 20px;
-  text-decoration: none;
-  
-}
-
-.button:hover {
-  background-color: #ef744b;
-  
-}
-
-.button:active {
-  background-color: #A9A9A9;
-  color: #808080;
-} */
-
 
 /*-- scroll down button -- */
 .home-content {
@@ -206,16 +178,12 @@ p {
 }
 
 
-.logo {
-  height: 50px;
-  margin: 30px;
-  margin-left: 80px;
-}
 .social {
   margin: 20px;
 }
 
-.sub-section {
+/*  About Section */
+.about-section {
   margin:auto;
   padding: 60px;
   background-color: #fafafa;
@@ -225,13 +193,13 @@ p {
  
 }
 
-.sub-section-alternative {
+/* .sub-section-alternative {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 20px;
   background-color: rgb(233, 76, 29);
-} 
+}  */
 
 
 .headshot {
@@ -250,7 +218,7 @@ p {
   margin-top: 80px;
 }
 
-/* --Projects --*/
+/* Projects */
 
 .project-card {
   width: 100px;
@@ -271,20 +239,6 @@ p {
   margin:auto;
   box-shadow: 5px 5px 20px black;
 }
-
-/* .hr-red {
-  border: 1px solid rgb(233, 76, 29);
-  width: 220px;
-  margin: 20px 0px
-
-}
-
-.hr-black {
-  border: 1px solid #333;
-  width: 260px;
-  margin: 20px 0px
-
-} */
 
 
 /* code for the divider borrowed from codepen https://codepen.io/Oddgson/pen/VPrYbv */
@@ -314,8 +268,8 @@ p {
 	z-index: 1;
 	top: -9px;
 	left: calc(50% - 9px);
-	width: 18px;
-	height: 18px;
+	width: 15px;
+	height: 15px;
 	background-color:rgb(233, 76, 29);
 	border: 1px solid rgb(48,49,51);
 	border-radius: 50%;
@@ -329,8 +283,8 @@ p {
 	z-index: 1;
 	top: -9px;
 	left: calc(50% - 9px);
-	width: 18px;
-	height: 18px;
+	width: 15px;
+	height: 15px;
 	background-color: #333;
 	border: 1px solid rgb(48,49,51);
 	border-radius: 50%;
@@ -339,9 +293,9 @@ p {
 }
 
 
-.row {
+/* .row {
   justify-content: center;
-}
+} */
 
 /* -----Skills---- */
 
@@ -491,7 +445,7 @@ footer {
 }
   
 .contact-container {
-  background-color: rgb(233, 76, 29);
+  background-color: rgba(233, 76, 29, 0.6);
   border-radius: 20px;
   box-shadow: 5px 5px 20px black;
   margin-bottom: 70px;
@@ -611,7 +565,7 @@ a {
 
 
 @media only screen and (max-width: 1000px) {
-  .hamburger {
+  /* .hamburger {
       display: block;
       border: 0;
       background-color: transparent;
@@ -641,7 +595,7 @@ a {
 
   .logo {
       display: none;
-  }
+  } */
 
   .project-container {
     display: flex;

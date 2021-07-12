@@ -1,11 +1,11 @@
-const hamburgerButton = document.getElementById('hamburger')
-const navList = document.getElementById('nav-list')
+// const hamburgerButton = document.getElementById('hamburger')
+// const navList = document.getElementById('nav-list')
 
-function toggleButton() {
-    navList.classList.toggle('show')
-}
+// function toggleButton() {
+//     navList.classList.toggle('show')
+// }
 
-hamburgerButton.addEventListener('click', toggleButton)
+// hamburgerButton.addEventListener('click', toggleButton)
 
 // borrowed code from https://tobiasahlin.com/moving-letters/#10 to animate letters
 // Wrap every letter in a span
@@ -43,22 +43,23 @@ anime.timeline({loop: true})
 //   });
 
 
-  let navbar = document.getElementById('navbar')
-  let scrollval = 0;
-  window.addEventListener('scroll', () => {
-    if(scrollval > window.scrollY) {
-        navbar.classList.remove('hide')
-      console.log('Scroll up')
-    } else {
-      navbar.classList.add('hide')
-      console.log('Scroll down')
-    }
-    scrollval = window.scrollY;
-  })}
+  // let navbar = document.getElementById('navbar')
+  // let scrollval = 0;
+  // window.addEventListener('scroll', () => {
+  //   if(scrollval > window.scrollY) {
+  //       navbar.classList.remove('hide')
+  //     console.log('Scroll up')
+  //   } else {
+  //     navbar.classList.add('hide')
+  //     console.log('Scroll down')
+  //   }
+  //   scrollval = window.scrollY;
+  // })}
 
   /* -- enable tooltips -- */
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
   });
+
 
   
