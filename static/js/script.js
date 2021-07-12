@@ -62,4 +62,4 @@ anime.timeline({loop: true})
   });
 
 
-  
+}

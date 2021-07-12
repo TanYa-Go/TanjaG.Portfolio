@@ -17,8 +17,8 @@ body {
     color: #fafafa;
     border-radius: 36px;
     background: linear-gradient(225deg, #28282f, #212128);
-    box-shadow:  -25px 25px 25px #0f0f12,
-                  25px -25px 25px #43434d;
+    box-shadow:  5px 5px 5px #0f0f12
+                  
   }
   
   
@@ -56,10 +56,10 @@ body {
     padding: 30px 80px;
     font-size: 30px;
     color: #fafafa;
-    border-radius: 36px;
+    border-radius: 20px;
     background: linear-gradient(225deg, #28282f, #212128);
-    box-shadow:  -15px 15px 15px #0f0f12,
-                  15px -15px 15px #3b3b46;
+    box-shadow:  5px 5px 5px #0f0f12
+                  
   }
   
 #link-color a {
