@@ -150,8 +150,8 @@ def edit_skill(skill_id):
             "skill_title": request.form.get("skill_title"),
         }
         files = request.files
-        if files:
-            image = files['image']
+        image = files['image']
+        if image:
             path = f'static/uploads/{image.filename}'
             image.save(path)
             new_values["image_path"] = path
@@ -210,8 +210,8 @@ def edit_testimonial(testimonial_id):
             "testimonial_description": request.form.get("testimonial_description"),
         }
         files = request.files
-        if files:
-            image = files['image']
+        image = files['image']
+        if image:
             path = f'static/uploads/{image.filename}'
             image.save(path)
             new_values["image_path"] = path
@@ -223,9 +223,16 @@ def edit_testimonial(testimonial_id):
 
         return redirect(url_for('edit_testimonial', testimonial_id=testimonial['_id']) )
 
-    
+
     return render_template(
         "edit_testimonial.html", testimonial=testimonial)
+
+
+@app.route("/delete_testimonial/<testimonial_id>")
+def delete_testimonial(testimonial_id):
+    mongo.db.testimonials.remove({"_id": ObjectId(testimonial_id)})
+    flash("Testimonial Successfully Deleted")
+    return redirect(url_for("add_testimonial"))
 
 
 
