@@ -5,6 +5,9 @@
     
 
         {% include "components/flash.html" %}
+        <div class="text-center">
+            <a href="{{ url_for('.index', _anchor='about-me') }}" class="register-cancel"> View All Skills</i></a>
+        </div>
         <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('add_skill')}}" enctype="multipart/form-data">
             
            <div class="dropdown">
