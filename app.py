@@ -35,7 +35,8 @@ def index():
         )["username"]
     except:
         username = ''
-    return render_template("index.html", skills=skills, username=username)
+    testimonials = mongo.db.testimonials.find()
+    return render_template("index.html", skills=skills, username=username, testimonials=testimonials)
 
 
 @app.route("/projects")
@@ -142,6 +143,7 @@ def add_skill():
 
 @app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
 def edit_skill(skill_id):
+    skill = mongo.db.skills.find_one({"_id": ObjectId(skill_id)})
     if request.method == "POST":
         new_values = {
             "category_title": request.form.get("category_title"),
@@ -159,9 +161,9 @@ def edit_skill(skill_id):
         mongo.db.skills.update_one(skill, new_values)
         flash("Skill Successfully Updated")
 
-        return redirect( url_for ('edit_skill', skill_id=skill['_id']) )
+        return redirect( url_for('edit_skill', skill_id=skill['_id']) )
 
-    skill = mongo.db.skills.find_one({"_id": ObjectId(skill_id)})
+    
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_skill.html", skill=skill, categories=categories)
@@ -195,8 +197,35 @@ def add_testimonial():
         flash("Testimonial Successfully Added")
         return redirect(url_for("add_testimonial"))
 
-    testimonials = mongo.db.testimonials.find(???)
+    testimonials = mongo.db.testimonials.find()
     return render_template("add_testimonial.html", testimonials=testimonials)
+
+
+@app.route("/edit_testimonial/<testimonial_id>", methods=["GET", "POST"])
+def edit_testimonial(testimonial_id):
+    testimonial = mongo.db.testimonials.find_one({"_id": ObjectId(testimonial_id)})
+    if request.method == "POST":
+        new_values = {
+            "user_name": request.form.get("user_name"),
+            "testimonial_description": request.form.get("testimonial_description"),
+        }
+        files = request.files
+        if files:
+            image = files['image']
+            path = f'static/uploads/{image.filename}'
+            image.save(path)
+            new_values["image_path"] = path
+
+        new_values = {'$set': new_values}
+
+        mongo.db.testimonials.update_one(testimonial, new_values)
+        flash("Testimonial Successfully Updated")
+
+        return redirect(url_for('edit_testimonial', testimonial_id=testimonial['_id']) )
+
+    
+    return render_template(
+        "edit_testimonial.html", testimonial=testimonial)
 
 
 
