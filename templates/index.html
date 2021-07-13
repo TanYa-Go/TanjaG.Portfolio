@@ -198,23 +198,23 @@
                 </div>  -->
             </div>
     </div>
-<!-- </section> -->
+
 
 <!-- Testimonials-->
 
- <!-- Three columns of text below the carousel -->
-<section class="container testimonials-container" id="testimonials">
+ <section class="container testimonials-container" id="testimonials">
         <div class="row text-center">
+           
             <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+            {% for testimonial in testimonials %}
+                <img src={{testimonial.image_path}} width="140" height="140">
+                <h3>{{testimonial.user_name}}</h3>
+                <p>{{testimonial.testimonial_description}}</p>
+            {% endfor %}
+            </div>
 
-            <h3>Jim Beam</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae labore hic esse consequatur deserunt, expedita eos neque cum! Est, ab.</p>
-            
-            </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
+                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
             <h3>Johnny Walker</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatem, distinctio fuga officiis adipisci neque.</p>
            

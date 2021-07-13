@@ -167,19 +167,39 @@ def edit_skill(skill_id):
         "edit_skill.html", skill=skill, categories=categories)
 
 
-
-
-
-
-
-
-
-
 @app.route("/delete_skill/<skill_id>")
 def delete_skill(skill_id):
     mongo.db.skills.remove({"_id": ObjectId(skill_id)})
     flash("Skill Successfully Deleted")
     return redirect(url_for("add_skill"))
+
+
+
+@app.route("/add_testimonial", methods=["GET", "POST"])
+def add_testimonial():
+    if request.method == "POST":
+        files = request.files
+        if 'image' not in files:
+            return 'no image'
+        image = files['image']
+        path = f'static/uploads/{image.filename}'
+        image.save(path)
+
+        testimonial = {
+            "user_name": request.form.get("user_name"),
+            "testimonial_description": request.form.get(
+                "testimonial_description"),
+            "image_path": path,
+        }
+        mongo.db.testimonials.insert_one(testimonial)
+        flash("Testimonial Successfully Added")
+        return redirect(url_for("add_testimonial"))
+
+    testimonials = mongo.db.testimonials.find(???)
+    return render_template("add_testimonial.html", testimonials=testimonials)
+
+
+
 
 
 if __name__ == "__main__":

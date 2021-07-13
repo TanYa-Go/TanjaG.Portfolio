@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2 class="text-center title-register">Add Testimonial</h2>
+    
+
+        {% include "components/flash.html" %}
+        <div class="text-center">
+            <a href="{{ url_for('.index', _anchor='testimonials') }}" class="register-cancel"> View Testimonials</i></a>
+        </div>
+        <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('add_testimonial')}}" enctype="multipart/form-data">
+            
+           <div class="dropdown">
+               <!-- <button class="btn btn-secondary dropdown-toggle validate" required type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-folder"></i> Category
+                </button> -->
+                
+                <!-- <select name="category_title">
+                    <option disabled selected><i class="fas fa-folder"></i> Category</option>
+                    {% for category in categories %}
+                        <option class="" value="{{category.category_title}}">{{category.category_title}}</option>
+                     {% endfor %}
+                </select>
+              </div> -->
+            
+              <!-- category name -->
+              <!-- image -->
+                    <div class="form-group">
+                        <i class=""></i>
+                        <label for="image">Image</label>
+                        <input type="file" name="image" id="image" class="form-control" required>
+                    </div>
+                
+                      <div class="form-group">
+                    <i class="fas fa-cog"></i>
+                    <label for="user_name">Name</label>
+                    <input type="text" name="user_name" id="user_name" minlength="3" maxlength="50" 
+                        class="form-control validate" required>
+                    </div>
+                
+                <!-- description -->
+                <div class="form-group">
+                    <i class="fas fa-star"></i>
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description" class="form-control" required>
+                </div>
+                <!-- submit button -->
+                <button type="submit" class="btn  btn-register"><i class="fas fa-check"></i> Add </button><br>
+                 <!-- cancel button -->   
+                  <a href="{{ url_for('dashboard', username=session['user']) }}" class="register-cancel"><i class="fas fa-times"></i> Cancel <i class="fas fa-cancel"></i></a>
+                </div>
+            </form>
+         
+           
+    {% endblock %}
+    
