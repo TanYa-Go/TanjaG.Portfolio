@@ -223,7 +223,7 @@ def edit_testimonial(testimonial_id):
 
         return redirect(url_for('edit_testimonial', testimonial_id=testimonial['_id']) )
 
-
+    
     return render_template(
         "edit_testimonial.html", testimonial=testimonial)
 
