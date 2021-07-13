@@ -63,3 +63,8 @@ anime.timeline({loop: true})
 
 
 }
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+{
+    $('body').addClass('noanimated'); // to remove transition
+}
