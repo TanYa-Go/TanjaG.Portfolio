@@ -56,7 +56,7 @@
 <section class="about-section container" id="about-me">
 <div class="row">
 
-    <div class="col-12 col-lg-5 headshot-container">
+    <div class="col-12 col-lg-6 headshot-container">
         <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
             alt="Tanja Godinic headshot" />
     </div>
@@ -79,14 +79,14 @@
 
         
 </div>
-
+<br><br>
 <!--skills-->
     <h2 class="text-center title-skills text-center">Skills</h2>
         <div class="divider div-transparent div-dot"></div>
             <div class="container skills-container " id="skills">
                    <div class="row">
                        <div class="col-12 col-md-3">
-                            <h3 class="category-title">Frontend</h3>
+                            <h3 class="category-title-fb">Frontend</h3>
                                 <ul class="skill-list">
                                 {% for skill in skills %}
                                     {% if skill.category_title == "Frontend" %}
@@ -106,7 +106,7 @@
                         </div>
                     
                         <div class="col-12 col-md-3">
-                            <h3 class="category-title">Backend</h3>
+                            <h3 class="category-title-fb">Backend</h3>
                                 <ul class="skill-list">
                                 {% for skill in skills %}
                                     {% if skill.category_title == "Backend" %}
