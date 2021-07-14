@@ -23,14 +23,15 @@
                 </select>
               </div> -->
             
-              <!-- category name -->
+             
               <!-- image -->
                     <div class="form-group">
                         <i class=""></i>
-                        <label for="image">Image</label>
-                        <input type="file" name="image" id="image" class="form-control" required>
+                        <label for="image"><i class="fas fa-camera"></i> Image</label><br>
+                        <img id="testimonial_img" src="/{{testimonial.image_path}}" width="50" height="50">
+                        <input type="file" name="image" id="image" class="form-control" >
                     </div>
-                
+                 <!-- name -->
                       <div class="form-group">
                     <i class="fas fa-cog"></i>
                     <label for="user_name">Name</label>
@@ -42,7 +43,6 @@
                 <div class="form-group">
                     <i class="fas fa-star"></i>
                     <label for="testimonial_description">Description</label>
-                    
                     <input type="text" name="testimonial_description" id="testimonial_description" class="form-control" value="{{testimonial.testimonial_description}}" required>
                 </div>
                 <!-- submit button -->
