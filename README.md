@@ -3,29 +3,34 @@
 ![Mock up]()
 
 
-## **Goal for the project**
+## **About for the project**
+This project is a personal portfolio website that will showcase my software development skills and my recent projects to potential employers, potential clients or other developers. It will also serve as one of the milestone projects for the Code Institute Software Development Diploma course, where I needed to showcase what I've learned from the Python/Flask/MongoDB backend modules. 
+
+The idea was that the website has a log in option so that users can add to the website, change something depending on their credentials. So myself as an **admin** will have rights to make changes to all sections that have that option, while the **guest** user will be able to add only testimonials after they have worked with me or hired me for a job. 
 
 <a></a>
 
 ## Table of contents 
 * [UX](#ux)
+* [The Strategy Plane](#the-strategy-plane)
     * [User Goals](#user-goals)
-    * [User Stories](#user-stories)
     * [Site Owners Goals](#site-owners-goals)
-    * [User Requirements and Expectations](#user-requirements-and-expectations)
-        * [Requirements](#requirements)
-        * [Expectations](#expectations)
-    * [Design Choices](#design-choices)
-        * [Fonts](#fonts)
-        * [Colors](#colors)
-        * [Structure](#structure)
-* [Wireframes and Flowcharts](#wireframes-and-flowcharts)
+    * [User Stories](#user-stories)
+       * [Recruiters and Employers](#recruiters-and-employers)
+        * [Other Developers](#other-developers)
+        * [Potential Clients](#potential-clients)
+* [The Scope Plane](#the-scope-plane)
+    * [Existing Features](#existing-features)
+    * [Features to be implemented](#features-to-be-implemented)
+* [The Structure Plane](#the-structure-plane)
+* [The Skeleton Plane](#the-skeleton-plane)
     * [Wireframes](#wireframes)
     * [Flowcharts](#flowcharts)
     * [Database Structure](#database-structure)
-* [Features](#features)
-    * [Existing Features](#existing-features)
-    * [Features to be implemented](#features-to-be-implemented)
+* [The Surface Plane](#the-surface-plane)
+    * [Design Choices](#design-choices)
+        * [Fonts](#fonts)
+        * [Colors](#colors)
 * [Technologies used](#technologies-used)
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
@@ -40,75 +45,123 @@
 
 <a name="ux"></a>
 
-## **UX**
+# **UX**
 
 <a></a>
 
+## **The Strategy Plane**
+
+
 ### **User Goals**
+
+Users can be divided into three categories:
+
+* ### **Recruiters and potential employers**
+  The user, in this case, is a person who is looking to hire a developer and on this website, they need to be able to find all the information necessary for them to decide to invite me for an interview or offer me a job. 
+  * Users goal is to be able to find skills and experience to see if it suits the role they have in mind.
+  * Users goal is to be able to see projects that I've worked on to see what type of work I've done and if it is something similar they would need from me
+  * Users goal is to see my previous employment to get a feel if someone my experience would be a good fit for their team
+  * Users goal is to be able to find the contact information easily and contact me without leaving the page 
+  * User goal is to be able to download my CV with one click 
+
+* ### **Other developers** 
+The user, in this case, is another developer who is looking for someone to work on a project with or a collaboration of some sort.
+* This user's goal is to be able to see what skills and languages I know to see if we could work well together
+* Users goal is to be able to find my GitHub profile to see the way I write my code and if this would suit their project
+* Users goal is to find contact information easily and contact me from the website directly
+
+* ### **Potential Clients**
+The user in this case can be a person, a company, an artist, a small business, etc., who is lookig to hire someone to create their website, an app or change their existing website, etc. 
+
+* This user's goal is to be able to see the projects that I have  created before, to see if they would like to hire me for their project
+* This user's goal is to be able to see the testimonials from others that have worked with me, to evaluate if they want to hire me
+
+* This user's goal is to be able to find the contact information easily and contact the site owner without leaving the page 
 
 
 
 [Back to Top](#table-of-contents)
-
-<a></a>
-
-### **User Stories**
-
-
 
 <a></a>
 
 ### **Site owners Goals**
 
+My the goal is to have a beautiful and reponsive website that represents me as a person and also as a developer. I'd like potential employers to find it interesting enough to want to explore it and find out about me, my accomplishments, my skills, and that they will want to get in touch for an interview, a project, or a collaboration as a result.   
+
+Apart from the other users, I will be a user as well.  As a user, (admin) I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job etc., directly from the page, without needing to change the code. 
+
+
+<a></a>
+
+### **User Stories**
+  
+#### **Recruiters and Employers** 
+
+* As a busy user, I am using a lot of devices and I would like to be able to see this page equally well on any device I am currently using
+
+* As a user, I would like the site to be intuitive and have easy navigation so that I can quickly and easily access the information I am looking for
+
+* As a user, I would like to see the information about the site owner, to see how they present themselves and how they look like
+
+* As a user, I would like to be able to see the site owners past experiences and their projects to see if the skills they have match the role I am looking to fill
+
+* As a user, I would like to see site owners the LinkedIn page
+
+* As a user, I would like to be able to contact the site owner easily and without leaving the page
+
+* As a user, I would like to be able to find and download the site owners CV quickly and download it with one click
+
+ 
+#### **Other Developers** 
+
+* As a user, I would like to see the projects site owner was working on and the skills they have, to see if we could potentially work together on a project
+
+* As a user, I would like to be able to see the site owners GitHub link to see how they are putting their skills to use and how their skills developed over time
+
+
+#### **Potential Clients**
+
+* As a user I would like to be able to see the projects that the site owner has made, to see if I would like to hire them for my project
+
+* As a user, I would like to see the testimonials from people that have worked with the site owner, to confirm my decision for choosing them for my project
+
+* As a user, I would like to be able to find the contact details easily, and contact the site owner without leaving the page 
+
+[Back to Top](#table-of-contents)
+
+<a></a>
+
+## **The Scope Plane**
+
+<a></a>
+
+## **Features**
+
+<a></a>
+
+### **Existing Features**
+
+
+
+<a></a>
+
+### **Features to be implemented**
+
+
 
 
 [Back to Top](#table-of-contents)
 
 <a></a>
 
-### **User Requirements and Expectations**
+## **The Structure Plane**
 
+
+
+## **The Skeleton Plane**
 <a></a>
 
-#### Requirements
 
-
-
-<a></a>
-
-#### Expectations
-
-
-
-[Back to Top](#table-of-contents)
-
-<a></a>
-
-### **Design Choices**
-
-
-<a></a>
-
-#### Colors
-
-
-
-<a></a>
-
-#### Fonts
-
-<a></a>
-
-#### Structure
-
-
-
-[Back to Top](#table-of-contents)
-
---- 
-<a></a>
-
-## **Wireframes and Flowcharts**
 
 ### **Database Schema**
 
@@ -135,31 +188,35 @@
 
 
 
+
+
+## **The Surface Plane**
+
+### **Design Choices**
+
+
+<a></a>
+
+#### Colors
+
+
+
+<a></a>
+
+#### Typography
+
+<a></a>
+
+
+
 [Back to Top](#table-of-contents)
 
 ---
 
-<a></a>
-
-## **Features**
 
 <a></a>
 
-### **Existing Features**
-
-
-
-<a></a>
-
-### **Features to be implemented**
-
-
-
-[Back to Top](#table-of-contents)
-
-<a></a>
-
-## **Technologies used**
+# **Technologies used**
 
 <a></a>
 
@@ -197,20 +254,20 @@
 <a></a>
 
 
-## **Testing**
+# **Testing**
 
 
 
 [Back to Top](#table-of-contents)
 
-## **Bugs**
+    ## **Bugs**
 
 
 [Back to Top](#table-of-contents)
 
 <a></a>
 
-## **Deployment**
+# **Deployment**
 
     
 
@@ -218,11 +275,11 @@
 
 <a></a>
 
-## **Credits**
+# **Credits**
 
 Took inspiration from [Ania Kubow](https://www.youtube.com/watch?v=-D6oTPA4vXc&t=4221s) for layout of the page
 
-Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate letters on the home page from 
+Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate letters on the home page 
 
 
 [Back to Top](#table-of-contents)
