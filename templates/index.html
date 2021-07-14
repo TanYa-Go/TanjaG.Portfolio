@@ -156,7 +156,7 @@
     <div class="container project-container" id="projects">
         <div class="row">
                 <div class="col">
-                <h2 class="title text-center">My Projects</h2>
+                <h2 class="contact-title text-center">My Projects</h2>
                 <div class="divider div-transparent div-dot-black"></div>
                 </div>
         </div>
@@ -169,7 +169,7 @@
                         <!-- <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p> -->
                         <hr />
                         <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View here</a></p>
-                        <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p>
+                        <!-- <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p> -->
                 </div>
                 <div class="col-md-4 project-card">
                         <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
@@ -203,6 +203,12 @@
 <!-- Testimonials-->
 
  <section class="container testimonials-container" id="testimonials">
+    <div class="row">
+        <div class="col">
+        <h2 class="title text-center">Testimonials</h2>
+        <div class="divider div-transparent div-dot"></div>
+        </div>
+</div>
         <div class="row text-center">
             {% for testimonial in testimonials %}
             <div class="col-lg-4">
@@ -211,8 +217,8 @@
                 <h3>{{testimonial.user_name}}</h3>
                 <p>{{testimonial.testimonial_description}}</p>
                 {% if username == 'meadmin' %}
-                    <a href="{{ url_for ('edit_testimonial', testimonial_id=testimonial._id)}}" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
-                    <a href="{{ url_for ('delete_testimonial', testimonial_id=testimonial._id)}}" data-toggle="tooltip" data-placement="bottom" title="Delete"> <i class="fas fa-trash"></i></a>
+                    <a href="{{ url_for ('edit_testimonial', testimonial_id=testimonial._id)}}" class="bin" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
+                    <a href="{{ url_for ('delete_testimonial', testimonial_id=testimonial._id)}}" class="bin" data-toggle="tooltip" data-placement="bottom" title="Delete"> <i class="fas fa-trash"></i></a>
                 {% endif %}
             </div>
             {% endfor %}
