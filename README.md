@@ -37,8 +37,9 @@ The idea was that the website has a log in option so that users can add to the w
     * [Tools](#tools)
 * [Testing](#testing)
 * [Deployment](#deployment)
-    * [Local Deployment](#local-deployment)
     * [Heroku Deployment](#heroku-deployment)
+    * [Run Locally](#run-locally)
+    
 * [Credits](#credits)
 
 --- 
@@ -269,7 +270,52 @@ Apart from the other users, I will be a user as well.  As a user, (admin) I want
 
 # **Deployment**
 
-    
+## Heroku Deployment
+
+**Create application:**
+1. Navigate to Heroku.com and login.
+1. Click on the new button.
+1. Select create new app.
+1. Enter the app name.
+1. Select region.
+
+**Set up connection to Github Repository:**
+
+1. Click the deploy tab and select GitHub - Connect to GitHub.
+1. A prompt to find a github repository to connect to will then be displayed.
+1. Enter the repository name for the project and click search.
+1. Once the repo has been found, click the connect button.
+
+**Set environment variables:**
+
+Click the settings tab and then click the Reveal Config Vars button and add the following:
+
+1. key: IP, value: 0.0.0.0
+2. key: PORT, value: 5000
+3. key: MONGO_DBNAME, value: (database name you want to connect to)
+4. key: MONGO_URI, value: (mongo uri - This can be found in MongoDB by going to clusters > connect > connect to your application and substituting the password and 
+    dbname that you set up in the link).
+5. key: SECRET_KEY, value: (This is a custom secret key set up for configuration to keep client-side sessions secure).
+
+**Enable automatic deployment:**
+1. Click the Deploy tab
+1. In the Automatic deploys section, choose the branch you want to deploy from then click Enable Automation Deploys.
+
+## Run Locally
+
+1. Navigate to the GitHub [Repository](https://github.com/TanYa-Go/TanjaG.Portfolio).
+1. Click the Code drop down menu.
+1. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
+1. Open your developement editor of choice and open a terminal window in a directory of your choice.
+1. Use the 'git clone' command in terminal followed by the copied git URL.
+1. A clone of the project will be created locally on your machine.
+
+Once the project has been loaded into an IDE of choice, run the following command in the shell to install all the required packages:
+> pip install -r requirements.txt
+
+Note: The project will not run locally with database connections unless the user sets up an [env.py](https://pypi.org/project/env.py/) file configuring IP, PORT, 
+MONGO_URI, MONGO_DBNAME and SECRET_KEY. You must have the connection details in order to do this. These details are private and not disclosed in this repository 
+for security purposes.  
 
 [Back to Top](#table-of-contents)
 
@@ -277,9 +323,21 @@ Apart from the other users, I will be a user as well.  As a user, (admin) I want
 
 # **Credits**
 
+### **Code**
+
+Code institute Tim Nelson's Task Manager project was a great help while creating this project
+
+L=I've learned a lot from Corey Schafer and his Pyhton/flask [tutorial](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&index=11)
+
 Took inspiration from [Ania Kubow](https://www.youtube.com/watch?v=-D6oTPA4vXc&t=4221s) for layout of the page
 
 Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate letters on the home page 
+
+### **Media**
+
+[Background image](https://www.svgbackgrounds.com/#rainbow-vortex)
+
+
 
 
 [Back to Top](#table-of-contents)
