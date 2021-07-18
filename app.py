@@ -235,7 +235,12 @@ def delete_testimonial(testimonial_id):
     return redirect(url_for("add_testimonial"))
 
 
-
+@app.errorhandler(500)
+def internal_error(error):
+    """
+    Route to handle 500 error
+    """
+    return render_template('500.html', error=error), 500
 
 
 if __name__ == "__main__":
