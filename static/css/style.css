@@ -298,6 +298,7 @@ p {
 	box-shadow: inset 0 0 0 2px rgb(233, 76, 29);
 					0 0 0 4px rgb(233, 76, 29);
 }
+
 /* 
 .row {
   justify-content: center;
@@ -577,7 +578,17 @@ a {
 }
 
 
+/* Page 500 */
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top: 100px;
+}
 
+.error-no {
+  color: #ff9d00;
+}
 
 
 @media only screen and (max-width: 1000px) {
