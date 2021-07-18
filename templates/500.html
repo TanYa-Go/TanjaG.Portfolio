@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-
-
-  <h1>500</h1>
+<div class="center">
+  <h1 class="error-no">500</h1>
   <h2>Internal Server Error <b>:(</b></h2>
-  <p>To return to the home page, please click <a href="{{ url_for('.index', _anchor='hello')}}">here</a></p>
+  <p>To return to the home page, please click <a href="{{ url_for('index')}}">here</a></p>
+</div>
+
 
 {% endblock %}

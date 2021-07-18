@@ -235,6 +235,14 @@ def delete_testimonial(testimonial_id):
     return redirect(url_for("add_testimonial"))
 
 
+@app.errorhandler(404)
+def not_found_error(error):
+    """
+    Route to handle 404 error
+    """
+    return render_template('404.html', error=error), 404
+
+
 @app.errorhandler(500)
 def internal_error(error):
     """
