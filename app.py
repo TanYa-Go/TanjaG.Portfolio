@@ -19,15 +19,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# @app.route("/skills")
-# def skills():
-#     skills = list(mongo.db.skills.find())
-#     return render_template("index.html/", skills=skills)
-
-
 @app.route("/")
-@app.route("/index")
 def index():
+    """
+    Renders index page template when going to the main website link
+    """
     skills = list(mongo.db.skills.find())
     try:
         username = mongo.db.users.find_one(
@@ -36,16 +32,24 @@ def index():
     except:
         username = ''
     testimonials = mongo.db.testimonials.find()
-    return render_template("index.html", skills=skills, username=username, testimonials=testimonials)
+    return render_template(
+        "index.html", skills=skills, username=username, testimonials=testimonials)
 
 
 @app.route("/projects")
 def projects():
+    """
+    Renders projects template
+    """
     return render_template("projects.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Register page, allows users to register for an account
+    if username doesn't already exist.
+    """
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -71,6 +75,10 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Checks users collection for user and password to allow registered
+    users to log in. Redirects to user's dashboard on successful sign in.
+    """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -100,7 +108,9 @@ def login():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
-    # grab the session user's username from db
+    """
+    If username exists in the database, render dashboard page
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -112,7 +122,10 @@ def dashboard(username):
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    """
+    Removes logged in user from session cookie and
+    returns them to the log in page.
+    """
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
@@ -120,6 +133,10 @@ def logout():
 
 @app.route("/add_skill", methods=["GET", "POST"])
 def add_skill():
+    """
+    Gets values from add skill form and stores values
+    into MongoDB collection skills.
+    """
     if request.method == "POST":
         files = request.files
         if 'image' not in files:
@@ -143,6 +160,10 @@ def add_skill():
 
 @app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
 def edit_skill(skill_id):
+    """
+    Allows user to edit a skill. If successful, flash message is displayed
+    to alert user.
+    """
     skill = mongo.db.skills.find_one({"_id": ObjectId(skill_id)})
     if request.method == "POST":
         new_values = {
@@ -161,9 +182,8 @@ def edit_skill(skill_id):
         mongo.db.skills.update_one(skill, new_values)
         flash("Skill Successfully Updated")
 
-        return redirect( url_for('edit_skill', skill_id=skill['_id']) )
+        return redirect(url_for('edit_skill', skill_id=skill['_id']))
 
-    
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_skill.html", skill=skill, categories=categories)
@@ -171,14 +191,21 @@ def edit_skill(skill_id):
 
 @app.route("/delete_skill/<skill_id>")
 def delete_skill(skill_id):
+    """
+    Allows user to delete a skill and redirects user to add skill page.
+    Flash message alerts user that delete was successful.
+    """
     mongo.db.skills.remove({"_id": ObjectId(skill_id)})
     flash("Skill Successfully Deleted")
     return redirect(url_for("add_skill"))
 
 
-
 @app.route("/add_testimonial", methods=["GET", "POST"])
 def add_testimonial():
+    """
+    Gets values from add testimonial form and stores values
+    into MongoDB collection testimonials.
+    """
     if request.method == "POST":
         files = request.files
         if 'image' not in files:
@@ -203,11 +230,17 @@ def add_testimonial():
 
 @app.route("/edit_testimonial/<testimonial_id>", methods=["GET", "POST"])
 def edit_testimonial(testimonial_id):
-    testimonial = mongo.db.testimonials.find_one({"_id": ObjectId(testimonial_id)})
+    """
+    Allows user to edit a testimonial. If successful, flash message is
+    displayed to alert user.
+    """
+    testimonial = mongo.db.testimonials.find_one(
+        {"_id": ObjectId(testimonial_id)})
     if request.method == "POST":
         new_values = {
             "user_name": request.form.get("user_name"),
-            "testimonial_description": request.form.get("testimonial_description"),
+            "testimonial_description": request.form.get(
+                "testimonial_description"),
         }
         files = request.files
         image = files['image']
@@ -221,15 +254,20 @@ def edit_testimonial(testimonial_id):
         mongo.db.testimonials.update_one(testimonial, new_values)
         flash("Testimonial Successfully Updated")
 
-        return redirect(url_for('edit_testimonial', testimonial_id=testimonial['_id']) )
+        return redirect(url_for(
+            'edit_testimonial', testimonial_id=testimonial['_id']))
 
-    
     return render_template(
         "edit_testimonial.html", testimonial=testimonial)
 
 
 @app.route("/delete_testimonial/<testimonial_id>")
 def delete_testimonial(testimonial_id):
+    """
+    Allows user to delete a testimonial and redirects
+    user to add testimonial page. Flash message alerts user
+    that delete was successful.
+    """
     mongo.db.testimonials.remove({"_id": ObjectId(testimonial_id)})
     flash("Testimonial Successfully Deleted")
     return redirect(url_for("add_testimonial"))
