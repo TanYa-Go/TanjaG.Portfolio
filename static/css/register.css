@@ -5,7 +5,6 @@ body {
 .title-register {
     margin-top: 80px;
     color: #fafafa;
-    /* background: linear-gradient(225deg, #28282f, #212128); */
     margin-bottom: 20px;
   }
   .main-form {
@@ -16,7 +15,8 @@ body {
     font-size: 30px;
     color: #fafafa;
     border-radius: 36px;
-    background: linear-gradient(225deg, #28282f, #212128);
+    background-color: #3b0432;
+    /* background: linear-gradient(225deg, #28282f, #212128); */
     box-shadow:  5px 5px 5px #0f0f12
                   
   }
@@ -33,7 +33,7 @@ body {
   }
 
   .form-control {
-    background-color: #25252c;
+    background-color: #3b0432;
     color:rgb(233, 76, 29);
     border-top:  #25252c;
     border-left: #25252c;
@@ -56,8 +56,8 @@ body {
     font-size: 30px;
     color: #fafafa;
     border-radius: 20px;
-    background: linear-gradient(225deg, #28282f, #212128);
-    box-shadow:  5px 5px 5px #0f0f12
+    background-color: #3b0432;
+    box-shadow:  5px 5px 5px #0f0f12;
                   
   }
   

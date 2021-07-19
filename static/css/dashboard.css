@@ -1,6 +1,7 @@
 .main-form-dash {
     margin-top: 100px;
     margin-bottom: 50px;
+    background-color: #3b0432;
 }
 
 .main-form-dash-add {
@@ -11,13 +12,15 @@
     font-size: 30px;
     color: #fafafa;
     border-radius: 20px;
-    background: linear-gradient(225deg, #28282f, #212128);
+    background-color: #3b0432;
+    /* background: linear-gradient(225deg, #28282f, #212128); */
     box-shadow:  5px 5px 5px #0f0f12,
                  
   }
 
 
-  .fa-plus, .fa-edit {
+
+  .fa-plus, .fa-edit, .fa-exclamation {
       color: rgb(233, 76, 29);
   }
 
