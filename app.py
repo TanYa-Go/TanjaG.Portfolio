@@ -33,7 +33,8 @@ def index():
         username = ''
     testimonials = mongo.db.testimonials.find()
     return render_template(
-        "index.html", skills=skills, username=username, testimonials=testimonials)
+        "index.html", skills=skills, username=username,
+        testimonials=testimonials)
 
 
 @app.route("/projects")
