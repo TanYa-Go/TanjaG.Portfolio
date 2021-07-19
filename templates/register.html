@@ -1,35 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2 class="title-register text-center">Register</h2>
+{% include "components/flash.html" %}
+<form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('register') }}">
+    <div class="form-group">
+        <i class="fas fa-user"></i>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}"
+            class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid username.</div>
+    </div>
+    <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}"
+            class="form-control" required>
+    </div>
+    <button type="submit" class="btn  btn-register">Register <i class="fas fa-sign-in-alt"></i></button>
+    </div>
+</form>
 
-
- <h2 class="title-register text-center">Register</h2>
-            {% include "components/flash.html" %}
-    <form class="main-form col-12 col-lg-8 text-center" method="POST" action="{{ url_for('register') }}">
-            <div class="form-group">
-                <i class="fas fa-user"></i>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}" class="form-control" required>
-                <div class="invalid-feedback">Please enter a valid username.</div>
-            </div>
-            <div class="form-group">
-                <i class="fas fa-lock"></i>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}"  class="form-control" required>
-            </div>
-            <button type="submit" class="btn  btn-register">Register <i class="fas fa-sign-in-alt"></i></button>
-            </div>
-        </form>
-   
-        <div class="row">
-            <div class="col-12">
-                <p class="text-center question">
-                    Already have an account? 
-                    <span id="link-color">
-                    <a href="{{ url_for('login') }}">Log In</a>
-                    </span>
-                </p>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-12">
+        <p class="text-center question">
+            Already have an account?
+            <span id="link-color">
+                <a href="{{ url_for('login') }}">Log In</a>
+            </span>
+        </p>
+    </div>
+</div>
 
 {% endblock %}

@@ -1,68 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-                   
-        <div class="main-form-dash col-12 col-lg-8 text-center">
-            {% include "components/flash.html" %}
-                <h3 class="text-center">
-                    {{ username }}'s Dashboard
-                </h3>
-        </div>
-        <div class="row">
-            {% if username == 'meadmin' %}
-                <div class="main-form-dash-add col-12 col-lg-4">
-                    <h3 class="text-center">
-                            <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> Add Skill </a>
-                        </h3>
-                </div>
-
-                <div class="main-form-dash-add col-12 col-lg-4 ">
-                    <h3 class="text-center">
-                        <a href="{{ url_for('.index', _anchor='skills') }}"> <i class="fas fa-edit"></i> Edit Skills </a>
-                    </h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="main-form-dash-add col-12 col-lg-4">
-                <h3 class="text-center">
-                        <a href="{{url_for('add_testimonial')}}"> <i class="fas fa-plus"></i> Add Testimonial </a>
-                    </h3>
-            </div>
-    
-            <div class="main-form-dash-add col-12 col-lg-4 ">
-                <h3 class="text-center">
-                    <a href="{{ url_for('.index', _anchor='testimonials') }}"> <i class="fas fa-edit"></i> Edit Testimonials  </a>
-                </h3>
-        </div>
-        <!-- <div class="row">
-            <div class="main-form-dash-add col-12 col-lg-4">
-                <h3 class="text-center">
-                        <a href="" > <i class="fas fa-plus"></i> Add Project </a>
-                    </h3>
-            </div>
-
-            <div class="main-form-dash-add col-12 col-lg-4 ">
-                <h3 class="text-center">
-                    <a href="{{url_for('add_skill')}}"> <i class="fas fa-edit"></i> Edit Project </a>
-                </h3>
-        </div>
-    </div> -->
-        </div>
-    {% endif %}
-
-   
-            <div class="col-12 text-center">
-                <p><i class="fas fa-exclamation"></i> </p>
-                 <p>You have no rights to edit this page</p>
-                 <p>Contact page admin to gain credentials</p>
-           </div>
-   </div>
+<div class="main-form-dash col-12 col-lg-8 text-center">
+    {% include "components/flash.html" %}
+    <h3 class="text-center">
+        {{ username }}'s Dashboard
+    </h3>
 </div>
-        
+<div class="row">
+    {% if username == 'meadmin' %}
+    <div class="main-form-dash-add col-12 col-lg-4">
+        <h3 class="text-center">
+            <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> Add Skill </a>
+        </h3>
+    </div>
 
-  
-   
+    <div class="main-form-dash-add col-12 col-lg-4 ">
+        <h3 class="text-center">
+            <a href="{{ url_for('.index', _anchor='skills') }}"> <i class="fas fa-edit"></i> Edit Skills </a>
+        </h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="main-form-dash-add col-12 col-lg-4">
+        <h3 class="text-center">
+            <a href="{{url_for('add_testimonial')}}"> <i class="fas fa-plus"></i> Add Testimonial </a>
+        </h3>
+    </div>
+
+    <div class="main-form-dash-add col-12 col-lg-4 ">
+        <h3 class="text-center">
+            <a href="{{ url_for('.index', _anchor='testimonials') }}"> <i class="fas fa-edit"></i> Edit Testimonials
+            </a>
+        </h3>
+    </div>
+</div>
+{% endif %}
+
+<div class="col-12 text-center">
+    <p><i class="fas fa-exclamation"></i> </p>
+    <p>You have no rights to edit this page</p>
+    <p>Contact page admin to gain credentials</p>
+</div>
+</div>
+</div>
+
 
 {% endblock %}
