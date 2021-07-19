@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="text-center title-register">
-  <h1>404</h1>
+<div class="text-center center">
+  <h1 class="error-no">404</h1>
   <h2><b>:(</b></h2>
-  <p>It looks like youre lost.</p> 
+  <p>It looks like you're lost.</p> 
   <p>The page you are looking for is not available.</p>
   <br/>
-  <a href="{{ url_for('index')}}">Go Home</a></p>
+  <button class="btn btn-danger"><a href="{{ url_for('index')}}">Go Home</a></p></button>
 </div>
 
 {% endblock %}
