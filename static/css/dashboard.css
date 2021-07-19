@@ -13,22 +13,21 @@
     color: #fafafa;
     border-radius: 20px;
     background-color: #3b0432;
-    /* background: linear-gradient(225deg, #28282f, #212128); */
-    box-shadow:  5px 5px 5px #0f0f12,
-                 
-  }
+    box-shadow: 5px 5px 5px #0f0f12,
 
+}
 
+.fa-plus,
+.fa-edit,
+.fa-exclamation {
+    color: rgb(233, 76, 29);
+}
 
-  .fa-plus, .fa-edit, .fa-exclamation {
-      color: rgb(233, 76, 29);
-  }
-
-  @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
 
     .main-form-dash-add {
         width: 70%;
         font-size: 20px;
     }
-    
-  }
+
+}

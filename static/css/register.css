@@ -1,82 +1,77 @@
-body {
-  background: linear-gradient(225deg, #28282f, #212128);
-}
-
 .title-register {
-    margin-top: 80px;
-    color: #fafafa;
-    margin-bottom: 20px;
-  }
-  .main-form {
-    width: 60%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 30px 80px;
-    font-size: 30px;
-    color: #fafafa;
-    border-radius: 36px;
-    background-color: #3b0432;
-    /* background: linear-gradient(225deg, #28282f, #212128); */
-    box-shadow:  5px 5px 5px #0f0f12
-                  
-  }
-  
-  
-  .btn-register {
-     background-color: rgb(233, 76, 29);
-     font-size: 20px;
-     width: 30%;
-  }
-
-  .register-cancel {
-    font-size: 19px;
-  }
-
-  .form-control {
-    background-color: #3b0432;
-    color:rgb(233, 76, 29);
-    border-top:  #25252c;
-    border-left: #25252c;
-    border-right: #25252c;
-    border-radius: 0px;
-    
-  }
-
-  .question {
-    color: #fafafa;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  .main-form-dash {
-    width: 50%;
-    margin: auto;
-    margin-top: 130px;
-    padding: 30px 80px;
-    font-size: 30px;
-    color: #fafafa;
-    border-radius: 20px;
-    background-color: #3b0432;
-    box-shadow:  5px 5px 5px #0f0f12;
-                  
-  }
-  
-#link-color a {
-  color:rgb(233, 76, 29);
+  margin-top: 80px;
+  color: #fafafa;
+  margin-bottom: 20px;
 }
 
-  /* --- Media Queries -----*/
-  @media only screen and (max-width: 1000px) {
-    .main-form {
-      width: 70%;
-      font-size: 25px;
+.main-form {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 30px 80px;
+  font-size: 30px;
+  color: #fafafa;
+  border-radius: 36px;
+  background-color: #3b0432;
+  box-shadow: 5px 5px 5px #0f0f12
+}
+
+
+.btn-register {
+  background-color: rgb(233, 76, 29);
+  font-size: 20px;
+  width: 30%;
+}
+
+.register-cancel {
+  font-size: 19px;
+}
+
+.form-control {
+  background-color: #3b0432;
+  color: rgb(233, 76, 29);
+  border-top: #25252c;
+  border-left: #25252c;
+  border-right: #25252c;
+  border-radius: 0px;
+
+}
+
+.question {
+  color: #fafafa;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.main-form-dash {
+  width: 50%;
+  margin: auto;
+  margin-top: 130px;
+  padding: 30px 80px;
+  font-size: 30px;
+  color: #fafafa;
+  border-radius: 20px;
+  background-color: #3b0432;
+  box-shadow: 5px 5px 5px #0f0f12;
+
+}
+
+#link-color a {
+  color: rgb(233, 76, 29);
+}
+
+/* --- Media Queries -----*/
+@media only screen and (max-width: 1000px) {
+  .main-form {
+    width: 70%;
+    font-size: 25px;
   }
 
   .btn-register {
     width: 40%;
   }
 
-  .title-register{
+  .title-register {
     font-size: 30px;
   }
-  }
+}
