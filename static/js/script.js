@@ -1,14 +1,23 @@
-// const hamburgerButton = document.getElementById('hamburger')
-// const navList = document.getElementById('nav-list')
 
-// function toggleButton() {
-//     navList.classList.toggle('show')
-// }
+/* hide navbar on scroll down, show on scroll up */
+let navbar = document.getElementById('navigation')
+let scrollval = 0;
+window.addEventListener('scroll', () => {
+  if(scrollval > window.scrollY) {
+      navbar.classList.remove('hide')
+    console.log('Scroll up')
+  } else {
+    navbar.classList.add('hide')
+    console.log('Scroll down')
+  }
+  scrollval = window.scrollY;
+});
 
-// hamburgerButton.addEventListener('click', toggleButton)
 
-// borrowed code from https://tobiasahlin.com/moving-letters/#10 to animate letters
-// Wrap every letter in a span
+
+
+/* borrowed code from https://tobiasahlin.com/moving-letters/#10 to animate letters on home page */
+/* Wrap every letter in a span */
 if (document.querySelector('.ml10 .letters')) {
    var textWrapper = document.querySelector('.ml10 .letters');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -27,7 +36,7 @@ anime.timeline({loop: true})
     delay: 1000
   });
 
-
+}
 // // smooth scroll
 // $('.navbar a').on('click', function (e) {
 //     if (this.hash !== '') {
@@ -43,26 +52,13 @@ anime.timeline({loop: true})
 //   });
 
 
-  // let navbar = document.getElementById('navbar')
-  // let scrollval = 0;
-  // window.addEventListener('scroll', () => {
-  //   if(scrollval > window.scrollY) {
-  //       navbar.classList.remove('hide')
-  //     console.log('Scroll up')
-  //   } else {
-  //     navbar.classList.add('hide')
-  //     console.log('Scroll down')
-  //   }
-  //   scrollval = window.scrollY;
-  // })}
-
   /* -- enable tooltips -- */
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
   });
 
 
-}
+/* remove letter animation on touch devices */
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 
