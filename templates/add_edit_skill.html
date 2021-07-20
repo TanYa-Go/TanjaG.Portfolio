@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2 class="text-center title-register">
+        {% if edit %}
+            Edit Skill
+        {% else %}
+            Add Skill
+        {% endif %}
+    </h2>
+
+    {% include "components/flash.html" %}
+    <div class="text-center">
+        <a href="{{ url_for('.index', _anchor='about-me') }}" class="register-cancel"> View All Skills</i></a>
+    </div>
+
+    {% include "components/skill-form.html" %}    
+           
+{% endblock %}
+    

@@ -161,7 +161,8 @@ def add_skill():
         return redirect(url_for("add_skill"))
 
     categories = mongo.db.categories.find().sort("category_title", 1)
-    return render_template("add_skill.html", categories=categories)
+    return render_template("add_edit_skill.html", categories=categories,
+    edit=False)
 
 
 @app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
@@ -192,7 +193,8 @@ def edit_skill(skill_id):
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "edit_skill.html", skill=skill, categories=categories)
+        "add_edit_skill.html", skill=skill, categories=categories,
+        edit=True)
 
 
 @app.route("/delete_skill/<skill_id>")
