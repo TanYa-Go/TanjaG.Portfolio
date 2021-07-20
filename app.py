@@ -52,7 +52,7 @@ def register():
     if username doesn't already exist.
     """
     if request.method == "POST":
-        # check if username already exists in db
+        
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -112,11 +112,12 @@ def dashboard(username):
     """
     If username exists in the database, render dashboard page
     """
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    user = mongo.db.users.find_one({"username": session["user"]})
+    username = user.get('username')
+    is_admin = user.get('is_admin')
 
     if session["user"]:
-        return render_template("dashboard.html", username=username)
+        return render_template("dashboard.html", username=username, is_admin=is_admin)
 
     return redirect(url_for("login"))
 
