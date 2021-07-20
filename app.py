@@ -24,13 +24,16 @@ def index():
     """
     Renders index page template when going to the main website link
     """
-    skills = list(mongo.db.skills.find())
+    try:
+        skills = list(mongo.db.skills.find())
+        user = mongo.db.users.find_one({"username": session.get("user")}) or {}
+        testimonials = mongo.db.testimonials.find()
+    except Exception:
+        print("An error occurred loading the index.")
 
-    user = mongo.db.users.find_one({"username": session.get("user")}) or {}
     username = user.get('username')
     is_admin = user.get('is_admin')
 
-    testimonials = mongo.db.testimonials.find()
     return render_template(
         "index.html", skills=skills, username=username, is_admin=is_admin,
         testimonials=testimonials)
@@ -63,7 +66,10 @@ def register():
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(register)
+        try:
+            mongo.db.users.insert_one(register)
+        except Exception:
+            flash("An error occurred. Contact site admin.")
 
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
@@ -111,12 +117,16 @@ def dashboard(username):
     """
     If username exists in the database, render dashboard page
     """
-    user = mongo.db.users.find_one({"username": session["user"]})
-    username = user.get('username')
-    is_admin = user.get('is_admin')
+    try:
+        user = mongo.db.users.find_one({"username": session["user"]})
+        username = user.get('username')
+        is_admin = user.get('is_admin')
 
-    if session["user"]:
-        return render_template("dashboard.html", username=username, is_admin=is_admin)
+        if session["user"]:
+            return render_template("dashboard.html", username=username, is_admin=is_admin)
+    
+    except Exception:
+        flash("An error occurred. Contact site admin.")
 
     return redirect(url_for("login"))
 
@@ -156,13 +166,18 @@ def add_skill():
             "image_path": path,
             "created_by": username,
         }
-        mongo.db.skills.insert_one(skill)
-        flash("Skill Successfully Added")
+        
+        try:
+            mongo.db.skills.insert_one(skill)
+            flash("Skill Successfully Added")
+        except Exception:
+            flash("An error occurred. Contact site admin.")
+
         return redirect(url_for("add_skill"))
 
     categories = mongo.db.categories.find().sort("category_title", 1)
-    return render_template("add_edit_skill.html", categories=categories,
-    edit=False)
+    return render_template(
+        "add_edit_skill.html", categories=categories, edit=False)
 
 
 @app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
@@ -186,8 +201,11 @@ def edit_skill(skill_id):
 
         new_values = {'$set': new_values}
 
-        mongo.db.skills.update_one(skill, new_values)
-        flash("Skill Successfully Updated")
+        try:
+            mongo.db.skills.update_one(skill, new_values)
+            flash("Skill Successfully Updated")
+        except Exception:
+            flash("An error occurred. Contact site admin.")
 
         return redirect(url_for('edit_skill', skill_id=skill['_id']))
 
@@ -204,10 +222,12 @@ def delete_skill(skill_id):
     Allows user to delete a skill and redirects user to add skill page.
     Flash message alerts user that delete was successful.
     """
-
-    mongo.db.skills.remove({"_id": ObjectId(skill_id)})
-    flash("Skill Successfully Deleted")
-          
+    try:
+        mongo.db.skills.remove({"_id": ObjectId(skill_id)})
+        flash("Skill Successfully Deleted")
+    except Exception:
+        flash("An error occurred. Contact site admin.")
+         
     return redirect(url_for("add_skill"))
 
 
@@ -232,8 +252,12 @@ def add_testimonial():
             "image_path": path,
             "created_by": username,
         }
-        mongo.db.testimonials.insert_one(testimonial)
-        flash("Testimonial Successfully Added")
+        try:
+            mongo.db.testimonials.insert_one(testimonial)
+            flash("Testimonial Successfully Added")
+        except Exception:
+            flash("An error occurred. Contact site admin.")
+
         return redirect(url_for("add_testimonial"))
 
     testimonials = mongo.db.testimonials.find()
@@ -262,9 +286,11 @@ def edit_testimonial(testimonial_id):
             new_values["image_path"] = path
 
         new_values = {'$set': new_values}
-
-        mongo.db.testimonials.update_one(testimonial, new_values)
-        flash("Testimonial Successfully Updated")
+        try:
+            mongo.db.testimonials.update_one(testimonial, new_values)
+            flash("Testimonial Successfully Updated")
+        except Exception:
+            flash("An error occurred. Contact site admin.")
 
         return redirect(url_for(
             'edit_testimonial', testimonial_id=testimonial['_id']))
@@ -280,8 +306,12 @@ def delete_testimonial(testimonial_id):
     user to add testimonial page. Flash message alerts user
     that delete was successful.
     """
-    mongo.db.testimonials.remove({"_id": ObjectId(testimonial_id)})
-    flash("Testimonial Successfully Deleted")
+    try:
+        mongo.db.testimonials.remove({"_id": ObjectId(testimonial_id)})
+        flash("Testimonial Successfully Deleted")
+    except Exception:
+        flash("An error occurred. Contact site admin.")
+
     return redirect(url_for("add_testimonial"))
 
 
