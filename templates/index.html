@@ -155,7 +155,26 @@
 
 </section>
 
+<section class="container testimonials-container" id="testimonials">
+    <div class="row">
+        <div class="col">
+            <h2 class="title text-center">Education</h2>
+            <div class="divider div-transparent div-dot"></div>
+        </div>
+    </div>
+    <div class="row text-center">
+        
+        <div class="col-lg-4 ">
+            <img src= width="140" height="140">
+            <h3 class="user-name"></h3>
+            <p ></p>
+            
+           
+        </div>
+        
 
+    </div>
+</section>
 <!-- Projects -->
 
 <!-- <section class="sub-section-alternative " id="projects"> -->
@@ -219,11 +238,10 @@
     </div>
     <div class="row text-center">
         {% for testimonial in testimonials %}
-        <div class="col-lg-4">
-
+        <div class="col-lg-4 ">
             <img src={{testimonial.image_path}} width="140" height="140">
-            <h3>{{testimonial.user_name}}</h3>
-            <p>{{testimonial.testimonial_description}}</p>
+            <h3 class="user-name">{{testimonial.user_name}}</h3>
+            <p >{{testimonial.testimonial_description}}</p>
             {% if is_admin or testimonial.created_by == username %}
             <a href="{{ url_for ('edit_testimonial', testimonial_id=testimonial._id)}}" class="bin"
                 data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>

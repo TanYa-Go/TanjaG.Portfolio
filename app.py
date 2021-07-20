@@ -27,12 +27,11 @@ def index():
     try:
         skills = list(mongo.db.skills.find())
         user = mongo.db.users.find_one({"username": session.get("user")}) or {}
+        username = user.get('username')
+        is_admin = user.get('is_admin')
         testimonials = mongo.db.testimonials.find()
     except Exception:
         print("An error occurred loading the index.")
-
-    username = user.get('username')
-    is_admin = user.get('is_admin')
 
     return render_template(
         "index.html", skills=skills, username=username, is_admin=is_admin,
@@ -245,18 +244,26 @@ def add_testimonial():
         path = f'static/uploads/{image.filename}'
         image.save(path)
 
-        testimonial = {
-            "user_name": request.form.get("user_name"),
-            "testimonial_description": request.form.get(
-                "testimonial_description"),
-            "image_path": path,
-            "created_by": username,
-        }
         try:
-            mongo.db.testimonials.insert_one(testimonial)
-            flash("Testimonial Successfully Added")
+            user = mongo.db.users.find_one({"username": session.get("user")}) or {}
+            username = user.get('username')
+            is_admin = user.get('is_admin')
+
+            testimonial = {
+                "user_name": request.form.get("user_name"),
+                "testimonial_description": request.form.get(
+                    "testimonial_description"),
+                "image_path": path,
+                "created_by": username,
+            }
+            try:
+                mongo.db.testimonials.insert_one(testimonial)
+                flash("Testimonial Successfully Added")
+            except Exception:
+                flash("An error occurred. Contact site admin.")
+
         except Exception:
-            flash("An error occurred. Contact site admin.")
+            print("An error occurred loading the index.")
 
         return redirect(url_for("add_testimonial"))
 
