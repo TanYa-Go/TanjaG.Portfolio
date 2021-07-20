@@ -25,15 +25,14 @@ def index():
     Renders index page template when going to the main website link
     """
     skills = list(mongo.db.skills.find())
-    try:
-        username = mongo.db.users.find_one(
-            {"username": session["user"]}
-        )["username"]
-    except:
-        username = ''
+
+    user = mongo.db.users.find_one({"username": session.get("user")}) or {}
+    username = user.get('username')
+    is_admin = user.get('is_admin')
+
     testimonials = mongo.db.testimonials.find()
     return render_template(
-        "index.html", skills=skills, username=username,
+        "index.html", skills=skills, username=username, is_admin=is_admin,
         testimonials=testimonials)
 
 
@@ -140,6 +139,10 @@ def add_skill():
     into MongoDB collection skills.
     """
     if request.method == "POST":
+
+        user = mongo.db.users.find_one({"username": session["user"]})
+        username = user.get('username')
+
         files = request.files
         if 'image' not in files:
             return 'no image'
@@ -151,6 +154,7 @@ def add_skill():
             "category_title": request.form.get("category_title"),
             "skill_title": request.form.get("skill_title"),
             "image_path": path,
+            "created_by": username,
         }
         mongo.db.skills.insert_one(skill)
         flash("Skill Successfully Added")
@@ -193,12 +197,15 @@ def edit_skill(skill_id):
 
 @app.route("/delete_skill/<skill_id>")
 def delete_skill(skill_id):
+
     """
     Allows user to delete a skill and redirects user to add skill page.
     Flash message alerts user that delete was successful.
     """
+
     mongo.db.skills.remove({"_id": ObjectId(skill_id)})
     flash("Skill Successfully Deleted")
+          
     return redirect(url_for("add_skill"))
 
 
@@ -221,6 +228,7 @@ def add_testimonial():
             "testimonial_description": request.form.get(
                 "testimonial_description"),
             "image_path": path,
+            "created_by": username,
         }
         mongo.db.testimonials.insert_one(testimonial)
         flash("Testimonial Successfully Added")
