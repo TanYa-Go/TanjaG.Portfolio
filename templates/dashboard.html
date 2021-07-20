@@ -9,13 +9,13 @@
 </div>
 <div class="row">
     {% if username == 'meadmin' %}
-    <div class="main-form-dash-add col-12 col-lg-4">
+    <div class="main-form-dash-add col-12 col-md-3 col-lg-4">
         <h3 class="text-center">
             <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> Add Skill </a>
         </h3>
     </div>
 
-    <div class="main-form-dash-add col-12 col-lg-4 ">
+    <div class="main-form-dash-edit col-12 col-md-3  col-lg-4">
         <h3 class="text-center">
             <a href="{{ url_for('.index', _anchor='skills') }}"> <i class="fas fa-edit"></i> Edit Skills </a>
         </h3>
@@ -29,15 +29,15 @@
         </h3>
     </div>
 
-    <div class="main-form-dash-add col-12 col-lg-4 ">
+    <div class="main-form-dash-edit col-12 col-lg-4 ">
         <h3 class="text-center">
             <a href="{{ url_for('.index', _anchor='testimonials') }}"> <i class="fas fa-edit"></i> Edit Testimonials
             </a>
         </h3>
     </div>
 </div>
-{% endif %}
 
+{% else %}
 <div class="col-12 text-center">
     <p><i class="fas fa-exclamation"></i> </p>
     <p>You have no rights to edit this page</p>
@@ -45,6 +45,6 @@
 </div>
 </div>
 </div>
-
+{% endif %}
 
 {% endblock %}

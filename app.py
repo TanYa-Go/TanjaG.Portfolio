@@ -37,12 +37,12 @@ def index():
         testimonials=testimonials)
 
 
-@app.route("/projects")
-def projects():
-    """
-    Renders projects template
-    """
-    return render_template("projects.html")
+# @app.route("/projects")
+# def projects():
+#     """
+#     Renders projects template
+#     """
+#     return render_template("projects.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
