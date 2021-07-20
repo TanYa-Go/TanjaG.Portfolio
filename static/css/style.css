@@ -36,15 +36,34 @@ ul {
   background-color: #3b0432;
 }
 
-.nav-item a {
-  color: rgb(233, 76, 29);
-  margin-top: 15px;
-
+.hide {
+  animation: hide 0.6s ease forwards;
 }
 
-li a:hover {
-  text-decoration: none;
+@keyframes hide {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.unhide {
+  animation: unhide 0.6s ease forwards;
+}
+
+@keyframes unhide {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+.navbar-dark .navbar-nav .nav-link {
   color: rgb(233, 76, 29);
+  margin-top: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgb(241 190 175);
+  text-decoration: none;
 }
 
 
@@ -54,10 +73,6 @@ li a:hover {
   text-transform: uppercase;
 }
 
-
-.hide {
-  display: none;
-}
 
 /* About section */
 
@@ -438,11 +453,11 @@ p {
   transform-origin: 0 0;
 }
 
-.hide {
+/* .hide {
   display: none;
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
-}
+} */
 
 
 
@@ -580,6 +595,14 @@ a {
 .error-no,
 .center a {
   color: #ff9d00;
+}
+
+.hidden_right {
+  transform: translateX(100%);
+}
+
+.unhidden {
+
 }
 
 /* Media queries */

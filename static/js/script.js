@@ -4,12 +4,19 @@ let scrollval = 0;
 window.addEventListener('scroll', () => {
   if (scrollval > window.scrollY) {
     navbar.classList.remove('hide')
+    navbar.classList.add('unhide')
     console.log('Scroll up')
   } else {
+    navbar.classList.remove('unhide')
     navbar.classList.add('hide')
     console.log('Scroll down')
   }
   scrollval = window.scrollY;
+
+  //if (scrollval == 400) {
+  //  document.getElementById('about-me').style.display = 'block'
+  //}
+
 });
 
 
