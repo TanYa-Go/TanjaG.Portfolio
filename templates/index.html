@@ -91,7 +91,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Frontend" %}
                     <li data-id="{{skill._id}}">
-                        <img src={{skill.image_path}} width="25" height="25">
+                        <img src="{{cdn}}/{{skill.image_path}}"" width="25" height="25">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -113,7 +113,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Backend" %}
                     <li data-id="{{skill._id}}">
-                        <img src="/{{skill.image_path}}" width="20" height="20">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -135,7 +135,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Libraries & Frameworks" %}
                     <li data-id="{{skill._id}}">
-                        <img src={{skill.image_path}} width="20" height="20">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -165,7 +165,7 @@
     <div class="row text-center">
         
         <div class="col-lg-4 ">
-            <img src= width="140" height="140">
+            <img src="" width="140" height="140">
             <h3 class="user-name"></h3>
             <p ></p>
             
@@ -239,7 +239,7 @@
     <div class="row text-center">
         {% for testimonial in testimonials %}
         <div class="col-lg-4 ">
-            <img src={{testimonial.image_path}} width="140" height="140">
+            <img src="{{cdn}}/{{testimonial.image_path}}" width="140" height="140">
             <h3 class="user-name">{{testimonial.user_name}}</h3>
             <p >{{testimonial.testimonial_description}}</p>
             {% if is_admin or testimonial.created_by == username %}

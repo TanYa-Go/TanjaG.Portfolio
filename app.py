@@ -32,10 +32,13 @@ def index():
         testimonials = mongo.db.testimonials.find()
     except Exception:
         print("An error occurred loading the index.")
+    
+    cdn = ''
+    #cdn = 'https://dyw7dciygqjtx.cloudfront.net'
 
     return render_template(
         "index.html", skills=skills, username=username, is_admin=is_admin,
-        testimonials=testimonials)
+        testimonials=testimonials, cdn=cdn)
 
 
 # @app.route("/projects")
