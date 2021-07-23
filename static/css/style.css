@@ -392,7 +392,24 @@ p {
   color: rgb(233, 76, 29);
 }
 
+/* Education */
 
+.skills-container {
+  margin: auto;
+  padding: 60px;
+  background-color: #fafafa;
+  border-radius: 20px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  box-shadow: 5px 5px 20px black;
+  
+}
+
+.degree {
+  color: rgb(233, 76, 29);
+ 
+ 
+}
 
 /* Testimonials */
 
@@ -415,7 +432,7 @@ p {
 #testimonials p {
   color: #333;
   font-size: 18px;
-  font-family: Yatra One;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   text-align: justify;
 }
 
@@ -648,7 +665,6 @@ a {
 
   .project-container {
     display: flex;
-    flex-wrap: wrap;
     margin: 10px 10px;
   }
 

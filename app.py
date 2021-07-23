@@ -7,6 +7,8 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+import base64
+import requests
 
 
 app = Flask(__name__)
@@ -252,9 +254,9 @@ def add_testimonial():
             return 'no image'
         image = files['image']
 
-        path = f'static/{image.filename}'
+        path = f'static/uploads/{image.filename}'
         image.save(path)
-
+       
         try:
             user = mongo.db.users.find_one({"username": session.get("user")}) or {}
             username = user.get('username')
