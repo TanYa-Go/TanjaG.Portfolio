@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, request)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -24,7 +24,7 @@ def index():
     """
     Renders index page template when going to the main website link
     """
-    
+
     try:
         skills = list(mongo.db.skills.find())
         user = mongo.db.users.find_one({"username": session.get("user")}) or {}
@@ -34,8 +34,11 @@ def index():
     except Exception:
         print("An error occurred loading the index.")
   
-    #cdn = ''
-    cdn = 'https://dyw7dciygqjtx.cloudfront.net'
+    host = request.host
+    if 'gitpod' in host:
+        cdn = ''
+    else:
+        cdn = 'https://dyw7dciygqjtx.cloudfront.net'
 
     return render_template(
         "index.html", skills=skills, username=username, is_admin=is_admin,
@@ -248,7 +251,8 @@ def add_testimonial():
         if 'image' not in files:
             return 'no image'
         image = files['image']
-        path = f'static/uploads/{image.filename}'
+
+        path = f'online_images/{image.filename}'
         image.save(path)
 
         try:
