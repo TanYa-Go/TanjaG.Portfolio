@@ -33,7 +33,7 @@ def index():
         testimonials = mongo.db.testimonials.find()
     except Exception:
         print("An error occurred loading the index.")
-    
+  
     #cdn = ''
     cdn = 'https://dyw7dciygqjtx.cloudfront.net'
 
