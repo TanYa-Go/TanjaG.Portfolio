@@ -34,8 +34,8 @@ def index():
     except Exception:
         print("An error occurred loading the index.")
     
-    cdn = ''
-    #cdn = 'https://dyw7dciygqjtx.cloudfront.net'
+    #cdn = ''
+    cdn = 'https://dyw7dciygqjtx.cloudfront.net'
 
     return render_template(
         "index.html", skills=skills, username=username, is_admin=is_admin,
