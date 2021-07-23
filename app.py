@@ -24,6 +24,7 @@ def index():
     """
     Renders index page template when going to the main website link
     """
+    
     try:
         skills = list(mongo.db.skills.find())
         user = mongo.db.users.find_one({"username": session.get("user")}) or {}
@@ -140,7 +141,10 @@ def logout():
     returns them to the log in page.
     """
     flash("You have been logged out")
-    session.pop("user")
+    try:
+        session.pop("user")
+    except Exception:
+        pass
     return redirect(url_for("login"))
 
 
