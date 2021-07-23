@@ -252,7 +252,7 @@ def add_testimonial():
             return 'no image'
         image = files['image']
 
-        path = f'static/online_images/{image.filename}'
+        path = f'static/{image.filename}'
         image.save(path)
 
         try:
