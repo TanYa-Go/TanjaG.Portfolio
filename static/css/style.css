@@ -307,7 +307,7 @@ p {
 
 
 .row {
-  justify-content: center;
+  justify-content: center; 
   margin: 0px;
   padding: 0px;
 }
@@ -581,19 +581,23 @@ footer {
   background: linear-gradient(225deg, #28282f, #212128);
 }
 
-.select-menu {
+select {
   width: 100%;
-  background: linear-gradient(225deg, #28282f, #212128);
-  height: 200px;
+  background-color: #3b0432;
+  color: #fafafa;
+  text-align-last: center;
+  margin-bottom: 40px;
+  border-radius: 10px;
 }
 
-.select-item {
+
+
+.select-menu select{
   color: rgb(233, 76, 29);
   font-size: 25px;
-  border-radius: 5px;
 }
 
-.dropdown-item:hover {
+option:hover {
   background-color: slategray;
 }
 

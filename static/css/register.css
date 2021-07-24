@@ -1,5 +1,5 @@
 .title-register {
-  margin-top: 140px;
+  margin-top: 100px;
   color: #fafafa;
   margin-bottom: 20px;
 }
@@ -60,6 +60,26 @@
   color: rgb(233, 76, 29);
 }
 
+@media (min-width: 320px) and (max-width: 576px) {
+
+  .main-form {
+    width: 60%;
+    font-size: 20px;
+  }
+
+  .btn-register {
+    width: 200px;
+  }
+
+  .title-register {
+    font-size: 20px;
+    margin-top: 120px;
+  }
+
+
+}
+
+
 /* --- Media Queries -----*/
 @media only screen and (max-width: 1000px) {
   .main-form {
@@ -68,10 +88,13 @@
   }
 
   .btn-register {
-    width: 40%;
+    width: auto;
   }
 
   .title-register {
     font-size: 30px;
+  }
+  input[type="file"] {
+    width: 250px;
   }
 }

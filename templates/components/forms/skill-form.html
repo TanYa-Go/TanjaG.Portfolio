@@ -1,66 +1,68 @@
-<form class="main-form col-12 col-lg-8 text-center" method="POST" enctype="multipart/form-data" action="
-    {% if edit %}
-        {{ url_for('edit_skill', skill_id=skill._id)}}
-    {% else %}
-        {{ url_for('add_skill')}}
-    {% endif %}
-">
-
-    <div class="dropdown">
-        
-        <select name="category_title">
-            <option class="select-menu" disabled><i class="fas fa-folder"></i> Category</option>
-            {% for category in categories %}
-                {% if edit %}
-                    {% set selected = '' %}
-                    {% if category.category_title == skill.category_title %}
-                        {% set selected = 'selected' %}
-                    {% endif %}
-                {% endif %}
-                <option class="" value="{{category.category_title}}" {{selected}}>{{category.category_title}}</option>
-            {% endfor %}
-        </select>
-    </div>
-
-    <!-- category name -->
-    <div class="form-group">
-        <i class="fas fa-cog"></i>
-        <label for="skill_title">Title</label>
-        <input type="text" name="skill_title" id="skill_title" minlength="5" maxlength="50"
-            class="form-control validate" required
+   <div class="container">
+    <div class="row">
+        <form class="main-form col-12 col-lg-8 text-center" method="POST" enctype="multipart/form-data" action="
             {% if edit %}
-                value="{{skill.skill_title}}"
+                {{ url_for('edit_skill', skill_id=skill._id)}}
+            {% else %}
+                {{ url_for('add_skill')}}
             {% endif %}
-        >
+        ">
 
-    </div>
-    <!-- image -->
-    <div class="form-group">
-        <i class=""></i>
-        <label for="image">Image</label>
-        {% if edit %}
-            <br>
-            <img id="skill_img" src="/{{skill.image_path}}" width="50" height="50">
-        {% endif %}
-        <input type="file" name="image" id="image" class="form-control"
-        {% if not edit %}
-            required
-        {% endif %}
-        >
-    </div>
-    
-    <!-- submit button -->
-    <button type="submit" class="btn  btn-register"><i class="fas fa-check"></i>
-        {% if edit %}
-        Save
-        {% else %}
-         Add Skill
-        {% endif %}
-    </button><br>
+                 
+                <select name="category_title" class="select-menu">
+                    <option  class="text-center" >Category</option>
+                    {% for category in categories %}
+                        {% if edit %}
+                            {% set selected = '' %}
+                            {% if category.category_title == skill.category_title %}
+                                {% set selected = 'selected' %}
+                            {% endif %}
+                        {% endif %}
+                        <option class="text-center" value="{{category.category_title}}" {{selected}}>{{category.category_title}}</option>
+                    {% endfor %}
+                </select>
         
-    
-    <!-- cancel button -->
-    <a href="{{ url_for('dashboard', username=session['user']) }}" class="register-cancel"><i class="fas fa-times"></i>
-        Cancel <i class="fas fa-cancel"></i></a>
+
+            <!-- category name -->
+            <div class="form-group">
+                <i class="fas fa-cog"></i>
+                <label for="skill_title">Title</label>
+                <input type="text" name="skill_title" id="skill_title" minlength="5" maxlength="50"
+                    class="form-control validate" required
+                    {% if edit %}
+                        value="{{skill.skill_title}}"
+                    {% endif %}
+                >
+            </div>
+            <!-- image -->
+            <div class="form-group text-center">
+                <i class="fas fa-image"></i>
+                <label for="image">Image</label>
+                {% if edit %}
+                    <br>
+                    <img id="skill_img" src="/{{skill.image_path}}" width="50" height="50">
+                {% endif %}
+                <input type="file" name="image" id="image" class="form-control upload"
+                {% if not edit %}
+                    required
+                {% endif %}
+                >
+            </div>
+            
+            <!-- submit button -->
+            <button type="submit" class="btn btn-register"><i class="fas fa-check"></i>
+                {% if edit %}
+                Save
+                {% else %}
+                Add Skill
+                {% endif %}
+            </button><br>
+                
+            
+            <!-- cancel button -->
+            <a href="{{ url_for('dashboard', username=session['user']) }}" class="register-cancel"><i class="fas fa-times"></i>
+                Cancel <i class="fas fa-cancel"></i></a>
+            </div>
+        </form>
     </div>
-</form>
+</div> 
