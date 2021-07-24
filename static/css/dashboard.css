@@ -1,12 +1,18 @@
+* {
+    box-sizing: inherit;
+}
+
 .main-form-dash {
-    margin-top: 120px;
+    margin-top: 130px;
     margin-bottom: 50px;
     background-color: #3b0432;
+    color: rgb(233, 76, 29);
+    text-transform: uppercase;
+    
 }
 
 .main-form-dash-add {
     width: 30%;
-    margin-left: 190px;
     margin-top: 20px;
     padding: 30px 30px;
     font-size: 30px;
@@ -19,7 +25,7 @@
 
 .main-form-dash-edit {
     width: 30%;
-    margin-left: 80px;
+    margin-left: 30px;
     margin-top: 20px;
     padding: 30px 30px;
     font-size: 30px;
@@ -44,32 +50,54 @@
     color: rgb(233, 76, 29);
 }
 
-@media (min-width: 200px) and (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 576px) {
 
-    /* .main-form-dash-add {
-        width: 50%;
-        font-size: 20px;
+    .main-form-dash-add a {
+       font-size: 20px;
+       
     }
 
-    .main-form-dash-edit{
-        width: 50%;
+    .main-form-dash-edit a {
         font-size: 20px;
-    } */
+        
+     }
+
+    .main-form-dash-edit{
+        font-size: 20px;
+        margin-left:  0;
+    }
 
 }
 
+@media (min-width: 577px) and (max-width: 768px) {
 
+    .main-form-dash-add a {
+        font-size: 25px;
+        
+     }
+     .main-form-dash-edit a {
+        font-size: 25px;
+        
+     }
+     .main-form-dash-edit{
+         font-size: 20px;
+         margin-left:  0;
+     }
+ 
 
-@media only screen and (max-width: 1000px) {
+}
 
-    .main-form-dash-add {
-        width: 50%;
-        font-size: 20px;
-    }
+@media (min-width: 769px) and (max-width: 992px) {
 
-    .main-form-dash-edit{
-        width: 50%;
-        font-size: 20px;
-    }
+    .main-form-dash-add a {
+        font-size: 27px;
+        
+     }
+     .main-form-dash-edit a {
+        font-size: 27px;
+        
+     }
+    
+ 
 
 }

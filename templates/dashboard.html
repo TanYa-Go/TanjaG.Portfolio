@@ -9,29 +9,29 @@
 </div>
 <div class="row">
     {% if is_admin %}
-    <div class="main-form-dash-add col-12 col-md-3 col-lg-4">
+    <div class="main-form-dash-add col-9 col-md-4 col-lg-4">
         <h3 class="text-center">
             <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> Add Skill </a>
         </h3>
     </div>
 
-    <div class="main-form-dash-edit col-12 col-md-3  col-lg-4">
+    <div class="main-form-dash-edit col-9 col-md-4  col-lg-4">
         <h3 class="text-center">
-            <a href="{{ url_for('.index', _anchor='skills') }}"> <i class="fas fa-edit"></i> Edit Skills </a>
+            <a href="{{ url_for('.index', _anchor='skills') }}"> <i class="fas fa-edit"></i> Edit Skill</a>
         </h3>
     </div>
 </div>
 
 <div class="row">
-    <div class="main-form-dash-add col-12 col-lg-4">
+    <div class="main-form-dash-add col-9 col-md-4 col-lg-4">
         <h3 class="text-center">
             <a href="{{url_for('add_testimonial')}}"> <i class="fas fa-plus"></i> Add Testimonial </a>
         </h3>
     </div>
 
-    <div class="main-form-dash-edit col-12 col-lg-4 ">
+    <div class="main-form-dash-edit col-9 col-md-4 col-lg-4 ">
         <h3 class="text-center">
-            <a href="{{ url_for('.index', _anchor='testimonials') }}"> <i class="fas fa-edit"></i> Edit Testimonials
+            <a href="{{ url_for('.index', _anchor='testimonials') }}"> <i class="fas fa-edit"></i> Edit Testimonial
             </a>
         </h3>
     </div>
