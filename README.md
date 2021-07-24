@@ -203,12 +203,20 @@ I would also like to add a form in contact section so people can have that optio
 
 
 
-#### Desktop Wireframes
+#### Index Page Wireframes
+[Hello Section](static/images/wireframes/hello.png)\
+[About Me Section](static/images/wireframes/about-me.png)\
+[My Projects Section](static/images/wireframes/my-projects.png)\
+[Testimonials Section](static/images/wireframes/testimonials.png)
 
+#### Admin Login Pages Wireframes
+[Register](static/images/wireframes/dashboard.png)\
+[Login](static/images/wireframes/login.png)\
+[Dashboard](static/images/wireframes/dashboard.png)
+#### CRUD Operations Pages Wireframes
+[Add / Edit Skill](static/images/wireframes/add_edit_skill.png)
+[Add / Edit Testimonial](static/images/wireframes/add_edit_skill.png)
 
-#### Tablet Wireframes
-
-#### Mobile Wireframes
 
 
 
