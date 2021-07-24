@@ -214,7 +214,7 @@ I would also like to add a form in contact section so people can have that optio
 [Login](static/images/wireframes/login.png)\
 [Dashboard](static/images/wireframes/dashboard.png)
 #### CRUD Operations Pages Wireframes
-[Add / Edit Skill](static/images/wireframes/add_edit_skill.png)
+[Add / Edit Skill](static/images/wireframes/add_edit_skill.png)\
 [Add / Edit Testimonial](static/images/wireframes/add_edit_skill.png)
 
 
