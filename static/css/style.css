@@ -34,6 +34,7 @@ ul {
 
 .navbar-dark {
   background-color: #3b0432;
+  
 }
 
 .hide {
@@ -62,7 +63,7 @@ ul {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: rgb(241 190 175);
+  color: rgb(240, 203, 192);
   text-decoration: none;
 }
 
@@ -72,6 +73,7 @@ ul {
   margin-top: 5px;
   color: #333;
   text-transform: uppercase;
+  margin-bottom: 45px;
 }
 
 
@@ -115,45 +117,6 @@ ul {
   font-size: 40px;
 }
 
-
-/* About section */
-
-
-h1 {
-  font-size: 90px;
-  margin: 0;
-}
-
-h2 {
-  font-size: 50px;
-  color: #fafafa;
-}
-
-p {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 400;
-
-}
-
-.information {
-  padding-left: 30px;
-}
-
-.information p {
-  text-align: justify;
-  font-size: 20px;
-  padding: 0px 0px;
-  font-family: Yatra One;
-}
-
-.subtext {
-  font-size: 15px;
-  font-weight: 300;
-}
-
-
-
 /* Scroll down button  */
 
 .home-content {
@@ -183,7 +146,6 @@ p {
   color: rgb(233, 76, 29);
 }
 
-
 /* Social icons */
 
 .socials {
@@ -197,6 +159,44 @@ p {
   margin: 20px;
 }
 
+/* About section */
+
+
+h1 {
+  font-size: 90px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  color: #fafafa;
+}
+
+p {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+
+}
+
+.information {
+  padding-left: 30px;
+  margin-top: 50px;
+}
+
+.information p {
+  text-align: justify;
+  font-size: 20px;
+  padding: 20px 20px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.subtext {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+
 /*  About Section */
 
 .about-section {
@@ -206,24 +206,24 @@ p {
   border-radius: 20px;
   margin-bottom: 100px;
   box-shadow: 5px 5px 20px black;
-
+ 
 }
 
 .headshot {
-
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 50%;
   border: 2px solid rgb(233, 76, 29);
   box-shadow: 7px 7px 7px #5e5b5b;
+  margin-top: 60px;
 
 }
-
+/* 
 .headshot-container {
-  display: flex;
-  align-items: center;
-  margin-top: 80px;
-}
+  /* display: flex;
+  align-items: center; 
+  margin-top: 50px;
+} */
 
 /* Projects */
 
@@ -305,10 +305,12 @@ p {
      
 }
 
-/* 
+
 .row {
   justify-content: center;
-} */
+  margin: 0px;
+  padding: 0px;
+}
 
 /* Skills */
 
@@ -330,12 +332,12 @@ p {
   margin-bottom: 30px;
 }
 
-.skills-container {
+/* .skills-container {
   margin-top: 60px;
   margin-left: 10px;
   height: fit-content;
   width: max-content;
-}
+} */
 
 .skill-list {
   display: block;
@@ -378,7 +380,7 @@ p {
 
 }
 
-.editBtn {
+/* .editBtn {
   font-size: x-large;
   font-weight: 500;
   color: green;
@@ -386,7 +388,7 @@ p {
 
 .editBtn:hover {
   color: #333;
-}
+} */
 
 .letters {
   color: rgb(233, 76, 29);
@@ -394,7 +396,7 @@ p {
 
 /* Education */
 
-.skills-container {
+/* .education-container {
   margin: auto;
   padding: 60px;
   background-color: #fafafa;
@@ -403,10 +405,11 @@ p {
   margin-top: 100px;
   box-shadow: 5px 5px 20px black;
   
-}
+} */
 
 .degree {
   color: rgb(233, 76, 29);
+  font-weight: 700;
  
  
 }
@@ -432,17 +435,20 @@ p {
 #testimonials p {
   color: #333;
   font-size: 18px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: justify;
+  padding: 20px;
 }
 
-
-.bd-placeholder-img {
-  margin-bottom: 20px;
+.testi-img {
+  width: 140px;
+ height: 140px;
+ border-radius: 50%;
 }
 
 .bin {
   color: #5e5b5b;
+  margin-left: 10px;
 }
 
 .user-name {
@@ -620,15 +626,81 @@ a {
   color: #ff9d00;
 }
 
-.hidden_right {
-  transform: translateX(100%);
-}
-
-.unhidden {
-
-}
 
 /* Media queries */
+
+@media (min-width: 320px) and (max-width: 576px) {
+
+   .hamburger {
+    margin-top: -20px;
+  }
+
+  .hero-area {
+    margin-top: 100px;
+    height: 100%;
+    align-items: center;
+    padding: 50px 10px;
+    margin-left: -25px;
+  }
+   
+  .hero-text h3 {
+    font-size: 25px;
+  }
+
+  .hero-text h2 {
+    font-size: 28x;
+  }
+ 
+  .letter {
+    font-size: 30px;
+    }
+
+    .title {
+      font-size: 30px;
+    }
+
+    #about-me {
+      padding: 10px;
+    }
+
+    .code-institute h4 {
+      font-size: 23px;
+    }
+    .university h4 {
+      font-size: 23px;
+    }
+
+    .testimonials-container {
+      padding: 20px;
+    }
+    #testimonials p {
+      padding:0;
+    }
+    .category-title-fb {
+      margin-bottom: 30px;
+    }
+  
+}
+  
+
+
+
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+
+
+}
+
+
+
 
 @media only screen and (max-width: 1000px) {
   .hamburger {
@@ -643,7 +715,6 @@ a {
   .letters {
     font-size: 40px;
   }
-
 
   .hero-text {
     margin-top: 50px;
@@ -680,9 +751,7 @@ a {
     margin: 20px 20px;
   }
 
-  .testimonials-container {
-    margin: 20px 20px;
-  }
+ 
 
   .contact-container {
     margin: 20px 20px;
@@ -691,4 +760,4 @@ a {
   .skill-list {
     background-color: transparent;
   }
-}
+} 

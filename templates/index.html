@@ -53,10 +53,10 @@
 </section>
 
 <!-- About Me -->
-<section class="about-section container hidden__right" id="about-me">
+<section class="about-section container" id="about-me">
     <div class="row">
 
-        <div class="col-12 col-lg-6 headshot-container">
+        <div class="col-12 col-lg-6">
             <img class="headshot" src="{{ url_for('static', filename ='images/headshot.jpg') }}"
                 alt="Tanja Godinic headshot" />
         </div>
@@ -69,15 +69,12 @@
                 to every project.
                 I work quickly and effectively in getting things built and working across the stack. I'm an excellent
                 communicator who
-                thrives in bright and enthusiastic teams and I'm aslo a self starter when working solo. I follow form as
-                well as function.
-                I know that the aesthetics of effective design combined with application speed, security and reliability
-                combine to create
-                a great user experience.
+                thrives in bright and enthusiastic teams and I'm aslo a self starter when working solo. 
+                I love discussing different ideas, feel free to contact me about your project to see how I can help. 
             </p>
         </div>
 
-
+<!-- Education -->
     </div>
     <br><br> 
     <section class="education-container" id="education">
@@ -88,32 +85,44 @@
                 </div>
             </div>
             <div class="row edu text-center">
-                <div class="col code-institute">
+                <div class="col-12 col-md-6 code-institute">
                     <h4>Code Institute</h4>
                     <h4><span class="degree">Diploma in Software Development</h4></span> 
                     <h4>2020 - 2021</h4>
                 </div>
-                <div class="col university">
+                <div class="col-12 col-md-6 university">
                     <h4>Faculty of Economics and Business</h4>
                     <h4><span class="degree">Masters Degree Marketing</h4></span>
                     <h4>2001 - 2006</h4>
                 </div>
             </div>   
         </section>
-</section>
-
+<div class="row">
+    <div class="col">
+        <div class="divider div-transparent"></div>
+    </div>
+</div>
+<!-- Skills -->
 <div class="container skills-container " id="skills">
-    <h2 class="text-center title-skills text-center">Skills</h2>
-    <div class="divider div-transparent div-dot"></div>
-   
-        <div class="row">
-            <div class="col-12 col-md-3">
-                <h3 class="category-title-fb">Frontend</h3>
-                <ul class="skill-list">
+    <div class="row">
+        <div class="col">
+            <h2 class="title-skills text-center">Skills</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        <p class="divider div-transparent div-dot"></p>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class=" col-md-4">
+                <h3 class="category-title-fb text-center">Frontend</h3>
+                <ul class="skill-list text-center">
                     {% for skill in skills %}
                     {% if skill.category_title == "Frontend" %}
                     <li data-id="{{skill._id}}">
-                        <img src="{{cdn}}/{{skill.image_path}}"" width="25" height="25">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -129,9 +138,9 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-3">
-                <h3 class="category-title-fb">Backend</h3>
-                <ul class="skill-list">
+            <div class="col-md-4">
+                <h3 class="category-title-fb text-center">Backend</h3>
+                <ul class="skill-list text-center">
                     {% for skill in skills %}
                     {% if skill.category_title == "Backend" %}
                     <li data-id="{{skill._id}}">
@@ -151,9 +160,9 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-3">
-                <h3 class="category-title">Libraries & Frameworks</h3>
-                <ul class="skill-list">
+            <div class=" col-md-4">
+                <h3 class="category-title text-center">Libraries & Frameworks</h3>
+                <ul class="skill-list text-center">
                     {% for skill in skills %}
                     {% if skill.category_title == "Libraries & Frameworks" %}
                     <li data-id="{{skill._id}}">
@@ -173,7 +182,8 @@
                 </ul>
             </div>
         </div>
-    </div>
+</div>
+</section>
 
 
 
@@ -243,9 +253,12 @@
     <div class="row text-center">
         {% for testimonial in testimonials %}
         <div class="col-lg-4 ">
-            <img src="{{cdn}}/{{testimonial.image_path}}" width="140" height="140">
+            <br>
+            <img src="{{cdn}}/{{testimonial.image_path}}" class="testi-img">
+            <br><br>
             <h3 class="user-name">{{testimonial.user_name}}</h3>
             <p >{{testimonial.testimonial_description}}</p>
+            <br>
             {% if is_admin or testimonial.created_by == username %}
             <a href="{{ url_for ('edit_testimonial', testimonial_id=testimonial._id)}}" class="bin"
                 data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
