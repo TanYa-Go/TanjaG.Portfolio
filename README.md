@@ -210,8 +210,7 @@ I would also like to add a form in contact section so people can have that optio
 [Testimonials Section](static/images/wireframes/testimonials.png)
 
 #### Admin Login Pages Wireframes
-[Register](static/images/wireframes/dashboard.png)\
-[Login](static/images/wireframes/login.png)\
+[Register / Log In](static/images/wireframes/register-login.png)\
 [Dashboard](static/images/wireframes/dashboard.png)
 #### CRUD Operations Pages Wireframes
 [Add / Edit Skill](static/images/wireframes/add_edit_skill.png)\
