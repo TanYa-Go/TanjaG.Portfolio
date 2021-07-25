@@ -62,7 +62,8 @@
 
 /* --- Media Queries -----*/
 @media (min-width: 320px) and (max-width: 576px) {
-
+   
+  
   .main-form {
     width: 90%;
     font-size: 20px;
@@ -81,7 +82,8 @@
    .question {
      font-size: 15px;
    }
-
+  
+  
 }
 
 @media (min-width: 577px) and (max-width: 786px) {

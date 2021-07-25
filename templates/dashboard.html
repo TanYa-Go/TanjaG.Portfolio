@@ -2,11 +2,12 @@
 {% block content %}
 
 <div class="main-form-dash col-12 col-lg-8 text-center">
-    {% include "components/flash.html" %}
+   
     <h3 class="text-center">
         {{ username }}'s Dashboard
     </h3>
 </div>
+{% include "components/flash.html" %}
 <div class="row">
     {% if is_admin %}
     <div class="main-form-dash-add col-9 col-md-5 col-lg-4">
@@ -38,22 +39,17 @@
 </div>
 
 {% else %}
-<div class="col-12 text-center">
-    <p><i class="fas fa-exclamation"></i> </p>
-    <p>You have no rights to edit this page</p>
-    <p>Contact page admin to gain credentials</p>
+<div class="col-12 text-center ">
+    <p><i class="fas fa-exclamation"></i> </p><br>
+    <p class="warning">You have no rights to edit this page.</p>
+    <p class="warning">Contact page admin to gain credentials.</p>
 </div>
 </div>
 </div>
+
 {% endif %}
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="text-center author-dash">Created with <i class="fas fa-heart"></i> by Tanya-Go</div>
-        </div>
-    </div>
-</div>
+
 
 {% endblock %}
 

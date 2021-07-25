@@ -1,4 +1,3 @@
-
 .main-form-dash {
     margin-top: 130px;
     margin-bottom: 50px;
@@ -6,7 +5,7 @@
     color: rgb(233, 76, 29);
     text-transform: uppercase;
     box-sizing: content-box;
-    
+
 }
 
 .main-form-dash-add {
@@ -34,9 +33,9 @@
 
 }
 
-.main-form-dash-add, 
+.main-form-dash-add,
 .main-form-dash-edit,
-  a:hover {
+a:hover {
     border-bottom-style: none;
     color: rgb(233, 76, 29);
 }
@@ -46,6 +45,17 @@
 .fa-edit,
 .fa-exclamation {
     color: rgb(233, 76, 29);
+}
+
+.fa-exclamation {
+    font-size: 40px;
+}
+
+.warning {
+    color: silver;
+    font-size: 30px;
+
+
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
@@ -59,102 +69,114 @@
     .main-form-dash-edit {
         height: 80px;
     }
+
     .main-form-dash h3 {
         font-size: 20px;
     }
 
     .main-form-dash-add a {
-       font-size: 20px;
-       
+        font-size: 20px;
+
     }
 
     .main-form-dash-edit a {
         font-size: 20px;
-        
-     }
 
-    .main-form-dash-edit{
-        font-size: 20px;
-        margin-left:  0;
-        
     }
 
-     .author-dash {
-         margin-top: 50px;
-         color: rgb(233, 76, 29);
-         margin-bottom: 10px;
-     }
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-
-    .main-form-dash {
-        margin-bottom: 30px;
-        height: 50px;
-    }
-
-    .main-form-dash-add,
     .main-form-dash-edit {
-        height: 90px;
+        font-size: 20px;
+        margin-left: 0;
+
     }
 
-    .main-form-dash h3 {
-        font-size: 25px;
-    }
-
-    .main-form-dash-add a {
-        font-size: 22px;
-        
-     }
-     .main-form-dash-edit a {
-        font-size: 22px;
-        
-     }
-     .main-form-dash-edit{
-         font-size: 20px;
-         margin-left:  0;
-     }
-     
-     .author-dash {
+    .author-dash {
         margin-top: 50px;
         color: rgb(233, 76, 29);
         margin-bottom: 10px;
     }
+
+    .warning {
+        font-size: 22px;
+
+    }
 }
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+        .main-form-dash {
+            margin-bottom: 30px;
+            height: 50px;
+        }
+
+        .main-form-dash-add,
+        .main-form-dash-edit {
+            height: 90px;
+        }
+
+        .main-form-dash h3 {
+            font-size: 25px;
+        }
+
+        .main-form-dash-add a {
+            font-size: 22px;
+
+        }
+
+        .main-form-dash-edit a {
+            font-size: 22px;
+
+        }
+
+        .main-form-dash-edit {
+            font-size: 20px;
+            margin-left: 0px;
+        }
+
+        .author-dash {
+            margin-top: 50px;
+            color: rgb(233, 76, 29);
+            margin-bottom: 10px;
+        }
+
+    }
 
 
 
 @media (min-width: 769px) and (max-width: 992px) {
 
-    .main-form-dash-add a {
-        font-size: 24px;
-        
-     }
-     .main-form-dash-edit a {
-        font-size: 24px;
-        
-     }
-    
-     .author-dash {
-        margin-top: 200px;
-        color: rgb(233, 76, 29);
-        margin-bottom: 20px;
-    }
+        .main-form-dash-add a {
+            font-size: 24px;
 
-}
+        }
+
+        .main-form-dash-edit a {
+            font-size: 24px;
+
+        }
+
+        .author-dash {
+            margin-top: 200px;
+            color: rgb(233, 76, 29);
+            margin-bottom: 20px;
+        }
+
+    }
 
 @media screen and (min-width: 993px) {
-    .main-form-dash-add a {
-        font-size: 26px;
-        
-     }
-     .main-form-dash-edit a {
-        font-size: 26px;
-        
-     }
-    .author-dash {
-        margin-top: 200px;
-        color: rgb(233, 76, 29);
-        margin-bottom: 20px;
-    }
+        .main-form-dash-add a {
+            font-size: 26px;
+
+        }
+
+        .main-form-dash-edit a {
+            font-size: 26px;
+
+        }
+
+        .author-dash {
+            margin-top: 200px;
+            color: rgb(233, 76, 29);
+            margin-bottom: 20px;
+        }
 }
