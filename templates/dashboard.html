@@ -9,13 +9,13 @@
 </div>
 <div class="row">
     {% if is_admin %}
-    <div class="main-form-dash-add col-9 col-md-4 col-lg-4">
+    <div class="main-form-dash-add col-9 col-md-5 col-lg-4">
         <h3 class="text-center">
             <a href="{{url_for('add_skill')}}"> <i class="fas fa-plus"></i> Add Skill </a>
         </h3>
     </div>
 
-    <div class="main-form-dash-edit col-9 col-md-4  col-lg-4">
+    <div class="main-form-dash-edit col-9 col-md-5  col-lg-4">
         <h3 class="text-center">
             <a href="{{ url_for('.index', _anchor='skills') }}"> <i class="fas fa-edit"></i> Edit Skill</a>
         </h3>
@@ -23,13 +23,13 @@
 </div>
 
 <div class="row">
-    <div class="main-form-dash-add col-9 col-md-4 col-lg-4">
+    <div class="main-form-dash-add col-9 col-md-5 col-lg-4">
         <h3 class="text-center">
             <a href="{{url_for('add_testimonial')}}"> <i class="fas fa-plus"></i> Add Testimonial </a>
         </h3>
     </div>
 
-    <div class="main-form-dash-edit col-9 col-md-4 col-lg-4 ">
+    <div class="main-form-dash-edit col-9 col-md-5 col-lg-4 ">
         <h3 class="text-center">
             <a href="{{ url_for('.index', _anchor='testimonials') }}"> <i class="fas fa-edit"></i> Edit Testimonial
             </a>
@@ -47,4 +47,13 @@
 </div>
 {% endif %}
 
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="text-center author-dash">Created with <i class="fas fa-heart"></i> by Tanya-Go</div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
+

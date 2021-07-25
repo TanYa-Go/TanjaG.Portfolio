@@ -116,7 +116,7 @@ Apart from the other users, I will be a user as well.  As a user, (an admin) I w
 
 * As a user, I would like to see the projects site owner was working on and the skills they have, to see if we could potentially work together on a project
 
-* As a user, I would like to be able to see the site owners GitHub link to see how they are putting their skills to use and how their skills developed over time
+* As a user, I would like to be able to see the site owners GitHub link to see how they are putting their skills to use, and how their skills developed over time
 
 
 #### **Potential Clients**
@@ -148,18 +148,14 @@ Apart from the other users, I will be a user as well.  As a user, (an admin) I w
 * As admin: 
     * CRUD Functions
         * Create: create a new skill
-        * Read: after creating a skill, user can click View Skills button and is directed to the index page, the skill section, where they can see the skill they've just added 
+        * Read: after creating a skill, user can click View Skills button and is then directed to the index page, the skill section, where they can see the skill they've just added plus all other skills
         * Update: possibility to edit the skill
         * Delete: possibility to delete the skill
-
-* As a user: 
-    * CRUD Functions
         * Create: create a new testimonial
-        * Read: after creating a testimonial, user can click View Testimonials button and will be directed to the index page, the testimonial section, where they can see the testimonial they've just added 
-        * Update: possibility to edit the skill
-        * Delete: possibility to delete the skill
-
-* Users can click on email address in the contact section and will be directed to the email provider so they can send an email directly from the website
+        * Read: after creating a testimonial, user can click View Testimonials button and will be directed to the index page, the testimonial section, where they can see the testimonial they've just added plus all other testimonials
+        * Update: possibility to edit the testimonial
+        * Delete: possibility to delete the testimonial
+* Visitors can click on the email address in the footer and will be directed to the email provider so they can send an email directly from the website
 
 
 <a></a>
@@ -190,10 +186,6 @@ I would also like to add a contact form so people can have that option as well t
 
 ![Database Schema](static/images/schema.png)
 
-
-### **Flowchart**
-
-![Flowchart](static/images/flowchart.png)
 
 
 ### **Wireframes**
