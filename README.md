@@ -212,9 +212,10 @@ I would also like to add a form in contact section so people can have that optio
 #### Admin Login Pages Wireframes
 [Register / Log In](static/images/wireframes/register-login.png)\
 [Dashboard](static/images/wireframes/dashboard.png)
+
 #### CRUD Operations Pages Wireframes
-[Add / Edit Skill](static/images/wireframes/add_edit_skill.png)\
-[Add / Edit Testimonial](static/images/wireframes/add_edit_skill.png)
+[Add / Edit Skill](static/images/wireframes/add-edit-skill.png)\
+[Add / Edit Testimonial](static/images/wireframes/add-edit-testimonial.png)
 
 
 
