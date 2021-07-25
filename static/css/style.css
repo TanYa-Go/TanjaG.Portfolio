@@ -491,18 +491,17 @@ p {
 
 
 /* Footer */
-footer {
+/* footer {
   text-align: center;
   padding: 35px;
   height:min-content;
-}
+} */
 
 .contact-container {
   background-color: #3b0432;
- 
   box-shadow: 5px 5px 20px black;
- 
-  height: max-content;
+  margin-left: 0px;
+  height:max-content;
 
 }
 
@@ -529,10 +528,10 @@ footer {
   font-size: 30px;
   color: rgb(233, 76, 29);
   text-shadow: 3px 3px 3px #333;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #phone {
@@ -555,7 +554,8 @@ footer {
 .author {
   margin-top: -10px;
   color: rgb(233, 76, 29);
-  margin-bottom: 5px;
+  padding-bottom: 20px;
+ 
 }
 
 .fab {
@@ -565,7 +565,7 @@ footer {
 }
 
 .fab:hover {
-  color: rgb(233, 76, 29);
+  color: #fafafa
 }
 
 .fa-download:hover{
@@ -680,56 +680,83 @@ a {
     margin-left: -25px;
   }
    
+  .hero-text {
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-bottom: 200px;
+    padding: 20px;
+  }
+
   .hero-text h3 {
     font-size: 25px;
+    margin-top: 20px;
   }
 
   .hero-text h2 {
-    font-size: 28x;
+    font-size: 30px;
   }
  
+  .hero-text h1 {
+    font-size: 50px;
+  
+  }
   .letter {
-    font-size: 30px;
+    font-size: 35px;
     }
 
-    .title {
+  .title {
       font-size: 30px;
     }
 
-    #about-me {
+  #about-me {
       padding: 10px;
     }
 
-    .code-institute h4 {
-      font-size: 23px;
+  .code-institute {
+    margin-bottom: 15px;
+  }
+
+  .code-institute h4 {
+      font-size: 20px;
     }
-    .university h4 {
-      font-size: 23px;
+  .university h4 {
+      font-size: 20px;
     }
 
-    .testimonials-container {
+  .testimonials-container {
       padding: 20px;
     }
     #testimonials p {
       padding:0;
     }
-    .category-title-fb {
+  .category-title-fb {
       margin-bottom: 30px;
     }
 
-    .flashes {
-      font-size: 15px;
+  .flashes {
+    font-size: 15px;
+    }
+
+  .title-skills {
+      font-size: 30px;
     }
   
+  .fa-download {
+      margin-top: 20px;
+    }
+
+    .author {
+      margin-top: -30px;
+      padding-bottom: 10px;
+    }
 }
   
 
-
-
-
 @media (min-width: 577px) and (max-width: 768px) {
 
-
+  .code-institute {
+    margin-bottom: 20px;
+  }
 }
 
 
@@ -757,13 +784,13 @@ a {
     font-size: 40px;
   }
 
-  .hero-text {
+  /* .hero-text {
     margin-top: 50px;
     margin-left: 5px;
     margin-bottom: 200px;
     padding: 20px;
 
-  }
+  } */
 
   .hero-area {
     height: 100%;
@@ -775,10 +802,10 @@ a {
     display: none;
   }
 
-  .project-container {
+  /* .project-container {
     display: flex;
     margin: 10px 10px;
-  }
+  } */
 
   .headshot-container {
     width: 100%;
@@ -793,10 +820,9 @@ a {
   }
 
  
-
-  .contact-container {
+  /* .contact-container {
     margin: 20px 20px;
-  }
+  } */
 
   .skill-list {
     background-color: transparent;
