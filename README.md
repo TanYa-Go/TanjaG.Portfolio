@@ -219,9 +219,6 @@ I would also like to add a form in contact section so people can have that optio
 
 
 
-
-
-
 ## **The Surface Plane**
 
 ### **Design Choices**
@@ -229,13 +226,20 @@ I would also like to add a form in contact section so people can have that optio
 
 <a></a>
 
-#### Colors
+#### **Colors**
 
+I chose the [background image](static/images/wireframes/background.png) wich has array of rainbow colors so I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use on the rest of the page.
+
+I used the dark purple color #3b0432 for the navbar and the footer and the red-orange rgb(233, 76, 29) color for contrasting the purple in titles, icons, buttons etc.
 
 
 <a></a>
 
-#### Typography
+#### **Typography**
+
+Main font for the website is **Montserrat** with the fallback font  sans-serif, if for any reason the google font doesn't load. \
+I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;** for some paragraphs as it looks cleaner. 
+
 
 <a></a>
 
