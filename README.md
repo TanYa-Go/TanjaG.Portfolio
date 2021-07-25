@@ -76,7 +76,6 @@ The user in this case can be a person, a company, an artist, a small business, e
 
 * This user's goal is to be able to see the projects that I have  created before, to see if they would like to hire me for their project
 * This user's goal is to be able to see the testimonials from others that have worked with me, to evaluate if they want to hire me
-
 * This user's goal is to be able to find the contact information easily and contact the site owner without leaving the page 
 
 
@@ -89,7 +88,7 @@ The user in this case can be a person, a company, an artist, a small business, e
 
 My the goal is to have a beautiful and reponsive website that represents me as a person and also as a developer. I'd like potential employers to find it interesting enough to want to explore it and find out about me, my accomplishments, my skills, and that they will want to get in touch for an interview, a project, or a collaboration as a result.   
 
-Apart from the other users, I will be a user as well.  As a user, (admin) I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job etc., directly from the page, without needing to change the code. 
+Apart from the other users, I will be a user as well.  As a user, (an admin) I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job etc., directly from the page, without needing to change the code. 
 
 
 <a></a>
@@ -110,7 +109,7 @@ Apart from the other users, I will be a user as well.  As a user, (admin) I want
 
 * As a user, I would like to be able to contact the site owner easily and without leaving the page
 
-* As a user, I would like to be able to find and download the site owners CV quickly and download it with one click
+* As a user, I would like to be able to find and download the site owners CV directly from the website
 
  
 #### **Other Developers** 
@@ -167,9 +166,9 @@ Apart from the other users, I will be a user as well.  As a user, (admin) I want
 
 ### **Features to be implemented**
 
-In the future I would like to add an option for admin to be able to add and edit a New Project, new Employment and Education details.
+In the future I would like to add an option for admin to be able to add and edit a New Project, new Employment and Education details, the same way it is possibe to add skills and testimonials.
 
-I would also like to add a form in contact section so people can have that option as well to contact me  without leaving the page.
+I would also like to add a contact form so people can have that option as well to contact me without leaving the page.
 
 
 
@@ -199,10 +198,6 @@ I would also like to add a form in contact section so people can have that optio
 
 ### **Wireframes**
 
-
-
-
-
 #### Index Page Wireframes
 [Hello Section](static/images/wireframes/hello.png)\
 [About Me Section](static/images/wireframes/about-me.png)\
@@ -223,7 +218,6 @@ I would also like to add a form in contact section so people can have that optio
 
 ### **Design Choices**
 
-
 <a></a>
 
 #### **Colors**
@@ -232,7 +226,6 @@ I chose the [background image](static/images/wireframes/background.png) wich has
 
 I used the dark purple color #3b0432 for the navbar and the footer and the red-orange rgb(233, 76, 29) color for contrasting the purple in titles, icons, buttons etc.
 
-
 <a></a>
 
 #### **Typography**
@@ -240,15 +233,12 @@ I used the dark purple color #3b0432 for the navbar and the footer and the red-o
 Main font for the website is **Montserrat** with the fallback font  sans-serif, if for any reason the google font doesn't load. \
 I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;** for some paragraphs as it looks cleaner. 
 
-
 <a></a>
-
 
 
 [Back to Top](#table-of-contents)
 
 ---
-
 
 <a></a>
 
@@ -296,7 +286,7 @@ I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen
 
 [Back to Top](#table-of-contents)
 
-    ## **Bugs**
+## **Bugs**
 
 
 [Back to Top](#table-of-contents)
@@ -371,6 +361,10 @@ Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate
 ### **Media**
 
 [Background image](https://www.svgbackgrounds.com/#rainbow-vortex)
+
+### **Acknowledgements**
+
+I would like to thank my mentor Simen Daehlin for the continuous support, encouragement and knowledge that he so generously shares. 
 
 
 
