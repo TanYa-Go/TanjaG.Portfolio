@@ -380,15 +380,23 @@ p {
 
 }
 
-/* .editBtn {
-  font-size: x-large;
-  font-weight: 500;
-  color: green;
+input[type="file" i] {
+  appearance: none;
+  background-color: initial;
+  cursor: default;
+  justify-content: center;
+  text-overflow:ellipsis;
+  white-space: pre;
+  text-align: center;
+  padding: initial;
+  border: initial;
+  overflow: hidden !important;
+  position: relative;
+  left: 30%;
+  top: 20px;
+  margin-bottom: 30px;
+  width: auto;
 }
-
-.editBtn:hover {
-  color: #333;
-} */
 
 .letters {
   color: rgb(233, 76, 29);
@@ -668,6 +676,7 @@ a {
 
 @media (min-width: 320px) and (max-width: 576px) {
 
+ 
    .hamburger {
     margin-top: -20px;
   }
@@ -749,20 +758,28 @@ a {
       margin-top: -30px;
       padding-bottom: 10px;
     }
+
+    input[type="file" i] {
+      left: 12%;
 }
-  
+}
 
 @media (min-width: 577px) and (max-width: 768px) {
 
   .code-institute {
     margin-bottom: 20px;
   }
+
+  input[type="file" i] {
+    left: 20%;
+    
 }
 
-
+}
 
 @media (min-width: 768px) and (max-width: 992px) {
 
+  
 
 
 }

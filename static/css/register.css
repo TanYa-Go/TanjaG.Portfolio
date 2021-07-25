@@ -21,6 +21,7 @@
   background-color: rgb(233, 76, 29);
   font-size: 20px;
   width: 30%;
+  margin-bottom: 20px;
 }
 
 .register-cancel {
@@ -72,6 +73,7 @@
 
   .btn-register {
     width: 200px;
+    margin-top: 20px;
   }
 
   .title-register {
@@ -114,9 +116,9 @@
 
 @media (min-width: 787px) and (max-width: 992px) {
 
-  .btn-register {
-    width: auto;
-  }
+  /* .btn-register {
+    width: 200px
+  } */
 
   .title-register {
     font-size: 40px;
@@ -133,4 +135,9 @@
   }
 }
 
-
+@media screen and (min-width: 993px) {
+  .btn-register {
+    width: 60%;
+    margin-top: 10px;
+  }
+}
