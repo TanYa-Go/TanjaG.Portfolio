@@ -60,11 +60,13 @@
   color: rgb(233, 76, 29);
 }
 
+/* --- Media Queries -----*/
 @media (min-width: 320px) and (max-width: 576px) {
 
   .main-form {
-    width: 60%;
+    width: 90%;
     font-size: 20px;
+    padding: 30px 30px;
   }
 
   .btn-register {
@@ -72,29 +74,61 @@
   }
 
   .title-register {
-    font-size: 20px;
-    margin-top: 120px;
+    font-size: 25px;
+    margin-top: 140px;
   }
 
+   .question {
+     font-size: 15px;
+   }
 
 }
 
+@media (min-width: 577px) and (max-width: 786px) {
 
-/* --- Media Queries -----*/
-@media only screen and (max-width: 1000px) {
+  .title-register {
+    font-size: 40px;
+    margin-top: 140px;
+  }
+ 
+  .btn-register {
+    width: auto;
+  }
+
   .main-form {
-    width: 70%;
+    width: 80%;
+    
+  }
+
+  label {
     font-size: 25px;
   }
+
+  .question {
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width: 787px) and (max-width: 992px) {
 
   .btn-register {
     width: auto;
   }
 
   .title-register {
-    font-size: 30px;
+    font-size: 40px;
+    margin-top: 140px;
   }
-  input[type="file"] {
-    width: 250px;
+
+  
+  label {
+    font-size: 27px;
+  }
+
+  .question {
+    font-size: 18px;
   }
 }
+
+
