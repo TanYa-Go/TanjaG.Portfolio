@@ -196,12 +196,22 @@
 <div class="container project-container" id="projects">
     <div class="row">
         <div class="col">
-            <h2 class="contact-title text-center">My Projects</h2>
+            <h2 class="title-skills text-center">My Projects</h2>
             <div class="divider div-transparent div-dot-black"></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 project-card">
+    <div class="row project-cards">
+        <div class="col-12 col-md-4 col-lg-4 project-card">
+            <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
+                alt="Project Two Image" />
+            <h4>Movie Trivia Extravaganza</h4>
+            <!-- <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p> -->
+            <hr />
+            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/"
+                    target="_blank">View here</a>
+            </p>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/projectOne.jpg') }}"
                 alt="Project One Image" />
 
@@ -212,17 +222,8 @@
                     target="_blank">View here</a></p>
             <!-- <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p> -->
         </div>
-        <div class="col-md-4 project-card">
-            <img class="project-image" src="{{ url_for('static', filename ='images/projectTwo.jpg') }}"
-                alt="Project Two Image" />
-            <h4>Movie Trivia Extravaganza</h4>
-            <!-- <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p> -->
-            <hr />
-            <p class="subtext"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/"
-                    target="_blank">View here</a>
-            </p>
-        </div>
-        <div class="col-md-4 project-card">
+        
+        <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/projectThree.jpg') }}"
                 alt="Project Three Image" />
             <h4>Project Three</h4>
@@ -230,14 +231,14 @@
             <hr />
             <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
         </div>
-        <!-- <div class="col-md-3 project-card">
+        <div class="col-12 col-md-4 project-card">
                         <img class="project-image" src="{{ url_for('static', filename ='images/projectFour.png') }}"
                             alt="Project Four Image" />
                         <h4>Project Four</h4>
                         <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
                         <hr />
                         <p class="subtext"><a class="project-link" href="https://www.github.com/">View here</a></p>
-                </div>  -->
+                </div> 
     </div>
 </div>
 

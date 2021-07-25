@@ -231,29 +231,32 @@ p {
   margin-top: 5px;
   color: #fafafa;
   text-transform: uppercase;
-
-}
-
-.project-card {
-  margin-left: auto;
-  margin-right: auto;
-  height: 350px;
-  box-shadow: 5px 5px 20px black;
-  background-color: #fafafa;
-  border-radius: 10px;
-  flex: 0 0 30%;
+  
 }
 
 .project-container {
-  width: 100%;
-  display: block;
-  justify-content: center;
+  width: auto;
   border-radius: 20px;
-  padding: 30px;
+  padding: 20px;
   background-color: #8a0027;
   margin: auto;
   box-shadow: 5px 5px 20px black;
 }
+
+.project-cards {
+  
+
+}
+
+.project-card {
+  margin: 20px;
+  height: auto;
+  box-shadow: 5px 5px 20px black;
+  background-color: #fafafa;
+  border-radius: 10px;
+  
+}
+
 
 
 /* code for the divider borrowed from codepen https://codepen.io/Oddgson/pen/VPrYbv */
@@ -618,7 +621,8 @@ option:hover {
 
 
 .project-image {
-  width: 100%;
+  width: 310px;
+  height: 200px;
   margin-top: 15px;
   margin-bottom: 20px;
 
