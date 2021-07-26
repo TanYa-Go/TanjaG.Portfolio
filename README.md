@@ -1,6 +1,6 @@
 # **My Portfolio**
 
-![Mock up]()
+![Mock up](static/images/pr2.jpg)
 
 
 ## **About for the project**
