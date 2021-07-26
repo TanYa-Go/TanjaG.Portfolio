@@ -322,7 +322,7 @@ def delete_testimonial(testimonial_id):
     except Exception:
         flash("An error occurred. Contact site admin.")
 
-    return redirect(url_for("pages/add_testimonial"))
+    return redirect(url_for("add_testimonial"))
 
 
 @app.errorhandler(404)
