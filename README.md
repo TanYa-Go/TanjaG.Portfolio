@@ -305,7 +305,7 @@ I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen
 
 # **Testing**
 
-The full testing procedure can be found in the [Testing](/workspace/TanjaG.Portfolio/testing.md) file
+The full testing procedure can be found in the [Testing](testing.md) file
 
 [Back to Top](#table-of-contents)
 
