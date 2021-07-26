@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template,
+    Flask, flash, render_template, request
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -24,7 +24,6 @@ def index():
     """
     Renders index page template when going to the main website link
     """
-
     try:
         skills = list(mongo.db.skills.find())
         user = mongo.db.users.find_one({"username": session.get("user")}) or {}
