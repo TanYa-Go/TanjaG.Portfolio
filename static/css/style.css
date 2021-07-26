@@ -71,7 +71,7 @@ ul {
 
 .title {
   margin-top: 5px;
-  color: #333;
+  color: #e4dede;
   text-transform: uppercase;
   margin-bottom: 45px;
 }
@@ -189,6 +189,8 @@ p {
   font-size: 20px;
   padding: 20px 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #e4dede;
+  text-shadow: 2px 2px 2px black;
 }
 
 .subtext {
@@ -201,7 +203,7 @@ p {
 .about-section {
   margin: auto;
   padding: 60px;
-  background-color: #fafafa;
+  background-color: #74042f;
   border-radius: 20px;
   margin-bottom: 100px;
   box-shadow: 5px 5px 20px black;
@@ -212,26 +214,26 @@ p {
   width: 100%;
   height: auto;
   border-radius: 50%;
-  border: 2px solid rgb(233, 76, 29);
-  box-shadow: 7px 7px 7px #5e5b5b;
+  border: 2px solid #7e0030;
+  /* box-shadow: 7px 7px 7px #5e5b5b; */
   margin-top: 60px;
 
 }
 
 /* Projects */
 
-.title-projects {
+/* .title-projects {
   margin-top: 5px;
   color: #fafafa;
   text-transform: uppercase;
 
-}
+} */
 
 .project-container {
   width: auto;
   border-radius: 20px;
   padding: 20px;
-  background-color: #8a0027;
+  background-color: #7e0030;
   margin: auto;
   box-shadow: 5px 5px 20px black;
 }
@@ -243,8 +245,8 @@ p {
   width: 100%;
   padding: 20px;
   box-shadow: 5px 5px 20px black;
-  background-color: #fafafa;
   border-radius: 10px;
+  background-color: #e4dede;
   
 }
 
@@ -280,7 +282,7 @@ hr {
   font-size: .75em;
   font-weight: 700;
   line-height: 1;
-  color: #fff;
+  color: #e4dede;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -347,12 +349,21 @@ hr {
 
 /* Skills */
 
+.skills-container {
+  background-color:#e4dede;
+  box-shadow: 5px 5px 5px black;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .title-skills {
   margin-top: 20px;
   color: #333;
   padding-top: 5px;
   padding-bottom: 30px;
   text-transform: uppercase;
+  
+ 
 }
 
 .category-title-fb {
@@ -376,7 +387,7 @@ hr {
 
 .skill-list li {
   list-style: none;
-  background: #eee;
+  background: rgba(235, 229, 229, 0.986);
   color: #333;
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -385,7 +396,9 @@ hr {
   font-size: 0.8rem;
   letter-spacing: 3px;
   font-family: 'montserrat-medium', sans-serif;
-  margin-right: 1.5rem;
+  /* margin-right: 1.5rem; */
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .skill-list a {
@@ -430,7 +443,20 @@ input[type="file"] {
 }
 
 /* Education */
+.title-edu {
+  padding-top: 20px;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
 
+.education-container {
+  background-color: #e4dede;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding:20px;
+  box-shadow: 5px 0px 5px black;
+}
 
 .degree {
   color: rgb(233, 76, 29);
@@ -443,7 +469,7 @@ input[type="file"] {
 .testimonials-container {
   margin: auto;
   padding: 60px;
-  background-color: #fafafa;
+  background-color: #7e0030;
   border-radius: 20px;
   margin-bottom: 100px;
   margin-top: 100px;
@@ -451,13 +477,15 @@ input[type="file"] {
 
 }
 
-#testimonials {
+/* #testimonials {
   padding: 70px 40px;
   background-color: #fafafa;
-}
+} */
 
 #testimonials p {
-  color: #333;
+  color: #e4dede;
+  font-weight: 600;
+  border-radius: 10px;
   font-size: 18px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-align: justify;
@@ -465,9 +493,10 @@ input[type="file"] {
 }
 
 .testi-img {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
+  border: 5px solid rgb(233, 76, 29);
 }
 
 .bin {
@@ -590,6 +619,10 @@ input[type="file"] {
   color: #fafafa;
 }
 
+.fa-download {
+  margin-top: 20px;
+}
+
 /* Add skills page */
 
 .dropdown button {
@@ -706,12 +739,15 @@ a {
     font-size: 35px;
   }
 
-  .title {
+  .title,
+  .title-edu {
     font-size: 30px;
   }
-
+  
+  
   #about-me {
     padding: 10px;
+    
   }
 
   .code-institute {
