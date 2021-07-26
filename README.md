@@ -3,7 +3,7 @@
 ![Mock up](static/images/pr2.jpg)
 
 
-## **About for the project**
+## **About the project**
 This project is a personal portfolio website that will showcase my software development skills and my recent projects to potential employers, potential clients or other developers. It will also serve as one of the milestone projects for the Code Institute Software Development Diploma course, where I needed to showcase what I've learned from the Python/Flask/MongoDB backend modules. 
 
 The idea was that the website has a log in option so that users can add to the website, change something depending on their credentials. So myself as an **admin** will have rights to make changes to all sections that have that option, while the **guest** user will be able to add only testimonials after they have worked with me or hired me for a job. 

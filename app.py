@@ -41,7 +41,7 @@ def index():
         cdn = 'https://dyw7dciygqjtx.cloudfront.net'
 
     return render_template(
-        "index.html", skills=skills, username=username, is_admin=is_admin,
+        "pages/index.html", skills=skills, username=username, is_admin=is_admin,
         testimonials=testimonials, cdn=cdn)
 
 
@@ -74,7 +74,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for("dashboard", username=session["user"]))
 
-    return render_template("register.html")
+    return render_template("pages/register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -107,7 +107,7 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("pages/login.html")
 
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
@@ -122,7 +122,7 @@ def dashboard(username):
 
         if session["user"]:
             return render_template(
-                "dashboard.html", username=username, is_admin=is_admin)
+                "pages/dashboard.html", username=username, is_admin=is_admin)
 
     except Exception:
         flash("An error occurred. Contact site admin.")
@@ -179,7 +179,7 @@ def add_skill():
 
     categories = mongo.db.categories.find().sort("category_title", 1)
     return render_template(
-        "add_edit_skill.html", categories=categories, edit=False)
+        "pages/add_edit_skill.html", categories=categories, edit=False)
 
 
 @app.route("/edit_skill/<skill_id>", methods=["GET", "POST"])
@@ -213,7 +213,7 @@ def edit_skill(skill_id):
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
-        "add_edit_skill.html", skill=skill, categories=categories,
+        "pages/add_edit_skill.html", skill=skill, categories=categories,
         edit=True)
 
 
@@ -272,7 +272,7 @@ def add_testimonial():
         return redirect(url_for("add_testimonial"))
 
     testimonials = mongo.db.testimonials.find()
-    return render_template("add_testimonial.html", testimonials=testimonials)
+    return render_template("pages/add_testimonial.html", testimonials=testimonials)
 
 
 @app.route("/edit_testimonial/<testimonial_id>", methods=["GET", "POST"])
@@ -307,7 +307,7 @@ def edit_testimonial(testimonial_id):
             'edit_testimonial', testimonial_id=testimonial['_id']))
 
     return render_template(
-        "edit_testimonial.html", testimonial=testimonial)
+        "pages/edit_testimonial.html", testimonial=testimonial)
 
 
 @app.route("/delete_testimonial/<testimonial_id>")
@@ -323,7 +323,7 @@ def delete_testimonial(testimonial_id):
     except Exception:
         flash("An error occurred. Contact site admin.")
 
-    return redirect(url_for("add_testimonial"))
+    return redirect(url_for("pages/add_testimonial"))
 
 
 @app.errorhandler(404)
@@ -331,7 +331,7 @@ def not_found_error(error):
     """
     Route to handle 404 error
     """
-    return render_template('404.html', error=error), 404
+    return render_template('pages/404.html', error=error), 404
 
 
 @app.errorhandler(500)
@@ -339,7 +339,7 @@ def internal_error(error):
     """
     Route to handle 500 error
     """
-    return render_template('500.html', error=error), 500
+    return render_template('pages/500.html', error=error), 500
 
 
 if __name__ == "__main__":

@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    {% include "components/head.html" %}
+    {% include "layout/head.html" %}
 </head>
 
 <body id="background-img">
-    {% include "components/navbar.html" %}
+    {% include "layout/navbar.html" %}
     <main>
         {% block content %}
         {% endblock%}
     </main>
-    {% include "components/scripts.html" %}
+    {% include "layout/scripts.html" %}
 </body>
 
 </html>
