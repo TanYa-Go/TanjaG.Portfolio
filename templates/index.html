@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
-
+<!-- Hello Section -->
 <div class="hero-area" id="hello">
     <div class="row">
         <div class="col-12 col-lg-11">
@@ -9,14 +8,13 @@
                 <h3>Hello there, I'm</h3>
                 <h1 class="ml10">
                     <span class="text-wrapper">
-                        <span class="letters noanimate">Tanja Godinic<br></h1></span>
+                        <span class="letters noanimate">Tanja Godinic<br>
+                </h1></span>
                 <h2>Full Stack Software Developer</h2></span>
-
                 <br>
                 <div class="home-content__scroll">
                     <a href="#about-me" class="scroll-link smoothscroll">
                         <span>Scroll Down <i class="fas fa-angle-double-down"></i></span>
-
                     </a>
                 </div>
             </div>
@@ -69,54 +67,54 @@
                 to every project.
                 I work quickly and effectively in getting things built and working across the stack. I'm an excellent
                 communicator who
-                thrives in bright and enthusiastic teams and I'm aslo a self starter when working solo. 
-                I love discussing different ideas, feel free to contact me about your project to see how I can help. 
+                thrives in bright and enthusiastic teams and I'm aslo a self starter when working solo.
+                I love discussing different ideas, feel free to contact me about your project to see how I can help.
             </p>
         </div>
 
-<!-- Education -->
+        <!-- Education -->
     </div>
-    <br><br> 
+    <br><br>
     <section class="education-container" id="education">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="title text-center">Education</h2>
-                    <div class="divider div-transparent div-dot"></div>
-                </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="title text-center">Education</h2>
+                <div class="divider div-transparent div-dot"></div>
             </div>
-            <div class="row edu text-center">
-                <div class="col-12 col-md-5 code-institute">
-                    <h5>Code Institute</h5>
-                    <h5><span class="degree">Diploma in Software Development</h5></span> 
-                    <h5 id="year">2020 - 2021</h5>
-                </div>
-                
-                <div class="col-12 col-md-5 university">
-                    <h5>Faculty of Economics and Business</h5>
-                    <h5><span class="degree">Masters Degree Marketing</h5></span>
-                    <h5>2001 - 2006</h4>
-                </div>
-            </div>   
-        </section>
-<div class="row">
-    <div class="col">
-        <div class="divider div-transparent"></div>
-    </div>
-</div>
-<!-- Skills -->
-<div class="container skills-container " id="skills">
-    <div class="row">
-        <div class="col">
-            <h2 class="title-skills text-center">Skills</h2>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-        <p class="divider div-transparent div-dot"></p>
-        </div>
-    </div>
+        <div class="row edu text-center">
+            <div class="col-12 col-md-5 code-institute">
+                <h5>Code Institute</h5>
+                <h5><span class="degree">Diploma in Software Development</h5></span>
+                <h5 id="year">2020 - 2021</h5>
+            </div>
 
+            <div class="col-12 col-md-5 university">
+                <h5>Faculty of Economics and Business</h5>
+                <h5><span class="degree">Masters Degree Marketing</h5></span>
+                <h5>2001 - 2006</h4>
+            </div>
+        </div>
+    </section>
     <div class="row">
+        <div class="col">
+            <div class="divider div-transparent"></div>
+        </div>
+    </div>
+    <!-- Skills -->
+    <div class="container skills-container " id="skills">
+        <div class="row">
+            <div class="col">
+                <h2 class="title-skills text-center">Skills</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="divider div-transparent div-dot"></p>
+            </div>
+        </div>
+
+        <div class="row">
             <div class=" col-md-4">
                 <h3 class="category-title-fb text-center">Frontend</h3>
                 <ul class="skill-list text-center">
@@ -183,7 +181,7 @@
                 </ul>
             </div>
         </div>
-</div>
+    </div>
 </section>
 
 
@@ -192,7 +190,6 @@
 
 <!-- Projects -->
 
-<!-- <section class="sub-section-alternative " id="projects"> -->
 <div class="container project-container" id="projects">
     <div class="row">
         <div class="col">
@@ -222,7 +219,7 @@
                     target="_blank">View here</a></p>
             <!-- <p class="subtext"><a class="project-link" href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">GitHub Repo</a></p> -->
         </div>
-        
+
         <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/projectThree.jpg') }}"
                 alt="Project Three Image" />
@@ -232,13 +229,13 @@
             <p class="subtext"><a class="project-link" href="https://www.github.com/kubowania">View here</a></p>
         </div>
         <div class="col-12 col-md-4 project-card">
-                        <img class="project-image" src="{{ url_for('static', filename ='images/projectFour.png') }}"
-                            alt="Project Four Image" />
-                        <h4>Project Four</h4>
-                        <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
-                        <hr />
-                        <p class="subtext"><a class="project-link" href="https://www.github.com/">View here</a></p>
-                </div> 
+            <img class="project-image" src="{{ url_for('static', filename ='images/projectFour.png') }}"
+                alt="Project Four Image" />
+            <h4>Project Four</h4>
+            <p class="subtext">This is my project and some text about it. I enjoyed making this project.</p>
+            <hr />
+            <p class="subtext"><a class="project-link" href="https://www.github.com/">View here</a></p>
+        </div>
     </div>
 </div>
 
@@ -259,7 +256,7 @@
             <img src="{{cdn}}/{{testimonial.image_path}}" class="testi-img">
             <br><br>
             <h3 class="user-name">{{testimonial.user_name}}</h3>
-            <p >{{testimonial.testimonial_description}}</p>
+            <p>{{testimonial.testimonial_description}}</p>
             <br>
             {% if is_admin or testimonial.created_by == username %}
             <a href="{{ url_for ('edit_testimonial', testimonial_id=testimonial._id)}}" class="bin"
@@ -274,6 +271,7 @@
 </section>
 
 </body>
+
 </html>
 
 {% include "components/footer.html" %}

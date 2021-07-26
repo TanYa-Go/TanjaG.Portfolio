@@ -1,39 +1,46 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-style navbar-dark" id="navigation">
     <a class="navbar-brand" href="index.html">
         <img src="" class="d-inline-block" alt="" loading="lazy" /></a>
-    <button class="navbar-toggler hamburger" id="hamburger" type="button" data-toggle="collapse" data-target="#navbarIcon"
-        aria-controls="navbarIcon" aria-expanded="false" aria-label="Toggle navigation"><span
-            class="navbar-toggler-icon" ></span>
+    <button class="navbar-toggler hamburger" id="hamburger" type="button" data-toggle="collapse"
+        data-target="#navbarIcon" aria-controls="navbarIcon" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarIcon">
         <ul class="navbar-nav ml-auto menucontainer">
             <li class="nav-item menuitem ">
                 <a class="nav-link" href="{{ url_for('.index', _anchor='hello') }}">Home<span
-                        class="sr-only">Home</span></a></li>
+                        class="sr-only">Home</span></a>
+            </li>
             <li class="nav-item menuitem ">
                 <a class="nav-link" href="{{ url_for('.index', _anchor='about-me') }}">About<span
-                        class="sr-only">About</span></a></li>
+                        class="sr-only">About</span></a>
+            </li>
             <li class="nav-item menuitem ">
                 <a class="nav-link" href="{{ url_for('.index', _anchor='projects') }}">Projects<span
                         class="sr-only">Projects</span></a>
             </li>
             <li class="nav-item menuitem ">
                 <a class="nav-link" href="{{ url_for('.index', _anchor='testimonials') }}">Testimonials<span
-                        class="sr-only">Testimonials</span></a></li>
+                        class="sr-only">Testimonials</span></a>
+            </li>
             <li class="nav-item menuitem ">
                 <a class="nav-link" href="{{ url_for('.index', _anchor='contact-me')  }}">Contact<span
-                        class="sr-only">Contact</span></a></li>
+                        class="sr-only">Contact</span></a>
+            </li>
             {% if is_admin %}
-                <li class="nav-item menuitem ">
-                    <a class="nav-link" href="{{ url_for('.dashboard', username=username, _anchor='') }}">Dashboard<span
-                            class="sr-only"></span></a></li>
+            <li class="nav-item menuitem ">
+                <a class="nav-link" href="{{ url_for('.dashboard', username=username, _anchor='') }}">Dashboard<span
+                        class="sr-only"></span></a>
+            </li>
             {% endif %}
             <li class="nav-item menuitem ">
                 <a class="nav-link" href="{{ url_for('.login', _anchor='') }}">login<span
-                        class="sr-only">Login</span></a></li>
+                        class="sr-only">Login</span></a>
+            </li>
             <li class="nav-item menuitem ">
-            <a class="nav-link" href="{{ url_for('.logout', _anchor='') }}">logout<span
-                    class="sr-only">Logout</span></a></li>
+                <a class="nav-link" href="{{ url_for('.logout', _anchor='') }}">logout<span
+                        class="sr-only">Logout</span></a>
+            </li>
 
         </ul>
     </div>

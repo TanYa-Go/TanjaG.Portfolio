@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for, request)
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -33,7 +33,7 @@ def index():
         testimonials = mongo.db.testimonials.find()
     except Exception:
         print("An error occurred loading the index.")
-  
+
     host = request.host
     if 'gitpod' in host:
         cdn = ''
@@ -45,14 +45,6 @@ def index():
         testimonials=testimonials, cdn=cdn)
 
 
-# @app.route("/projects")
-# def projects():
-#     """
-#     Renders projects template
-#     """
-#     return render_template("projects.html")
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """
@@ -60,7 +52,7 @@ def register():
     if username doesn't already exist.
     """
     if request.method == "POST":
-        
+
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -102,9 +94,9 @@ def login():
                     existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
-                            request.form.get("username")))
+                    request.form.get("username")))
                 return redirect(url_for(
-                            "dashboard", username=session["user"]))
+                    "dashboard", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -129,8 +121,9 @@ def dashboard(username):
         is_admin = user.get('is_admin')
 
         if session["user"]:
-            return render_template("dashboard.html", username=username, is_admin=is_admin)
-    
+            return render_template(
+                "dashboard.html", username=username, is_admin=is_admin)
+
     except Exception:
         flash("An error occurred. Contact site admin.")
 
@@ -175,7 +168,7 @@ def add_skill():
             "image_path": path,
             "created_by": username,
         }
-        
+
         try:
             mongo.db.skills.insert_one(skill)
             flash("Skill Successfully Added")
@@ -226,7 +219,6 @@ def edit_skill(skill_id):
 
 @app.route("/delete_skill/<skill_id>")
 def delete_skill(skill_id):
-
     """
     Allows user to delete a skill and redirects user to add skill page.
     Flash message alerts user that delete was successful.
@@ -236,7 +228,7 @@ def delete_skill(skill_id):
         flash("Skill Successfully Deleted")
     except Exception:
         flash("An error occurred. Contact site admin.")
-         
+
     return redirect(url_for("add_skill"))
 
 
@@ -254,9 +246,10 @@ def add_testimonial():
 
         path = f'static/uploads/{image.filename}'
         image.save(path)
-       
+
         try:
-            user = mongo.db.users.find_one({"username": session.get("user")}) or {}
+            user = mongo.db.users.find_one(
+                {"username": session.get("user")}) or {}
             username = user.get('username')
             is_admin = user.get('is_admin')
 

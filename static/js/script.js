@@ -13,13 +13,8 @@ window.addEventListener('scroll', () => {
   }
   scrollval = window.scrollY;
 
-  //if (scrollval == 400) {
-  //  document.getElementById('about-me').style.display = 'block'
-  //}
 
 });
-
-
 
 
 /* borrowed code from https://tobiasahlin.com/moving-letters/#10 to animate letters on home page */
@@ -28,8 +23,8 @@ if (document.querySelector('.ml10 .letters')) {
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
   anime.timeline({
-      loop: true
-    })
+    loop: true
+  })
     .add({
       targets: '.ml10 .letter',
       rotateY: [-90, 0],

@@ -59,6 +59,8 @@ a:hover {
 
 }
 
+/* Media Queries */
+
 @media (min-width: 320px) and (max-width: 576px) {
 
     .main-form-dash {
@@ -101,83 +103,87 @@ a:hover {
         font-size: 22px;
 
     }
+
+    #edit-bottom {
+        margin-bottom: 20px;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
 
-        .main-form-dash {
-            margin-bottom: 30px;
-            height: 50px;
-        }
+    .main-form-dash {
+        margin-bottom: 30px;
+        height: 50px;
+    }
 
-        .main-form-dash-add,
-        .main-form-dash-edit {
-            height: 90px;
-        }
+    .main-form-dash-add,
+    .main-form-dash-edit {
+        height: 90px;
+    }
 
-        .main-form-dash h3 {
-            font-size: 25px;
-        }
+    .main-form-dash h3 {
+        font-size: 25px;
+    }
 
-        .main-form-dash-add a {
-            font-size: 22px;
-
-        }
-
-        .main-form-dash-edit a {
-            font-size: 22px;
-
-        }
-
-        .main-form-dash-edit {
-            font-size: 20px;
-            margin-left: 0px;
-        }
-
-        .author-dash {
-            margin-top: 50px;
-            color: rgb(233, 76, 29);
-            margin-bottom: 10px;
-        }
+    .main-form-dash-add a {
+        font-size: 22px;
 
     }
+
+    .main-form-dash-edit a {
+        font-size: 22px;
+
+    }
+
+    .main-form-dash-edit {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    .author-dash {
+        margin-top: 50px;
+        color: rgb(233, 76, 29);
+        margin-bottom: 10px;
+    }
+
+}
 
 
 
 @media (min-width: 769px) and (max-width: 992px) {
 
-        .main-form-dash-add a {
-            font-size: 24px;
-
-        }
-
-        .main-form-dash-edit a {
-            font-size: 24px;
-
-        }
-
-        .author-dash {
-            margin-top: 200px;
-            color: rgb(233, 76, 29);
-            margin-bottom: 20px;
-        }
+    .main-form-dash-add a {
+        font-size: 24px;
 
     }
 
+    .main-form-dash-edit a {
+        font-size: 24px;
+
+    }
+
+    .author-dash {
+        margin-top: 200px;
+        color: rgb(233, 76, 29);
+        margin-bottom: 20px;
+    }
+
+}
+
 @media screen and (min-width: 993px) {
-        .main-form-dash-add a {
-            font-size: 26px;
+    .main-form-dash-add a {
+        font-size: 26px;
 
-        }
+    }
 
-        .main-form-dash-edit a {
-            font-size: 26px;
+    .main-form-dash-edit a {
+        font-size: 26px;
 
-        }
+    }
 
-        .author-dash {
-            margin-top: 200px;
-            color: rgb(233, 76, 29);
-            margin-bottom: 20px;
-        }
+    .author-dash {
+        margin-top: 200px;
+        color: rgb(233, 76, 29);
+        margin-bottom: 20px;
+    }
 }
