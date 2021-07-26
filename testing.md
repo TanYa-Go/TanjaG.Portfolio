@@ -1,7 +1,42 @@
 ## Testing user stories
 
+* ### **Recruiters and potential employers**
 
+    * Users goal is to be able to find my skills and experience to see if it suits the role they have in mind.
 
+        Skills and Education sections are displayed on the index page and can be accessed by scrolling down or by clicking on the navigation menu corresponding item.
+
+        I have decided not to include the Work History details on the portfolio as I don;t have the relevant experience yet. However the user can see my previous employment by visitin my linkedin oage or by accessing my CV from the footer. 
+
+    * Users goal is to be able to see projects that I've worked on to see what type of work I've done and what are my competencies 
+
+        My projects are displayed on the index page in the **My Projects** section and can be accessed by scrolling down or by clicking on the navigation menu corresponding item. To see more about each project, the user can click on the links below each project and access either the **live site** or **the repository** which will open in the separate tab.
+
+    * Users goal is to see my previous employment to get a feel if someone my experience would be a good fit for their team
+
+        I have decided not to include the Work History details on the portfolio, as explained above.
+
+    * Users goal is to be able to find the contact information easily and contact me without leaving the page
+
+        The user can find the contact information by clicking on the link in the navingation bar or scroll down to the footer. They will see the phone number, the email - which when clicked leads straight to the email provider so the user can send me an email without leaving the page. The user can also click on the linkedin icon which will lead to my linkedin page where they can also send me a message. 
+
+    * User goal is to be able to download my CV with one click
+     
+      The user can click on the download icon in the footer which will open the .pdf document of my CV in the new tab where they can download it
+
+* ### **Other developers** 
+
+    * Users goal is to be able to find my GitHub profile to see the way I write my code and if this would suit their project
+
+        The Github icon is availble on the home page so it is easy to find. When clicked, the icon leads to my GitHub profile page, which opens in a new tab.
+        There is also a GitHub link in the footer and on the downloadable CV.
+
+* ### **Potential Clients** 
+    * This user's goal is to be able to see the testimonials from others that have worked with me, to evaluate if they want to hire me
+
+        The user can click on the Testimonials menu link in the navbar and will be redirected to the Testimonials section of the index page.
+
+    
 ## Testing Functionality
 
  ### **Testing links and buttons**

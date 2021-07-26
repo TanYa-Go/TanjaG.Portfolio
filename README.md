@@ -60,7 +60,7 @@ Users can be divided into three categories:
 * ### **Recruiters and potential employers**
   The user, in this case, is a person who is looking to hire a developer and on this website, they need to be able to find all the information necessary for them to decide to invite me for an interview or offer me a job. 
   * Users goal is to be able to find skills and experience to see if it suits the role they have in mind.
-  * Users goal is to be able to see projects that I've worked on to see what type of work I've done and if it is something similar they would need from me
+  * Users goal is to be able to see projects that I've worked on to see what type of work I've done and what are my competencies
   * Users goal is to see my previous employment to get a feel if someone my experience would be a good fit for their team
   * Users goal is to be able to find the contact information easily and contact me without leaving the page 
   * User goal is to be able to download my CV with one click 
@@ -305,7 +305,7 @@ I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen
 
 # **Testing**
 
-The full testing procedure can be found in the [Testing](/workspace/TanjaG.Portfolio/Testing.md) file
+The full testing procedure can be found in the [Testing](/workspace/TanjaG.Portfolio/testing.md) file
 
 [Back to Top](#table-of-contents)
 
