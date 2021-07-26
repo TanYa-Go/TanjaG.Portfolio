@@ -66,17 +66,18 @@ Users can be divided into three categories:
   * User goal is to be able to download my CV with one click 
 
 * ### **Other developers** 
-The user, in this case, is another developer who is looking for someone to work on a project with or a collaboration of some sort.
-* This user's goal is to be able to see what skills and languages I know to see if we could work well together
-* Users goal is to be able to find my GitHub profile to see the way I write my code and if this would suit their project
-* Users goal is to find contact information easily and contact me from the website directly
+    The user, in this case, is another developer who is looking for someone to work on a project with or a collaboration of some sort.
+
+    * This user's goal is to be able to see what skills I have and what tech stack I use, to see if we could work well together
+    * Users goal is to be able to find my GitHub profile to see the way I write my code and if this would suit their project
+    * Users goal is to find contact information easily and contact me from the website directly
 
 * ### **Potential Clients**
-The user in this case can be a person, a company, an artist, a small business, etc., who is lookig to hire someone to create their website, an app or change their existing website, etc. 
+    The user in this case can be a person, a company, an artist, a small business, anyone who is lookig to hire someone to create their website, an app or change their existing website, etc. 
 
-* This user's goal is to be able to see the projects that I have  created before, to see if they would like to hire me for their project
-* This user's goal is to be able to see the testimonials from others that have worked with me, to evaluate if they want to hire me
-* This user's goal is to be able to find the contact information easily and contact the site owner without leaving the page 
+    * This user's goal is to be able to see the projects that I have  created before, to see if they would like to hire me for their project
+    * This user's goal is to be able to see the testimonials from others that have worked with me, to evaluate if they want to hire me
+    * This user's goal is to be able to find the contact information easily and contact the site owner without leaving the page 
 
 
 
@@ -86,9 +87,9 @@ The user in this case can be a person, a company, an artist, a small business, e
 
 ### **Site owners Goals**
 
-My the goal is to have a beautiful and reponsive website that represents me as a person and also as a developer. I'd like potential employers to find it interesting enough to want to explore it and find out about me, my accomplishments, my skills, and that they will want to get in touch for an interview, a project, or a collaboration as a result.   
+My the goal is to have a beautiful and reponsive website that represents me as a person and also as a developer. I'd like potential employers to find it interesting enough to want to explore it and find out about me, my accomplishments, my skills, and that they will want to get in touch for an interview, a project or a collaboration, as a result.   
 
-Apart from the other users, I will be a user as well.  As a user, (an admin) I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job etc., directly from the page, without needing to change the code. 
+Apart from the other users, I will be a user as well.  As an **admin** I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job, new testimonial etc., directly from the admin dashboard, without needing to change the code. 
 
 
 <a></a>
@@ -144,17 +145,20 @@ Apart from the other users, I will be a user as well.  As a user, (an admin) I w
 * Responsive design
 * Registration functionality
 * Log In and Out functionality
-* Dashboard where user can see what they can add/edit with their credentials
-* As admin: 
-    * CRUD Functions
+* Dashboard where user can access the functionalityies they have with their credentials
+* As an admin: 
+    * CRUD Operations
+   * Skills
         * Create: create a new skill
-        * Read: after creating a skill, user can click View Skills button and is then directed to the index page, the skill section, where they can see the skill they've just added plus all other skills
+        * Read: after creating a skill, user can click View Skills button and is then directed to the index page -  the skill section - where they can view the skill they've just added, plus all other skills
         * Update: possibility to edit the skill
         * Delete: possibility to delete the skill
+    * Testimonials
         * Create: create a new testimonial
         * Read: after creating a testimonial, user can click View Testimonials button and will be directed to the index page, the testimonial section, where they can see the testimonial they've just added plus all other testimonials
         * Update: possibility to edit the testimonial
         * Delete: possibility to delete the testimonial
+* Guest user can currently register/login however they do not have access to editing the website
 * Visitors can click on the email address in the footer and will be directed to the email provider so they can send an email directly from the website
 
 
@@ -162,7 +166,11 @@ Apart from the other users, I will be a user as well.  As a user, (an admin) I w
 
 ### **Features to be implemented**
 
-In the future I would like to add an option for admin to be able to add and edit a New Project, new Employment and Education details, the same way it is possibe to add skills and testimonials.
+In the future I would like to add functionality to the dashboard so that admin can Add, Edit  and Delete Projects, Employment details and Education details, the same way it is possibe to add skills and testimonials now.
+
+I would also like to expand the dashboard to include some statistics about the page and links to the relevant sections available for edit. 
+
+In the future I will also add a separate page for each project to provide more details on what is included in each project, a few more images and demo gifs. 
 
 I would also like to add a contact form so people can have that option as well to contact me without leaving the page.
 
@@ -175,6 +183,17 @@ I would also like to add a contact form so people can have that option as well t
 
 ## **The Structure Plane**
 
+The website structure is built according to the standard UI/UX rules so that it is intuituve and makes it easy for the user to find what they are looking for.
+* All the main information is placed on the one scrolling page with links to each section in the navigation bar 
+* The navigation bar is on top of the page and the menu links will change collor on hover so the user can jump to a different section on the website should they wish
+* Navbar will dissapear when the user scrolls down but will reappaear when user scrolls up so they can go to another section quicker
+* Footer contains contact information, social media icons and a link to download my CV for anyone who needs it
+
+The admin side of the website has additional pages
+* Register, Log in/Logout - currently hidden from the dashboard so visitors cannot register
+* Admin dashboard -  where admin can see what changes he can make with his credentials 
+* Add/Edit skill pages - where admin can add or edit a skill
+* Add/Edit testiminial - where admin can add or edit a testimonial
 
 
 ## **The Skeleton Plane**
@@ -184,8 +203,17 @@ I would also like to add a contact form so people can have that option as well t
 
 ### **Database Schema**
 
-![Database Schema](static/images/schema.png)
+The database used for this project is the document-based database MongoDB.
 
+![Database Schema](static/images/database.png)
+
+The database consists of four collections :
+* **Users** - contains the data required for user to register, login, access admin panel (if the user is **is_admin**)
+* **Categories**  - Skill categories are divided into three categories - Frontend, Backend and Libraries & Frameworks. This data is used when adding a new skill or editing a skill
+* **Testimonials** - Stores data for adding a new testimonial and pulls data from here when editing testimonials
+* **Skills** - data that is stored here is skill category, skill name (title) and skill image path.
+
+The three other collections **Experience**, **Projects** and **Education** are not currently in use. They are planned to be implemented in the future, for adding relevant work experience, education details and any new projects. 
 
 
 ### **Wireframes**
@@ -214,16 +242,19 @@ I would also like to add a contact form so people can have that option as well t
 
 #### **Colors**
 
-I chose the [background image](static/images/wireframes/background.png) wich has array of rainbow colors so I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use on the rest of the page.
+I chose the [background image](static/images/wireframes/background.png) with array of rainbow colors so I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use on the rest of the page.
 
-I used the dark purple color #3b0432 for the navbar and the footer and the red-orange rgb(233, 76, 29) color for contrasting the purple in titles, icons, buttons etc.
+I used the color ![dark purple](static/images/wireframes/colorP.png)   #3b0432 for the navbar and the footer.\
+The  color ![red-orange](static/images/wireframes/colorR.png)  rgb(233, 76, 29) for contrasting the purple in titles, icons, buttons etc.\
+The ![dark purple](static/images/wireframes/colorD.png) #74042f color was used as a background color for different section on the index page.
+
 
 <a></a>
 
 #### **Typography**
 
 Main font for the website is **Montserrat** with the fallback font  sans-serif, if for any reason the google font doesn't load. \
-I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;** for some paragraphs as it looks cleaner. 
+I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;** for some paragraphs as it looks much cleaner. 
 
 <a></a>
 
