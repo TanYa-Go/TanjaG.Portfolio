@@ -28,12 +28,12 @@ if (document.querySelector('.ml10 .letters')) {
     .add({
       targets: '.ml10 .letter',
       rotateY: [-90, 0],
-      duration: 1300,
+      duration: 2000,
       delay: (el, i) => 45 * i
     }).add({
       targets: '.ml10',
       opacity: 0,
-      duration: 1000,
+      duration: 2000,
       easing: "easeOutExpo",
       delay: 1000
     });

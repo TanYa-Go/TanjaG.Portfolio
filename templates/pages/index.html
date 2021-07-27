@@ -114,7 +114,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Frontend" %}
                     <li data-id="{{skill._id}}">
-                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20" alt="skill logo">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="25" height="29" alt="skill logo">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
