@@ -78,7 +78,7 @@
 #### Register/Login
 
 - Register and log in both have the button to submit the respective action. Both buttons function as intended and send the user to the dashboard while the respective flash message appears on the screen 
-- Register and Login links are  removed from the navbar but can be accessed by inputting the right path in the URL  /register or /login
+- Register and Login links are removed from the navbar but can be accessed by inputting the right path in the URL  "/register" or "/login"
 
 #### Logout
 
@@ -100,4 +100,39 @@
 
 - **DELETE**: Delete functionality was tested by clicking on the **Bin** icon beside the respective item on the index page.  The functionality works as intended, the item is deleted. 
 
- ### **Testing form Validation**
+ ### **Form Validation Testing**
+
+ #### Register/Login
+
+ Testing was done to see if the user can **Register/Login** without any input in the input fields. Both fields for the username and the passowrd work as expected and asking for an input before proceeding. 
+
+ #### **Add Skill**
+
+ The form for adding a skill was tested by first trying to submit it without any input. The **Title** input field provides a message asking to fill in the field before proceeding. 
+ Then testing was done by trying to submit the form without choosing an image. This also resulted in a **Choose file** field warning that this needs to be chosen before proceeding. 
+ The **Title** input field is set to have minimum of three carachters input so a warning will pop up if the user enters less then three carachters.
+
+ Uploading an image works as expected and the image is displayed on the index page. Testing was done by trying to upload a non image file, which resulted in the file not showing on the page. 
+
+ BUGS: 
+ * The Category field has a *required* attribute so the user should not be able to submit the form without choosing the **Category**. If the category is not chosen and the user submits the form, the flash message will say that the action was successful, however the item is not actually added to the page. The Category field must be chosen for the skill to be successfully added, however this is not clear for the user. 
+ 
+    For now, the only user who is able to make changes to the page is myself, as the page admin, and I am aware of this issue. I am aiming to fix this issue asap however the time was limited prior to submitting the project so the issue is still remaining. 
+
+ * Images: I have tried to implement the Heroku CDN called Edge to store the uploaded imges there instead of in the **Uploads** folder. The functionality does work on the deployed site, however if another commit is made in the repository after an image was uploaded, the image will dissapear. 
+
+    This issue is remaining for now but the goal is to fix it asap. 
+
+ #### **Edit Skill**
+
+ This form functions the same as the **Add Skill** form with the main difference that the **Edit Skill** form is prepopulated with the chosen skill's data, ready to be edited.  
+
+#### **Add Testimonial**
+
+ The form for adding a testimonial was tested by first trying to submit it without any input. All input fields are asking for an input before proceeding. All the fileds must be filled out to submit the form. 
+ 
+ Uploading an image works as expected and the image is displayed on the index page. Testing was also done by trying to upload a non image file, which resulted in the file not showing on the page. In future this will be improved, so that it is clear for the user that the only file that can be uploaded, is an image file. 
+
+#### **Edit Testimonial**
+
+ This form functions the same as the **Add Testimonial*** form with the main difference that the **Edit Testimonial** form is prepopulated with the chosen testimonial's data, ready to be edited. 

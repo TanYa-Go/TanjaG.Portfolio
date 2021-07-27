@@ -9,7 +9,7 @@
         ">
 
                  
-                <select name="category_title" class="select-menu">
+                <select name="category_title" class="select-menu" required>
                     <option  class="text-center" >Category</option>
                     {% for category in categories %}
                         {% if edit %}
@@ -27,7 +27,7 @@
             <div class="form-group">
                 <i class="fas fa-cog"></i>
                 <label for="skill_title">Skill Title</label>
-                <input type="text" name="skill_title" id="skill_title" minlength="5" maxlength="50"
+                <input type="text" name="skill_title" id="skill_title" minlength="3" maxlength="50"
                     class="form-control validate" required
                     {% if edit %}
                         value="{{skill.skill_title}}"
