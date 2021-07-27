@@ -91,7 +91,25 @@
 
 <br>  
 
-### Testing CRUD functionality for Skills and Testimonials
+### **Error Pages**
+
+* **404 Page** - I have implemented the 404 page to make sure that user comes back to the home page if they encounter a problem. I have added the explanation that this page cannot be found and the **Go Home** button so the user can easily return to the home page instead of leaving the page alltoghether.
+
+    I've tested the page by inputting the nonexisting path at the end of the url and the page does appear.
+The button works as intended and takes the user back to the home page.
+
+![404 Page](static/images/4.jpg) 
+
+
+* **Page 500** - I have also added the page 500 in case of any internal server error. The message appears so the user knows that this is a server error nad offers the option to return to the home page. 
+
+I've tested the page by turning debug to False and changing the db password to incorrect one, and the page does appear.
+The link works as intended and takes the user back to the home page.
+
+![Page 500](static/images/5.jpg)
+
+### **Testing CRUD functionality for Skills and Testimonials**
+
 - **CREATE**: Create functionality was tested by clicking on the respective **Add Skill / Add Testimonial** buttons on the admin dashboard. After filling in the form the **Flash message** appears on the screen to confirm to the user that the Skill / Testimonial was successfully created. Under the flash message, there is a **View All Skills / View All Testimonials** link that leads to the respective section on the index page, so by clicking on this link the user can view the result of their action. There is no need to click on the **Home** in navigation or the **Back** arrow to see it. Skill / Testimonial are showing on the index page in their respective sections. Image upload works as expected. The functionality works as intended.
 
 - **READ**: Skill / Testimonial including the images are showing on the index page in their respective sections.  The functionality works as intended.
@@ -102,11 +120,11 @@
 
  ### **Form Validation Testing**
 
- #### Register/Login
+ #### **Register/Login Form**
 
  Testing was done to see if the user can **Register/Login** without any input in the input fields. Both fields for the username and the passowrd work as expected and asking for an input before proceeding. 
 
- #### **Add Skill**
+ #### **Add Skill Form**
 
  The form for adding a skill was tested by first trying to submit it without any input. The **Title** input field provides a message asking to fill in the field before proceeding. 
  Then testing was done by trying to submit the form without choosing an image. This also resulted in a **Choose file** field warning that this needs to be chosen before proceeding. 
@@ -123,16 +141,19 @@
 
     This issue is remaining for now but the goal is to fix it asap. 
 
- #### **Edit Skill**
+ #### **Edit Skill Form**
 
- This form functions the same as the **Add Skill** form with the main difference that the **Edit Skill** form is prepopulated with the chosen skill's data, ready to be edited.  
+ This form functions the same as the **Add Skill** form with the main difference that the **Edit Skill** form is prepopulated with the chosen skill's data, ready to be edited. When the details are changed and the **Save** button is clicked - if the image was changed, the new image will show on the screen. The user can check the changes made by clicking on **View All Skills** link. The link is also tested and takes the user to the **Skills** section on index page. 
+ Functionality works as expected. 
 
-#### **Add Testimonial**
+ 
 
- The form for adding a testimonial was tested by first trying to submit it without any input. All input fields are asking for an input before proceeding. All the fileds must be filled out to submit the form. 
+#### **Add Testimonial Form**
+
+ The form for adding a testimonial was tested by first trying to submit it without any input. All input fields are asking for an input before proceeding. All the fields must be filled out to submit the form. 
  
  Uploading an image works as expected and the image is displayed on the index page. Testing was also done by trying to upload a non image file, which resulted in the file not showing on the page. In future this will be improved, so that it is clear for the user that the only file that can be uploaded, is an image file. 
 
-#### **Edit Testimonial**
+#### **Edit Testimonial Form**
 
- This form functions the same as the **Add Testimonial*** form with the main difference that the **Edit Testimonial** form is prepopulated with the chosen testimonial's data, ready to be edited. 
+ This form functions the same as the **Add Testimonial** form with the main difference that the **Edit Testimonial** form is prepopulated with the chosen testimonial's data, ready to be edited. When the details are changed and the Save button is clicked - if the image was changed, the new image will show on the screen. The user can check the changes made, by clicking on **View All Testimonials** link. The link is also tested and takes the user to the Tesimonials section on index page. Functionality works as expected.
