@@ -35,10 +35,10 @@ def index():
 
     host = request.host
     if 'gitpod' in host:
-         cdn = ''
+        cdn = ''
     else:
         cdn = 'https://dyw7dciygqjtx.cloudfront.net'
-    
+
     return render_template(
         "pages/index.html", skills=skills, username=username,
         is_admin=is_admin, testimonials=testimonials, cdn=cdn)

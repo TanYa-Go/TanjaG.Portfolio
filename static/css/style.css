@@ -376,13 +376,17 @@ hr {
   padding-left: 0px;
 }
 
+.skill-img {
+  width: 100%;
+  height: auto;
+}
 
 .skill-list li {
   list-style: none;
   background: rgba(235, 229, 229, 0.986);
   color: #333;
   display: inline-block;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
   font-size: 0.8rem;

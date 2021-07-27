@@ -386,7 +386,7 @@ Image for the (fake) testimonial with the name John Boyle is a Photo by <a href=
    \
 The other two are genuine testimonials and the images were provided by Melinda and Rebecca personally. 
 
-Icons for the skills were taken from 
+Icons for the skills were taken from [Image Bin](https://imgbin.com/)
 
 ### **Acknowledgements**
 
