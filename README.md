@@ -242,10 +242,12 @@ The three other collections **Experience**, **Projects** and **Education** are n
 
 #### **Colors**
 
-I chose the [background image](static/images/wireframes/background.png) with array of rainbow colors so I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use on the rest of the page.
+I chose the background image with array of rainbow colors so in order to have complementary colors on the website, I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use for the other parts of the website.
+
+![background image](static/images/wireframes/background.png) 
 
 I used the color ![dark purple](static/images/wireframes/colorP.png)   #3b0432 for the navbar and the footer.\
-The  color ![red-orange](static/images/wireframes/colorR.png)  rgb(233, 76, 29) for contrasting the purple in titles, icons, buttons etc.\
+The  color ![red-orange](static/images/wireframes/colorR.png)  rgb(243, 96, 51) for contrasting the purple in titles, icons, buttons etc.\
 The ![dark purple](static/images/wireframes/colorD.png) #74042f color was used as a background color for different section on the index page.
 
 
@@ -289,7 +291,7 @@ I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen
 * [Git](https://git-scm.com/)
 * [GitPod](https://www.gitpod.io/)
 * [Heroku](https://www.heroku.com/)
-* [Balsamic](https://balsamiq.com/wireframes/)
+* [Balsamiq](https://balsamiq.com/wireframes/)
 * [W3C HTML Validation Service](https://validator.w3.org/)
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 * [techsini](http://techsini.com/)
@@ -306,10 +308,6 @@ I have also used **-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen
 # **Testing**
 
 The full testing procedure can be found in the [Testing](testing.md) file
-
-[Back to Top](#table-of-contents)
-
-## **Bugs**
 
 
 [Back to Top](#table-of-contents)
@@ -383,11 +381,20 @@ Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate
 
 ### **Media**
 
-[Background image](https://www.svgbackgrounds.com/#rainbow-vortex)
+[Background image](https://www.svgbackgrounds.com/#rainbow-vortex) was found here.
+Image for the (fake) testimonial with the name John Boyle is a Photo by <a href="https://unsplash.com/@christianbuehner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">christian buehner</a> on <a href="https://unsplash.com/s/photos/a-man-with-glasses?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   \
+The other two are genuine testimonials and the images were provided by Melinda and Rebecca personally. 
+
+Icons for the skills were taken from 
 
 ### **Acknowledgements**
 
 I would like to thank my mentor Simen Daehlin for the continuous support, encouragement and knowledge that he so generously shares. 
+
+I'd also like to thank Richard Wells for his advices and suggestions on how to improve the site. 
+
+
 
 
 
