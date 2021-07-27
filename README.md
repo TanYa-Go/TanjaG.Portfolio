@@ -1,12 +1,12 @@
 # **My Portfolio**
 
-![Mock up](static/images/pr2.jpg)
+![Mock up](static/images/mockup.png)
 
 
 ## **About the project**
-This project is a personal portfolio website that will showcase my software development skills and my recent projects to potential employers, potential clients or other developers. It will also serve as one of the milestone projects for the Code Institute Software Development Diploma course, where I needed to showcase what I've learned from the Python/Flask/MongoDB backend modules. 
+This project is a personal portfolio website that will showcase my software development skills and my recent projects, to potential employers, potential clients or other developers. It will also serve as one of the milestone projects for the Code Institute Software Development Diploma course, where I needed to showcase what I've learned from the Python/Flask/MongoDB backend modules. 
 
-The idea was that the website has a log in option so that users can add to the website, change something depending on their credentials. So myself as an **admin** will have rights to make changes to all sections that have that option, while the **guest** user will be able to add only testimonials after they have worked with me or hired me for a job. 
+The original idea was to have a log in option so that users can add to the website or change something depending on their credentials. Myself as an **admin** would have the rights to make changes to all sections that have that option, while the **guest** user will be able to add or edit only testimonials after they have collaborated with me. I then changed the concept so that user cannot make any changes, until I implement some sort of notification system for when a testimonial is added, so that I can review it before it is posted to the live site. For now only admin has the rights to make changes to the website. 
 
 <a></a>
 
@@ -89,7 +89,7 @@ Users can be divided into three categories:
 
 My the goal is to have a beautiful and reponsive website that represents me as a person and also as a developer. I'd like potential employers to find it interesting enough to want to explore it and find out about me, my accomplishments, my skills, and that they will want to get in touch for an interview, a project or a collaboration, as a result.   
 
-Apart from the other users, I will be a user as well.  As an **admin** I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job, new testimonial etc., directly from the admin dashboard, without needing to change the code. 
+  As an **admin** user I want to be be able to log in and make changes to the website, for example, add a new skill, add a new project, new job, new testimonial etc., directly from the admin dashboard, without needing to change the code. 
 
 
 <a></a>
@@ -145,7 +145,7 @@ Apart from the other users, I will be a user as well.  As an **admin** I want to
 * Responsive design
 * Registration functionality
 * Log In and Out functionality
-* Dashboard where user can access the functionalityies they have with their credentials
+* Dashboard where user can access the functionalities they have with their credentials
 * As an admin: 
     * CRUD Operations
    * Skills
@@ -168,9 +168,9 @@ Apart from the other users, I will be a user as well.  As an **admin** I want to
 
 In the future I would like to add functionality to the dashboard so that admin can Add, Edit  and Delete Projects, Employment details and Education details, the same way it is possibe to add skills and testimonials now.
 
-I would also like to expand the dashboard to include some statistics about the page and links to the relevant sections available for edit. 
+I would also like to expand the dashboard to include some statistics about the page and links to the relevant sections available for edit. As mentioned above I would also love to add an option to receive a notification when user leaves a review so that I cann approve it. 
 
-In the future I will also add a separate page for each project to provide more details on what is included in each project, a few more images and demo gifs. 
+In the future I will also add a separate page for each project to provide more details on what is included in each project, the proces of making it, a few more images and demo gifs. 
 
 I would also like to add a contact form so people can have that option as well to contact me without leaving the page.
 
@@ -185,15 +185,15 @@ I would also like to add a contact form so people can have that option as well t
 
 The website structure is built according to the standard UI/UX rules so that it is intuituve and makes it easy for the user to find what they are looking for.
 * All the main information is placed on the one scrolling page with links to each section in the navigation bar 
-* The navigation bar is on top of the page and the menu links will change collor on hover so the user can jump to a different section on the website should they wish
-* Navbar will dissapear when the user scrolls down but will reappaear when user scrolls up so they can go to another section quicker
-* Footer contains contact information, social media icons and a link to download my CV for anyone who needs it
+* The navigation bar is on top of the page and the menu links will change color on hover so the user can jump to a different section on the website should they wish
+* Navbar will disappear when the user scrolls down but will reappaear when user scrolls up so they can go to another section quicker. 
+* Footer contains contact information, social media icons and a link to download my CV for anyone who would like a copy
 
 The admin side of the website has additional pages
 * Register, Log in/Logout - currently hidden from the dashboard so visitors cannot register
 * Admin dashboard -  where admin can see what changes he can make with his credentials 
 * Add/Edit skill pages - where admin can add or edit a skill
-* Add/Edit testiminial - where admin can add or edit a testimonial
+* Add/Edit testimonial - where admin can add or edit a testimonial
 
 
 ## **The Skeleton Plane**
@@ -203,17 +203,17 @@ The admin side of the website has additional pages
 
 ### **Database Schema**
 
-The database used for this project is the document-based database MongoDB.
-
-![Database Schema](static/images/database.png)
-
+The database used for this project is the document-based database MongoDB. 
 The database consists of four collections :
 * **Users** - contains the data required for user to register, login, access admin panel (if the user is **is_admin**)
 * **Categories**  - Skill categories are divided into three categories - Frontend, Backend and Libraries & Frameworks. This data is used when adding a new skill or editing a skill
 * **Testimonials** - Stores data for adding a new testimonial and pulls data from here when editing testimonials
 * **Skills** - data that is stored here is skill category, skill name (title) and skill image path.
 
-The three other collections **Experience**, **Projects** and **Education** are not currently in use. They are planned to be implemented in the future, for adding relevant work experience, education details and any new projects. 
+The three other collections **Experience**, **Projects** and **Education** are not currently in use. Plan is to implement them shortly to be able to add relevant work experience, education details and any new projects. 
+
+
+![Database Schema](static/images/database.png)
 
 
 ### **Wireframes**
@@ -242,13 +242,13 @@ The three other collections **Experience**, **Projects** and **Education** are n
 
 #### **Colors**
 
-I chose the background image with array of rainbow colors so in order to have complementary colors on the website, I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use for the other parts of the website.
+I chose the background image with an array of rainbow colors and in order to have complementary colors on the rest of the website, I used the [Image Color Picker](https://imagecolorpicker.com/) to choose the colors to use for different elements and sections.
 
 ![background image](static/images/wireframes/background.png) 
 
 I used the color ![dark purple](static/images/wireframes/colorP.png)   #3b0432 for the navbar and the footer.\
 The  color ![red-orange](static/images/wireframes/colorR.png)  rgb(243, 96, 51) for contrasting the purple in titles, icons, buttons etc.\
-The ![dark purple](static/images/wireframes/colorD.png) #74042f color was used as a background color for different section on the index page.
+The ![dark purple](static/images/wireframes/colorD.png) #74042f color was used as a background color for different sections on the index page.
 
 
 <a></a>
@@ -381,12 +381,12 @@ Borrowed code from [here](https://tobiasahlin.com/moving-letters/#10) to animate
 
 ### **Media**
 
-[Background image](https://www.svgbackgrounds.com/#rainbow-vortex) was found here.
+[Background image](https://www.svgbackgrounds.com/#rainbow-vortex) was found here.\
 Image for the (fake) testimonial with the name John Boyle is a Photo by <a href="https://unsplash.com/@christianbuehner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">christian buehner</a> on <a href="https://unsplash.com/s/photos/a-man-with-glasses?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    \
 The other two are genuine testimonials and the images were provided by Melinda and Rebecca personally. 
 
-Icons for the skills were taken from [Image Bin](https://imgbin.com/)
+Icons for the skills were taken from the [Image Bin](https://imgbin.com/)
 
 ### **Acknowledgements**
 

@@ -44,7 +44,7 @@
 #### Navigation
 
 - Top navigation is fully functional, all links lead to the relevant section on the page
-- When the user scrolls down the navbar disappear and when they scroll up the navbar will reappear
+- When the user scrolls down the navbar disappear and when they scroll up the navbar will reappear. This functionality is diabled for tablet and mobile device for better user experience.
 - Mobile navigation toggle "hamburger" working as expecting, opening the navigation on smaller screens
 
 
