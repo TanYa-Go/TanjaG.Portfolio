@@ -319,11 +319,11 @@ The full testing procedure can be found in the [Testing](testing.md) file
 ## Heroku Deployment
 
 **Create application:**
-1. Navigate to Heroku.com and login.
-1. Click on the new button.
-1. Select create new app.
-1. Enter the app name.
-1. Select region.
+1. Navigate to Heroku.com and login
+1. Click on the new button
+1. Select create new app
+1. Enter the app name
+1. Select region
 
 **Set up connection to Github Repository:**
 

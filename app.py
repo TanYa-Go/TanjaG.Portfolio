@@ -33,15 +33,15 @@ def index():
     except Exception:
         print("An error occurred loading the index.")
 
-    # host = request.host
-    # if 'gitpod' in host:
-    #      = ''
-    # else:
-    #     cdn = 'https://dyw7dciygqjtx.cloudfront.net'
-    # cdn=cdn
+    host = request.host
+    if 'gitpod' in host:
+         cdn = ''
+    else:
+        cdn = 'https://dyw7dciygqjtx.cloudfront.net'
+    
     return render_template(
         "pages/index.html", skills=skills, username=username,
-        is_admin=is_admin, testimonials=testimonials)
+        is_admin=is_admin, testimonials=testimonials, cdn=cdn)
 
 
 @app.route("/register", methods=["GET", "POST"])
