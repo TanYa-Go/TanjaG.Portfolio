@@ -21,7 +21,7 @@
         </div>
         <div class="col-12 col-lg-1 d-sm-none d-xs-none d-md-block d-md-1">
             <div class="socials">
-                <div><a href="https://www.twitter.com" class="social" target="_blank">
+                <div><a href="https://www.twitter.com" class="social" target="_blank" rel="noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40"
                             viewBox="0 0 24 24">
                             <path
@@ -29,7 +29,7 @@
                         </svg>
                     </a></div>
                 <br>
-                <div><a href="https://www.github.com/tanya-go" class="social" target="_blank">
+                <div><a href="https://www.github.com/tanya-go" class="social" target="_blank" rel="noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40"
                             viewBox="0 0 24 24">
                             <path
@@ -37,7 +37,7 @@
                         </svg>
                     </a></div>
                 <br>
-                <div><a href="https://www.linkedin.com/in/tanja-godinic/" target="_blank" class="social">
+                <div><a href="https://www.linkedin.com/in/tanja-godinic/" target="_blank" rel="noreferrer" class="social">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="40" height="40"
                             viewBox="0 0 24 24">
                             <path
@@ -114,7 +114,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Frontend" %}
                     <li data-id="{{skill._id}}">
-                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20" alt="skill logo">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -136,7 +136,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Backend" %}
                     <li data-id="{{skill._id}}">
-                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20" alt="skill logo">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -158,7 +158,7 @@
                     {% for skill in skills %}
                     {% if skill.category_title == "Libraries & Frameworks" %}
                     <li data-id="{{skill._id}}">
-                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20">
+                        <img src="{{cdn}}/{{skill.image_path}}" width="20" height="20" alt="skill logo">
                         {{skill.skill_title}}
 
                         {% if is_admin or skill.created_by == username %}
@@ -189,7 +189,7 @@
     <div class="row project-cards">
         <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/pr1.jpg') }}"
-                alt="Project Two Image" />
+                alt="Project Image" />
             <h4 class="project-name">Movie Trivia Extravaganza</h4>
             <p class="subtext text-center">This is a movie quiz app created using Javascript and an API for the quiz
                 questions.
@@ -199,10 +199,10 @@
             </p>
             <hr />
             <p class="subtext text-center"><a class="project-link" href="https://tanya-go.github.io/Movie-Quiz/"
-                    target="_blank">View Website</a>
+                    target="_blank" rel="noreferrer">View Website</a>
             </p>
             <p class="subtext text-center"><a class="project-link" href="https://github.com/TanYa-Go/Movie-Quiz"
-                    target="_blank">View Repo</a>
+                    target="_blank" rel="noreferrer">View Repo</a>
             </p>
             <hr />
             <div class="stack">
@@ -232,7 +232,7 @@
         </div>
         <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/pr2.jpg') }}"
-                alt="Project Two Image" />
+                alt="Project Image" />
             <h4 class="project-name">Portfolio Website</h4>
             <p class="subtext text-center">
                 My own personal portfolio website. It contains a hidden admin panel where admin can access
@@ -241,10 +241,10 @@
             </p>
             <hr />
             <p class="subtext text-center"><a class="project-link" href="https://tanjag-portfolio.herokuapp.com/"
-                    target="_blank">View Website</a>
+                    target="_blank" rel="noreferrer">View Website</a>
             </p>
             <p class="subtext text-center"><a class="project-link" href="https://github.com/TanYa-Go/TanjaG.Portfolio"
-                    target="_blank">View Repo</a>
+                    target="_blank" rel="noreferrer">View Repo</a>
             </p>
             <hr />
             <div class="stack">
@@ -280,7 +280,7 @@
         </div>
         <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/pr3.jpg') }}"
-                alt="Project Two Image" />
+                alt="Project Image" />
             <h4 class="project-name">Women in Technology</h4>
             <p class="subtext text-center">This is an app that I created together with a team of 4 people during the
                 Women in Tech
@@ -289,10 +289,10 @@
             </p>
             <hr />
             <p class="subtext text-center"><a class="project-link"
-                    href="https://crypticcaroline.github.io/womenscareers/" target="_blank">View Website</a>
+                    href="https://crypticcaroline.github.io/womenscareers/" target="_blank" rel="noreferrer">View Website</a>
             </p>
             <p class="subtext text-center"><a class="project-link" href="https://github.com/TanYa-Go/womenscareers"
-                    target="_blank">View Repo</a>
+                    target="_blank" rel="noreferrer">View Repo</a>
             </p>
             <hr />
             <div class="stack">
@@ -319,7 +319,7 @@
         </div>
         <div class="col-12 col-md-4 col-lg-4 project-card">
             <img class="project-image" src="{{ url_for('static', filename ='images/pr4.jpg') }}"
-                alt="Project Two Image" />
+                alt="Project Image" />
             <h4 class="project-name">Eleventh Embodiment</h4>
             <p class="subtext text-center">This is a static website created for a dear friend of mine who is a yoga
                 teacher and
@@ -328,10 +328,10 @@
             </p>
             <hr />
             <p class="subtext text-center"><a class="project-link"
-                    href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank">View Website</a>
+                    href="https://tanya-go.github.io/eleventh-embodiment/" target="_blank" rel="noreferrer">View Website</a>
             </p>
             <p class="subtext text-center"><a class="project-link"
-                    href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank">View Repo</a>
+                    href="https://github.com/TanYa-Go/eleventh-embodiment" target="_blank" rel="noreferrer">View Repo</a>
             </p>
             <hr />
             <div class="stack">
@@ -365,7 +365,7 @@
         {% for testimonial in testimonials %}
         <div class="col-lg-4 ">
             <br>
-            <img src="{{cdn}}/{{testimonial.image_path}}" class="testi-img">
+            <img src="{{cdn}}/{{testimonial.image_path}}" class="testi-img" alt="Image of the person that wrote review">
             <br><br>
             <h3 class="user-name">{{testimonial.user_name}}</h3>
             <p>{{testimonial.testimonial_description}}</p>
