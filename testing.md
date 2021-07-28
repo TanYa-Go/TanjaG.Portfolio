@@ -41,51 +41,51 @@
 
  ### **Testing links and buttons**
 
-#### Navigation
+#### **Navigation**
 
 - Top navigation is fully functional, all links lead to the relevant section on the page
 - When the user scrolls down, the navbar disappears and when they scroll up again, the navbar will reappear. This functionality is disabled for tablet and mobile devices for a better user experience.
 - Mobile navigation toggle "hamburger" working as expecting, opening the navigation on smaller screens
 
 
- #### Hello Section 
+ #### **Hello Section** 
 
  - Scroll down button functioning as expected, scrolls down when clicked
  - Social media icons open the respective pages in the new tab
 
  
-#### Skills
+#### **Skills**
 
 - When logged in as an admin, the user can see the **Edit** and **Delete** icons beside each skill. A tooltip will pop up to give the user information on what each button does, in the case is not clear from the icons
 - Buttons work as expected, sending the user to edit skill or delete the skill
 - Those buttons are not visible to the non-admin user 
 
-#### Projects 
+#### **Projects** 
 
 - **View Website** and **View Repo** buttons work as intended, leads the user to the respective page, opening it in the new tab
 
-#### Testimonials
+#### **Testimonials**
 
 - When logged in as an admin, the user can see the **Edit** and **Delete** icons under each testimonial. A tooltip will pop up to give the user information on what each button does, in case is not clear from the icons
 - Buttons work as expected, sending the user to edit skill or delete the testimonial
 - Those buttons are not visible to the non-admin user 
 
-#### Footer 
+#### **Footer** 
  - Click on the arrow icon in the footer opens a .pdf file of the CV in the separate tab where the user can download it
 - Social links are functioning properly, opening the page in a new tab
 - Click on the email address will immediately open the user's email provider to send an email directly
 
-#### Register/Login
+#### **Register/Login**
 
 - Register and log in both have the button to submit the respective form. Both buttons function as intended and send the user to the dashboard while the respective flash message appears on the screen 
 - Register and Login links are removed from the navbar but can be accessed by inputting the right path in the URL  "/register" or "/login"
 
-#### Logout
+#### **Logout**
 
 - Logout button functions as intended, sends the user back to the login page while a flash message appears confirming to the user that they have been logged out
 - Logout link is removed from the navbar but can be accessed by inputting the right URL path "/logout"
 
-#### Dashboard
+#### **Dashboard**
 
 - By clicking on the **Add Skill**, **Edit Skill**, **Add Testimonial** or **Edit Testimonial** button on the Dashboard, the user is redirected to the respective page
 
@@ -119,13 +119,13 @@ The link works as intended and takes the user back to the home page.
 
 - **DELETE**: Delete functionality was tested by clicking on the **Bin** icon beside the respective item on the index page.  The functionality works as intended, the item is deleted. 
 
- ### **Form Validation Testing**
+ ## **Form Validation Testing**
 
- #### **Register/Login Form**
+ ### **Register/Login Form**
 
  Testing was done to see if the user can **Register/Login** without any input in the input fields. Both fields, the username and the passowrd, work as expected and asking for an input before proceeding. 
 
- #### **Add Skill Form**
+ ### **Add Skill Form**
 
  The form for adding a skill was tested by first trying to submit it without any input. The **Title** input field provides a message asking to fill in the field before proceeding. 
  Then testing was done by trying to submit the form without choosing an image. This also resulted in a **Choose file** field warning that this needs to be chosen before proceeding. 
@@ -140,14 +140,14 @@ The link works as intended and takes the user back to the home page.
 
  
 
- #### **Edit Skill Form**
+ ### **Edit Skill Form**
 
  This form functions the same as the **Add Skill** form with the main difference that the **Edit Skill** form is prepopulated with the chosen skill's data, ready to be edited. When the details are changed and the **Save** button is clicked - if the image was changed, the new image will show on the form. The user can check the changes made by clicking on **View All Skills** link. The link is also tested and takes the user to the **Skills** section on index page. 
  Functionality works as expected. 
 
  
 
-#### **Add Testimonial Form**
+### **Add Testimonial Form**
 
  The form for adding a testimonial was tested by first trying to submit it without any input. All input fields are asking for an input before proceeding. All the fields must be filled out to submit the form. 
  
@@ -157,26 +157,36 @@ The link works as intended and takes the user back to the home page.
 
 * Images: I have tried to implement the Heroku CDN called Edge to store the uploaded imges there instead of in the **Uploads** folder in the repository. The functionality does work on the deployed site, however, if another commit is made in the repository after an image was uploaded, the image on the deployed site will be removed. 
 
-    This issue is remaining for now but the goal is to fix it asap. 
+    This is also causing console errors for each image. This unfortunate issue is remaining for now but my goal is to fix it asap!
 
 * Testing was also done by trying to    upload a non image file, which resulted in the file not showing on the page, as should be the case. 
 
     However, in future this will be improved, so that it is clear for the user that the only file that can be uploaded, is an image file. 
 
 
-#### **Edit Testimonial Form**
+### **Edit Testimonial Form**
 
  This form functions the same as the **Add Testimonial** form with the main difference that the **Edit Testimonial** form is prepopulated with the chosen testimonial's data, ready to be edited. When the details are changed and the Save button is clicked - if the image was changed, the new image will show on the form. The user can then check the changes made, by clicking on **View All Testimonials** link. The link is also tested and takes the user to the Tesimonials section on index page. Functionality works as expected.
 
 <br><br>
 
-### **Responsiveness and Compatibility**
+## **Responsiveness and Compatibility**
 
-#### **Devices**
+### **Devices**
 
 I was testing responsiveness with Google Chrome developer tools throught the project developement.
 
 I then used the app called **Responsively** to double check how the app looks on different devices. I was able to choose many different devices and see the app in lanscape and portrait mode. 
+
+I have also tested the website on the following actual devices:
+- iPhone 6
+- iPhone 11
+- Samsung A40
+- Samsung A51
+- A1 Alpha 20+
+- Laptop Lenovo G780 17"
+- LG Screen 23"
+
 
 After testing, there was a need to adjust some font sizes and margins to acheieve the satisfactorty result on all devices. The page is optimized for the devices from minimum of 320px screen size. 
 
@@ -197,18 +207,9 @@ After testing, there was a need to adjust some font sizes and margins to acheiev
 ![Responsive Login page](static/images/wireframes/respons4.JPG)
 
 
-I have also tested the website on the following actual devices:
-- iPhone 6
-- iPhone 11
-- Samsung A40
-- Samsung A51
-- A1 Alpha 20+
-- Laptop Lenovo G780 17"
-- LG Screen 23"
+ 
 
-The website is responsive on all tested devices. 
-
-#### **Browsers**
+### **Browsers**
 I have tested the app in the following browsers
 
 - Chrome
@@ -218,3 +219,15 @@ I have tested the app in the following browsers
 - Safari was tested on mobile phones only and wokrs as intended
 
 The website displays properly in all tested browsers, the images are not distorted and all sections and text are clearly visible.
+
+<br><br>
+
+## **Code Validation**
+
+I have put the code through the folowing validators  
+[HTML Validator](https://validator.w3.org/) Showing errors about doctype and lang and head missing however they are included in the base component and injected into the page with jinja.\
+Several other errors found in the index.html file however I did not have enough time to remove all of them to my dissapointment.
+
+[CSS Validator](https://jigsaw.w3.org/css-validator) All code is verified, no errors found.\
+[Javascript](https://jshint.com/) One undefned variable
+[Python Vlaidator](http://pep8online.com/) No errors found

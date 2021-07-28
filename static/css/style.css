@@ -660,7 +660,7 @@ a {
 
 @media (min-width: 320px) and (max-width: 576px) {
 
-  
+
   .hamburger {
     display: block;
     border: 0;
@@ -669,7 +669,7 @@ a {
     font-size: 30px;
     margin: 10px;
     align-self: flex-end;
-  } 
+  }
 
   .hero-area {
     margin-top: 100px;
@@ -718,7 +718,7 @@ a {
 
   }
 
-  
+
   .code-institute h4 {
     font-size: 20px;
   }
@@ -764,6 +764,7 @@ a {
   input[type="file"] {
     left: 12%;
   }
+
   .socials {
     display: none;
   }
@@ -771,18 +772,18 @@ a {
   .hide {
     animation: none;
   }
-  
+
   .unhide {
     animation: none;
   }
 
   .code-institute,
-.university {
-  padding-top: 20px;
-  margin-left: 0px;
-}
-  
-  
+  .university {
+    padding-top: 20px;
+    margin-left: 0px;
+  }
+
+
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -821,11 +822,11 @@ a {
   .hide {
     animation: none;
   }
-  
+
   .unhide {
     animation: none;
   }
-  
+
   .code-institute,
   .university {
     padding-top: 20px;
@@ -844,7 +845,7 @@ a {
     font-size: 30px;
     margin: 20px;
     align-self: flex-end;
-  } 
+  }
 
 
   .letters {
@@ -855,12 +856,12 @@ a {
     height: 100%;
     align-items: center;
     padding: 50px 20px;
-  } 
+  }
 
   .socials {
     display: none;
   }
- 
+
   .hero-text {
     padding: 50px;
   }
@@ -884,19 +885,18 @@ a {
 
 @media (min-width: 993px) and (max-width: 1200px) {
 
-.headshot {
-  margin-top: 150px;
-}
+  .headshot {
+    margin-top: 150px;
+  }
 
-.letters {
-  font-size: 70px;
- 
-}
+  .letters {
+    font-size: 70px;
 
-.code-institute,
+  }
+
+  .code-institute,
   .university {
     padding-top: 20px;
     margin-right: 10px;
   }
 }
-
