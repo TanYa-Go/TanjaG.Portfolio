@@ -657,6 +657,7 @@ a {
 
 /* Media queries */
 
+
 @media (min-width: 320px) and (max-width: 576px) {
 
   
@@ -700,7 +701,7 @@ a {
   }
 
   .letter {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .title,
@@ -899,4 +900,3 @@ a {
   }
 }
 
- 
