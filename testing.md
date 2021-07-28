@@ -93,20 +93,21 @@
 
 ### **Error Pages**
 
+![Error Pages](static/images/wireframes/50.png) 
+
 * **404 Page** - I have implemented the 404 page to make sure that user comes back to the home page if they encounter a problem. I have added the explanation that this page cannot be found and the **Go Home** button so the user can easily return to the home page instead of leaving the page alltoghether.
 
     I've tested the page by inputting the nonexisting path at the end of the url and the page does appear.
-The button works as intended and takes the user back to the home page.
+    The button works as intended and takes the user back to the home page.
 
-![404 Page](static/images/4.jpg) 
 
 
 * **Page 500** - I have also added the page 500 in case of any internal server error. The message appears so the user knows that this is a server error nad offers the option to return to the home page. 
 
-I've tested the page by turning debug to False and changing the db password to incorrect one, and the page does appear.
+    I've tested the page by turning debug to False and changing the db password to incorrect one, and the page does appear.
 The link works as intended and takes the user back to the home page.
 
-![Page 500](static/images/5.jpg)
+
 
 ### **Testing CRUD functionality for Skills and Testimonials**
 
