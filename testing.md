@@ -229,5 +229,5 @@ I have put the code through the folowing validators
 Several other errors found in the index.html file however I did not have enough time to remove all of them to my dissapointment.
 
 [CSS Validator](https://jigsaw.w3.org/css-validator) All code is verified, no errors found.\
-[Javascript](https://jshint.com/) One undefned variable
-[Python Vlaidator](http://pep8online.com/) No errors found
+[Javascript](https://jshint.com/) One undefned variable\
+[Python Validator](http://pep8online.com/) No errors found
